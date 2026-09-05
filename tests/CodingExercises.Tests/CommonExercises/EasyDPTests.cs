@@ -22,7 +22,7 @@ public class BuyAndSellStocksTests
     public void TestMaxProfit()
     {
         var solver = new BuyAndSellStocks();
-        Assert.Equal(7, solver.MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
+        Assert.Equal(5, solver.MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
         Assert.Equal(4, solver.MaxProfit(new int[] { 1, 2, 3, 4, 5 }));
     }
 }
