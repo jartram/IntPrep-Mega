@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -22,14 +22,28 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public void Solve(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (root == null)
+            {
+                return;
+            }
+
+            Preorder(root, null);
         }
 
         public TreeNode Preorder(TreeNode root, TreeNode prev)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (root == null)
+            {
+                return prev;
+            }
+
+            var rightMost = Preorder(root.right, prev);
+            var leftMost = Preorder(root.left, rightMost);
+
+            root.left = null;
+            root.right = leftMost;
+
+            return root;
         }
     }
 }

@@ -35,9 +35,7 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace CSharpPractical.Chapter10_Strings.ParenthesesChecker
 {
@@ -45,12 +43,17 @@ namespace CSharpPractical.Chapter10_Strings.ParenthesesChecker
     {
         public bool HasMatchingParentheses(string code)
         {
-            bool isValid = true;
-
-            // TODO Determine if the code has matching parentheses
-
-            // Please dont change the code below (automatic unit tests)
-            return isValid;
+            int balance = 0;
+            foreach (char c in code)
+            {
+                if (c == '(') balance++;
+                else if (c == ')')
+                {
+                    balance--;
+                    if (balance < 0) return false;
+                }
+            }
+            return balance == 0;
         }
     }
 }

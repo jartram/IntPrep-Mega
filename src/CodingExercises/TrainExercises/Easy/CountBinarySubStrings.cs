@@ -13,14 +13,35 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.TrainExercises.Easy
+namespace CodingExercises.TrainExercises.Easy
 {
     public class CountBinarySubStrings
     {
         public int CountBinarySubstrings(string s)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var lastConsecutiveCount = 1;
+            var consecutiveCount = 1;
+            var total = 0;
+
+            for (int i = 1; i < s.Length; i++)
+            {
+                if (s[i] != s[i - 1])
+                {
+                    lastConsecutiveCount = consecutiveCount;
+                    consecutiveCount = 1;
+                    total++;
+                }
+                else
+                {
+                    consecutiveCount++;
+                    if (consecutiveCount <= lastConsecutiveCount)
+                    {
+                        total++;
+                    }
+                }
+            }
+
+            return total;
         }
     }
 }

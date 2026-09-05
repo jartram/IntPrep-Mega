@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium

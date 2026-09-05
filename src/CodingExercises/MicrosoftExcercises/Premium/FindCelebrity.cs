@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 
 namespace CodingExercises.MicrosoftExcercises.Premium
 {
@@ -21,8 +21,17 @@ namespace CodingExercises.MicrosoftExcercises.Premium
     {
         public int Solve(int n)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var candidate = 0;
+
+            for (int i = 1; i < n; i++)
+            {
+                if (Knows(candidate, i))
+                {
+                    candidate = i;
+                }
+            }
+
+            return CheckCelebrity(n, candidate);
         }
 
         private bool Knows(int candidate, int i)

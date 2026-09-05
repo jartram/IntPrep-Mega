@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,8 +21,34 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int[] ExclusiveTime(int n, IList<string> logs)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var exclusiveTimes = new int[n];
+            var stack = new Stack<Interval>();
+            var lastTime = 0;
+
+            foreach (var log in logs)
+            {
+                var interval = new Interval(log);
+
+                if (interval.IsStart)
+                {
+                    if (stack.Count > 0)
+                    {
+                        exclusiveTimes[stack.Peek().FunctionId] += interval.Timestamp - lastTime;
+                    }
+
+                    lastTime = interval.Timestamp;
+                    stack.Push(interval);
+                }
+                else
+                {
+                    var prev = stack.Pop();
+                    exclusiveTimes[prev.FunctionId] += interval.Timestamp - lastTime + 1;
+
+                    lastTime = interval.Timestamp + 1;
+                }
+            }
+
+            return exclusiveTimes;
         }
     }
 

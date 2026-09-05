@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.CommonExercises.Easy_List
@@ -22,8 +22,17 @@ namespace CodingExercises.CommonExercises.Easy_List
     {
         public void Delete(ListNode node)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+
+            var aux = node;
+
+            while (aux.next.next != null)
+            {
+                aux.val = aux.next.val;
+                aux = aux.next;
+            }
+
+            aux.val = aux.next.val;
+            aux.next = null;
         }
     }
 }

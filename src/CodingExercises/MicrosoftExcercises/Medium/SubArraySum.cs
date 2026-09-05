@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,8 +21,24 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int SubarraySum(int[] nums, int k)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var total = 0;
+            var sum = 0;
+            var accumulatorMap = new Dictionary<int, int>();
+            accumulatorMap.Add(0, 1);
+            for (int i = 0; i < nums.Length; i++)
+            {
+                sum += nums[i];
+                if (accumulatorMap.ContainsKey(sum - k))
+                {
+                    total += accumulatorMap[sum - k];
+                }
+                if (!accumulatorMap.ContainsKey(sum))
+                {
+                    accumulatorMap.Add(sum, 0);
+                }
+                accumulatorMap[sum]++;
+            }
+            return total;
         }
     }
 }

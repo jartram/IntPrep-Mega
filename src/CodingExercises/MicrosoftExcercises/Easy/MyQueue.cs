@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
 {
@@ -34,29 +34,35 @@ namespace CodingExercises.MicrosoftExcercises.Easy
         /** Push element x to the back of queue. */
         public void Push(int x)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            while (queue.Count > 0)
+            {
+                stack.Push(queue.Pop());
+            }
+
+            stack.Push(x);
+
+            while (stack.Count > 0)
+            {
+                queue.Push(stack.Pop());
+            }
         }
 
         /** Removes the element from in front of queue and returns that element. */
         public int Pop()
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return queue.Pop();
         }
 
         /** Get the front element. */
         public int Peek()
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return queue.Peek();
         }
 
         /** Returns whether the queue is empty. */
         public bool Empty()
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return queue.Count == 0;
         }
     }
 }

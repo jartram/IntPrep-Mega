@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.Shared
+namespace CodingExercises.Shared
 {
     public class UnionFind
     {
@@ -33,14 +33,25 @@
 
         public void Union(int p, int q)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            int i = Find(p);
+            int j = Find(q);
+
+            if (weights[i] < weights[j])
+            {
+                id[i] = j;
+                weights[j] += weights[i];
+            }
+            else
+            {
+                id[j] = i;
+                weights[i] += weights[j];
+            }
+
         }
 
         public bool Connected(int p, int q)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return Find(p) == Find(q);
         }
 
         public int Find(int i) //path compression
@@ -59,8 +70,13 @@
 
         public int ConnectedComponents()
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            int count = 0;
+            for (int i = 0; i < id.Length; i++)
+            {
+                if (id[i] == i)
+                    count++;
+            }
+            return count;
         }
     }
 }

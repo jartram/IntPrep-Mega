@@ -13,15 +13,14 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.Exercises
+namespace CodingExercises.Exercises
 {
     public class ValidateBST
     {
         //Recursive way
         public bool IsValidBST(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return IsValidBST(root, null, null);
         }
 
         private bool IsValidBST(TreeNode root, int? min, int? max)

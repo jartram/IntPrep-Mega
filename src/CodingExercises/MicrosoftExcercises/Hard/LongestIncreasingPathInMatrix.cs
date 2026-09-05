@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
@@ -25,8 +25,18 @@ namespace CodingExercises.MicrosoftExcercises.Hard
 
         public int LongestIncreasingPath(int[][] matrix)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            int max = -1;
+            var memo = new Dictionary<string, int>();
+
+            for (int i = 0; i < matrix.Length; i++)
+            {
+                for (int j = 0; j < matrix[i].Length; j++)
+                {
+                    max = Math.Max(max, LongestIncreasingPath(matrix, i, j, memo));
+                }
+            }
+
+            return max;
         }
 
         private int LongestIncreasingPath(int[][] matrix, int row, int col, Dictionary<string, int> memo)
@@ -59,8 +69,24 @@ namespace CodingExercises.MicrosoftExcercises.Hard
 
         public IList<int[]> CalculateGreaters(int[][] matrix, int row, int col)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var greaters = new List<int[]>();
+
+            for (int index = 0; index < Ys.Length; index++)
+            {
+                var newRow = row + Ys[index];
+                var newCol = col + Xs[index];
+
+                if (newRow >= 0 &&
+                   newRow < matrix.Length &&
+                   newCol >= 0 &&
+                   newCol < matrix[newRow].Length &&
+                   matrix[row][col] < matrix[newRow][newCol])
+                {
+                    greaters.Add(new int[] { newRow, newCol });
+                }
+            }
+
+            return greaters;
         }
     }
 }

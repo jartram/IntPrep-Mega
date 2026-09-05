@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,8 +21,13 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public bool IsInterleave(string s1, string s2, string s3)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (s1.Length + s2.Length != s3.Length)
+            {
+                return false;
+            }
+            var cache = new Dictionary<string, bool>();
+
+            return IsInterleave(s1, s2, s3, 0, 0, 0, cache);
         }
         private bool IsInterleave(string s1, string s2, string s3, int i1, int i2, int i3, Dictionary<string, bool> cache)
         {

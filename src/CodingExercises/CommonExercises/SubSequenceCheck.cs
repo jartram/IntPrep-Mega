@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.Exercises
+namespace CodingExercises.Exercises
 {
     public class SubSequenceCheck
     {
@@ -23,8 +23,20 @@
 
         public static bool IsSubsequence(string s, string t)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var i = 0;
+            var j = 0;
+
+            while (i < s.Length && j < t.Length)
+            {
+                if (s[i] == s[j])
+                {
+                    i++;
+                }
+
+                j++;
+            }
+
+            return i == s.Length;
         }
     }
 }

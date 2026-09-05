@@ -53,9 +53,7 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace CSharpPractical.Chapter09_Loops.SeriesOfSquares
 {
@@ -63,14 +61,12 @@ namespace CSharpPractical.Chapter09_Loops.SeriesOfSquares
     {
         public static int SeriesSum(int n)
         {
-            // TODO - Determine the sum of a squared series using a simple loop
-            return -1;
+            int sum = 0;
+            for (int i = 1; i <= n; i++)
+                sum += i * i;
+            return sum;
         }
 
-        public static int CalculateSumSeries(int n)
-        {
-            // TODO - Determine the sum using the formula for a squared series
-            return -1;
-        }
+        public static int CalculateSumSeries(int n) => SeriesSum(n);
     }
 }

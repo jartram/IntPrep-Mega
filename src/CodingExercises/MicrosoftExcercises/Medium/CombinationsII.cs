@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,8 +26,13 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public IList<IList<int>> CombinationSum2(int[] candidates, int target)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            combinations = new List<IList<int>>();
+
+            Array.Sort(candidates);
+
+            Backtrack(candidates, 0, 0, target, new List<int>());
+
+            return combinations;
         }
 
         public void Backtrack(int[] candidates,

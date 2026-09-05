@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.Exercises
+namespace CodingExercises.Exercises
 {
     public class PathSum
     {
@@ -34,10 +34,14 @@
         public class Solution
         {
             public bool HasPathSum(TreeNode root, int sum)
-        {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
-        }
+            {
+                if (root == null)
+                    return false;
+                else if (root.left == null && root.right == null && root.val == sum)
+                    return true;
+                else
+                    return HasPathSum(root.left, sum - root.val) || HasPathSum(root.right, sum - root.val);
+            }
         }
     }
 }

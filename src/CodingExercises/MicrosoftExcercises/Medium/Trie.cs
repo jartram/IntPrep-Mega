@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -31,8 +31,21 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         /** Inserts a word into the trie. */
         public void Insert(string word)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var actual = root;
+
+            for (int i = 0; i < word.Length; i++)
+            {
+                var currentChar = word[i];
+
+                if (!actual.ContainsKey(currentChar))
+                {
+                    actual.Put(currentChar, new TrieNode());
+                }
+
+                actual = actual.Get(currentChar);
+            }
+
+            actual.setEnd();
         }
 
         private TrieNode searchPrefix(string word)
@@ -60,15 +73,17 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         /** Returns if the word is in the trie. */
         public bool Search(string word)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var node = searchPrefix(word);
+
+            return node != null && node.isEnd();
         }
 
         /** Returns if there is any word in the trie that starts with the given prefix. */
         public bool StartsWith(string prefix)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var node = searchPrefix(prefix);
+
+            return node != null;
         }
     }
 
@@ -84,32 +99,27 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public bool ContainsKey(char ch)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return links.ContainsKey(ch);
         }
 
         public TrieNode Get(char ch)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return links.ContainsKey(ch) ? links[ch] : null;
         }
 
         public void Put(char ch, TrieNode node)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            links.Add(ch, node);
         }
 
         public void setEnd()
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            isWord = true;
         }
 
         public bool isEnd()
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return isWord;
         }
     }
 
@@ -134,24 +144,42 @@ public class Trie
 
     /** Inserts a word into the trie. */
     public void Insert(string word)
+    {
+        var currentNode = root;
+
+        for (int i = 0; i < word.Length; i++)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            currentNode = currentNode.GetOrInsert(word[i]);
         }
+
+        currentNode.Word = word;
+    }
 
     /** Returns if the word is in the trie. */
     public bool Search(string word)
+    {
+        var currentNode = root;
+
+        for (int i = 0; i < word.Length && currentNode != null; i++)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            currentNode = currentNode.Get(word[i]);
         }
+
+        return currentNode != null && currentNode.Word == word;
+    }
 
     /** Returns if there is any word in the trie that starts with the given prefix. */
     public bool StartsWith(string word)
+    {
+        var currentNode = root;
+
+        for (int i = 0; i < word.Length && currentNode != null; i++)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            currentNode = currentNode.Get(word[i]);
         }
+
+        return currentNode != null;
+    }
 }
 
 public class TrieNode
@@ -166,14 +194,22 @@ public class TrieNode
     }
 
     public TrieNode GetOrInsert(char current)
+    {
+        if (!Links.ContainsKey(current))
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            Links.Add(current, new TrieNode());
         }
 
+        return Links[current];
+    }
+
     public TrieNode Get(char current)
+    {
+        if (!Links.ContainsKey(current))
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return null;
         }
+
+        return Links[current];
+    }
 }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,8 +21,9 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int NumDecodings(string s)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var cache = new Dictionary<int, int>();
+
+            return NumDecodings(s, 0, cache);
         }
 
         private int NumDecodings(string s, int start, Dictionary<int, int> cache)

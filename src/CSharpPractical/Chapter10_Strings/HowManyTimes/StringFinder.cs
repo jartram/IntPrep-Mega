@@ -19,9 +19,8 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+using System.Text.RegularExpressions;
 
 namespace CSharpPractical.Chapter10_Strings.HowManyTimes
 {
@@ -29,12 +28,9 @@ namespace CSharpPractical.Chapter10_Strings.HowManyTimes
     {
         public int SearchAndCount(string text, string word)
         {
-            int numberOfOccurrences = 0;
-
-            // TODO Count the number of times the word occurs in the text
-
-            // Please dont change the code below (automatic unit tests)
-            return numberOfOccurrences;
+            if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(word)) return 0;
+            string pattern = @"\b" + Regex.Escape(word) + @"\b";
+            return Regex.Matches(text, pattern, RegexOptions.IgnoreCase).Count;
         }
     }
 }

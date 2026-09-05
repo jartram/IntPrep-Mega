@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -23,8 +23,36 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public IList<string> Crawl(string startUrl, HtmlParser htmlParser)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var crawled = new List<string>();
+            var queue = new Queue<string>();
+            var visited = new HashSet<string>();
+            var hostName = GetHostName(startUrl);
+
+            Console.WriteLine(hostName);
+
+            queue.Enqueue(startUrl);
+
+            while (queue.Count > 0)
+            {
+                var actual = queue.Dequeue();
+
+                if (!visited.Contains(actual))
+                {
+                    visited.Add(actual);
+
+                    if (GetHostName(actual) == hostName)
+                    {
+                        crawled.Add(actual);
+
+                        foreach (var node in htmlParser.GetUrls(actual))
+                        {
+                            queue.Enqueue((string)node);
+                        }
+                    }
+                }
+            }
+
+            return crawled;
         }
 
         private string GetHostName(string url)

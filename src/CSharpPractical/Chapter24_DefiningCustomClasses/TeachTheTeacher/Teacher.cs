@@ -17,37 +17,19 @@
 
 using System;
 
-namespace CSharpPractical.Chapter24_DefiningCustomClasses.TeachTheTeacher;
-
-public class Teacher
+namespace CSharpPractical.Chapter24_DefiningCustomClasses.TeachTheTeacher
 {
-    public void SetFirstname(string firstname)
+    public class Teacher
     {
-        // TODO: Store teacher's first name
-        throw new NotImplementedException();
-    }
+        private string firstname = "";
+        private string lastname = "";
 
-    public void SetLastname(string lastname)
-    {
-        // TODO: Store teacher's last name
-        throw new NotImplementedException();
-    }
+        public void SetFirstname(string fn) => firstname = fn;
+        public void SetLastname(string ln) => lastname = ln;
 
-    public string Fullname()
-    {
-        // TODO: Return full name
-        throw new NotImplementedException();
-    }
+        public string Fullname() => $"{firstname} {lastname}";
+        public string Email() => $"{firstname.ToLower()}.{lastname.ToLower().Replace(" ", "")}@vives.be";
 
-    public string Email()
-    {
-        // TODO: Return student/teacher email address
-        throw new NotImplementedException();
-    }
-
-    public override string ToString()
-    {
-        // TODO: Return formatted string
-        throw new NotImplementedException();
+        public override string ToString() => $"{Fullname()} <{Email()}>";
     }
 }

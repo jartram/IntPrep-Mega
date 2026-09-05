@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Text;
 
 namespace CodingExercises.MicrosoftExcercises.Premium
@@ -25,8 +25,28 @@ namespace CodingExercises.MicrosoftExcercises.Premium
 
         public int NumDistinctIslands(int[][] grid)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var islands = 0;
+            var hashIslands = new HashSet<string>();
+
+            for (int i = 0; i < grid.Length; i++)
+            {
+                for (int j = 0; j < grid[i].Length; j++)
+                {
+                    if (grid[i][j] == 1)
+                    {
+                        var hashIsland = GetDistinctIsland(grid, i, j);
+
+                        if (!hashIslands.Contains(hashIsland))
+                        {
+                            hashIslands.Add(hashIsland);
+
+                            islands++;
+                        }
+                    }
+                }
+            }
+
+            return islands;
         }
 
         private string GetDistinctIsland(int[][] grid, int i, int j)

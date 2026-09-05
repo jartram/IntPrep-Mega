@@ -24,9 +24,7 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace CSharpPractical.Chapter09_Loops.StartToEnd
 {
@@ -34,20 +32,18 @@ namespace CSharpPractical.Chapter09_Loops.StartToEnd
     {
         public int Sum(int start, int end)
         {
-            // TODO Determine sum of values between start (included) and end (excluded)
             int sum = 0;
-
-            // Please dont change the code below (automatic unit tests)
+            for (int i = start; i < end; i++)
+                sum += i;
             return sum;
         }
 
         public int Sum(int start, int step, int end)
         {
-            // TODO Determine sum of values between start (included) and end (excluded)
-            // Increment from start to end with a value of step
+            if (step <= 0) return 0;
             int sum = 0;
-
-            // Please dont change the code below (automatic unit tests)
+            for (int i = start; i < end; i += step)
+                sum += i;
             return sum;
         }
     }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -26,8 +26,9 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public bool WordBreak(string str, IList<string> words)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            wordSet = words.ToHashSet();
+
+            return WordBreak(str);
         }
 
         private bool WordBreak(string str)
@@ -67,14 +68,58 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public bool WordBreak(string str, IList<string> words)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            foreach (var word in words)
+            {
+                if (!dict.ContainsKey(word))
+                {
+                    dict.Add(word, 0);
+                }
+            }
+
+            Backtrack(str, 0, "");
+
+            return result;
         }
 
         public void Backtrack(string str, int index, string currentWord)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            int i;
+
+            for (i = 0; i < currentWord.Length; i++)
+            {
+                if (str[index + i] != currentWord[i])
+                {
+                    break;
+                }
+            }
+
+            if (index + i == str.Length)
+            {
+                foreach (var tuple in dict)
+                {
+                    if (tuple.Value > 0)
+                    {
+                        result = true;
+
+                        return;
+                    }
+                }
+            }
+
+            if (i == currentWord.Length)
+            {
+                foreach (var word in dict.Keys.ToList())
+                {
+                    if (index + i < str.Length && str[index + i] == word[0] && index + i + word.Length - 1 <= str.Length - 1)
+                    {
+                        dict[word] += 1;
+
+                        Backtrack(str, index + i, word);
+
+                        dict[word] -= 1;
+                    }
+                }
+            }
         }
     }
 }

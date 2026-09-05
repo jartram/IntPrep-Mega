@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -23,8 +23,22 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public string Solve(int[] nums)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            Array.Sort(nums, new MyComparer());
+            var sb = new StringBuilder();
+
+            foreach (var num in nums)
+            {
+                sb.Append(num);
+            }
+
+            var trailingIndex = 0;
+
+            while (trailingIndex < sb.Length - 1 && sb[trailingIndex] == '0')
+            {
+                trailingIndex++;
+            }
+
+            return sb.ToString().Substring(trailingIndex);
         }
     }
 
@@ -32,8 +46,25 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int Compare(int a, int b)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (a == b)
+            {
+                return 0;
+            }
+
+            var optionA = $"{a}{b}";
+            var optionB = $"{b}{a}";
+
+            for (int i = 0; i < optionA.Length; i++)
+            {
+                var comparision = (optionB[i] - '0').CompareTo(optionA[i] - '0');
+
+                if (comparision != 0)
+                {
+                    return comparision;
+                }
+            }
+
+            return 0;
         }
     }
 }

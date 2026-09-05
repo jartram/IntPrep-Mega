@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System;
 
@@ -23,14 +23,38 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public bool IsBalanced(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return IsBalancedAux(root) != -1;
         }
 
         public int IsBalancedAux(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (root == null)
+            {
+                return 0;
+            }
+            else
+            {
+                var left = IsBalancedAux(root.left);
+
+                if (left == -1)
+                {
+                    return -1;
+                }
+
+                var right = IsBalancedAux(root.right);
+
+                if (right == -1)
+                {
+                    return -1;
+                }
+
+                if (Math.Abs(left - right) > 1)
+                {
+                    return -1;
+                }
+
+                return Math.Max(left, right) + 1;
+            }
         }
     }
 }

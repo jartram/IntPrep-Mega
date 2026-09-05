@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System;
 
@@ -23,8 +23,7 @@ namespace CodingExercises.MicrosoftExcercises.Premium
     {
         public int LargestBSTSubtree(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return FindMax(root).count;
         }
 
         private (int min, int max, int count) FindMax(TreeNode root)

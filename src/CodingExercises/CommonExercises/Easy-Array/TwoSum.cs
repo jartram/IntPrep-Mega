@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.CommonExercises.Easy_Array
 {
@@ -22,8 +22,21 @@ namespace CodingExercises.CommonExercises.Easy_Array
     {
         public int[] GetTwoSum(int[] nums, int target)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var hs = new Dictionary<int, int>();
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (hs.ContainsKey(target - nums[i]))
+                {
+                    return new int[] { i, hs[target - nums[i]] };
+                }
+                else
+                {
+                    hs.Add(nums[i], i);
+                }
+            }
+
+            return null;
         }
     }
 }

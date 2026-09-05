@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -36,8 +36,30 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public int PickIndex()
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            int randomWeight = _rnd.Next(0, _weightSum.Last()) + 1;
+
+            int low = 0;
+            int high = _weightSum.Length - 1;
+
+            while (low <= high)
+            {
+                var mid = low + (high - low) / 2;
+
+                if (_weightSum[mid] == randomWeight)
+                {
+                    return mid;
+                }
+                else if (_weightSum[mid] > randomWeight)
+                {
+                    high = mid - 1;
+                }
+                else
+                {
+                    low = mid + 1;
+                }
+            }
+
+            return low;
         }
     }
 }

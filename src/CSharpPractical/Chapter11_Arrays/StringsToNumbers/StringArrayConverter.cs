@@ -34,23 +34,16 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+using System.Linq;
 
 namespace CSharpPractical.Chapter11_Arrays.StringsToNumbers
 {
     public class StringArrayConverter
     {
-        public int[] ConvertToIntegers(string[] stringValues)
+        public int[] ConvertToIntegers(string[] values)
         {
-            // TODO Create an array of integers with the same size as the stringValues array
-            int[] numbers = null;
-
-            // TODO Convert each string in stringValues to an integer and store the result in numbers
-
-            // Please don't change the code below (automatic unit tests)
-            return numbers;
+            return Array.ConvertAll(values, int.Parse);
         }
     }
 }

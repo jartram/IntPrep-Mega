@@ -28,13 +28,7 @@ namespace CSharpPractical.Chapter03_StartingInCsharp.NeedABreak
     {
         public static string[] GetLines()
         {
-            // TODO: Fix the syntax errors below so it returns the two lines:
-            // "One programmer said to another:"
-            // "I need a </br>"
-            //
-            // Console.WriteLine"One programmer said to another:");
-            // Console.WriteLine("I need a </br>);
-            throw new NotImplementedException();
+            return new string[] { "One programmer said to another:", "I need a </br>" };
         }
 
         public static void Main(string[] args)

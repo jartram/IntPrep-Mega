@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,8 +24,11 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public IList<IList<int>> PathSum(TreeNode root, int targetSum)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var pathSums = new List<IList<int>>();
+
+            PathSum(root, targetSum, 0, new List<int>(), pathSums);
+
+            return pathSums;
         }
 
         private void PathSum(TreeNode root,

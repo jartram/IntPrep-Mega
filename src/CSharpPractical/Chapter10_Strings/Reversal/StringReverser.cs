@@ -15,9 +15,8 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+using System.Linq;
 
 namespace CSharpPractical.Chapter10_Strings.Reversal
 {
@@ -25,12 +24,9 @@ namespace CSharpPractical.Chapter10_Strings.Reversal
     {
         public string Reverse(string text)
         {
-            string reversed = "";
-
-            // TODO Reverse the character order of the text and put the result in reversed.
-
-            // Please dont change the code below (automatic unit tests)
-            return reversed;
+            char[] chars = text.ToCharArray();
+            Array.Reverse(chars);
+            return new string(chars);
         }
     }
 }

@@ -29,9 +29,8 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+using System.Linq;
 
 namespace CSharpPractical.Chapter10_Strings.HoloGram
 {
@@ -39,12 +38,9 @@ namespace CSharpPractical.Chapter10_Strings.HoloGram
     {
         public bool IsPangram(string text)
         {
-            bool isAPangram = true;
-
-            // TODO Check if text is a pangram and thereby contains all the letters of the alphabet
-            // TODO Convert text to lowercase first
-
-            return isAPangram;
+            if (string.IsNullOrEmpty(text)) return false;
+            string lower = text.ToLower();
+            return "abcdefghijklmnopqrstuvwxyz".All(c => lower.Contains(c));
         }
     }
 }

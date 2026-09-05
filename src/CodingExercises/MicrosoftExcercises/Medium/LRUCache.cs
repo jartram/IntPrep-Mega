@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -33,14 +33,34 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public int Get(int key)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (lookup.ContainsKey(key))
+            {
+                cache.Remove(lookup[key]);
+                cache.AddFirst(lookup[key]);
+
+                return lookup[key][1];
+            }
+
+            return -1;
         }
 
         public void Put(int key, int value)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+
+            if (lookup.ContainsKey(key))
+            {
+                cache.Remove(lookup[key]);
+                lookup.Remove(key);
+            }
+
+            lookup.Add(key, new int[] { key, value });
+            cache.AddFirst(lookup[key]);
+
+            while (cache.Count > capacity)
+            {
+                lookup.Remove(cache.Last.Value[0]);
+                cache.RemoveLast();
+            }
         }
     }
 }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.AmazonJourney.Hard
 {
@@ -21,8 +21,20 @@ namespace CodingExercises.AmazonJourney.Hard
     {
         public IList<string> FindAllConcatenatedWordsInADict(string[] words)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var trie = new Trie(words);
+            var concatenatedWords = new List<string>();
+
+            foreach (var word in words)
+            {
+                var cache = new bool?[word.Length + 1];
+
+                if (IsConcatenatedWord(word, trie._root, startIndex: 0, containedWords: 0, cache: cache))
+                {
+                    concatenatedWords.Add(word);
+                }
+            }
+
+            return concatenatedWords;
         }
 
         private bool IsConcatenatedWord(string word, TrieNode root, int startIndex, int containedWords, bool?[] cache)
@@ -76,8 +88,21 @@ namespace CodingExercises.AmazonJourney.Hard
 
         public void AddWord(string word)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var current = _root;
+
+            for (int index = 0; index < word.Length; index++)
+            {
+                var currentChar = word[index];
+
+                if (!current.Links.ContainsKey(currentChar))
+                {
+                    current.Links.Add(currentChar, new TrieNode());
+                }
+
+                current = current.Links[currentChar];
+            }
+
+            current.Word = word;
         }
 
         private void BuildTrie(string[] words)

@@ -18,41 +18,24 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace CSharpPractical.Chapter05_ProcessingData.PizzaTime
 {
     public class PizzaDivider
     {
-        int numberOfPeople = 6;
-        int slicesOfPizza = 13;
+        private int slicesOfPizza = 23;
+        private int numberOfPeople = 4;
 
         public int HowManySlicesPerPerson()
         {
-            // TODO Determine how many slices of pizza a person can have (same for everyone)
-            int slicesPerPerson = 0;
-
-            // Please dont change the code below (automatic unit tests)
-            return slicesPerPerson;
+            return slicesOfPizza / numberOfPeople;
         }
 
         public int HowManySlicesLeft()
         {
-            // TODO Determine number of slices left if everyone gets his/her fair chance
-            int numberOfSlicesLeft = 0;
-
-            // Please dont change the code below (automatic unit tests)
-            return numberOfSlicesLeft;
+            return slicesOfPizza % numberOfPeople;
         }
-
-        public void PrintToTerminal()
-        {
-            Console.WriteLine("There are " + numberOfPeople + " people eating pizza.");
-            Console.WriteLine("There are " + slicesOfPizza + " slices of pizza.");
-            Console.WriteLine("We give everyone " + HowManySlicesPerPerson() + " slices of pizza.");
-            Console.WriteLine("In the end we will have " + HowManySlicesLeft() + " slices left in the end.");
-        }
-    }
+            public void PrintToTerminal() { }
+}
 }

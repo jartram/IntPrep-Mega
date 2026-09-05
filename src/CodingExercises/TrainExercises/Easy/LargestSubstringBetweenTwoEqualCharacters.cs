@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CodingExercises.TrainExercises.Easy
@@ -22,8 +22,23 @@ namespace CodingExercises.TrainExercises.Easy
     {
         public int MaxLengthBetweenEqualCharacters(string s)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var max = -1;
+
+            var dictionaryFirstPosition = new Dictionary<char, int>();
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (dictionaryFirstPosition.ContainsKey(s[i]))
+                {
+                    max = Math.Max(max, i - dictionaryFirstPosition[s[i]] - 1);
+                }
+                else
+                {
+                    dictionaryFirstPosition.Add(s[i], i);
+                }
+            }
+
+            return max;
         }
     }
 }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -24,14 +24,39 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public IList<IList<int>> Permute(int[] nums)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var result = new List<IList<int>>();
+
+            foreach (var num in nums)
+            {
+                visited.Add(num);
+
+                Backtrack(nums, result);
+
+                visited.Remove(num);
+            }
+
+            return result;
         }
 
         public void Backtrack(int[] nums, IList<IList<int>> result)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (visited.Count == nums.Length)
+            {
+                result.Add(visited.ToList());
+                return;
+            }
+
+            foreach (var num in nums)
+            {
+                if (!visited.Contains(num))
+                {
+                    visited.Add(num);
+
+                    Backtrack(nums, result);
+
+                    visited.Remove(num);
+                }
+            }
         }
     }
 }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System;
 
@@ -23,8 +23,14 @@ namespace CodingExercises.MicrosoftExcercises.Premium
     {
         public int ClosestValue(TreeNode root, double target)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            int val, closest = root.val;
+            while (root != null)
+            {
+                val = root.val;
+                closest = Math.Abs(val - target) < Math.Abs(closest - target) ? val : closest;
+                root = target < root.val ? root.left : root.right;
+            }
+            return closest;
         }
     }
 }

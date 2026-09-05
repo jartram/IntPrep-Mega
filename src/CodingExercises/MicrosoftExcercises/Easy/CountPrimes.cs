@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
 {
@@ -21,8 +21,35 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public int Solve(int n)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var isPrime = new bool[n];
+
+            var count = 0;
+
+            for (int i = 2; i < n; i++)
+            {
+                isPrime[i] = true;
+            }
+
+            for (int i = 2; i < Math.Sqrt(n); i++)
+            {
+                if (isPrime[i])
+                {
+                    for (int j = i * i; j < n; j += i)
+                    {
+                        isPrime[j] = false;
+                    }
+                }
+            }
+
+            for (int i = 2; i < n; i++)
+            {
+                if (isPrime[i])
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
     }
 }

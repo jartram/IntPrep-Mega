@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,14 +52,12 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public int Next()
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return Iterator.ElementAt(Index++).val;
         }
 
         public bool HasNext()
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return Index < Iterator.Count;
         }
     }
 }

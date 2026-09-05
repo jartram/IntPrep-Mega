@@ -37,9 +37,7 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace CSharpPractical.Chapter08_MakingDecisions.CoordinatePlane
 {
@@ -50,15 +48,14 @@ namespace CSharpPractical.Chapter08_MakingDecisions.CoordinatePlane
 
         public string Quadrant()
         {
-            // TODO Determine the quadrant of the coordinates
-            // first, second, third, fourth or origin (if both 0)
-            string quadrant = "";
-
-            // Please dont change the code below (automatic unit tests)
-            return quadrant;
+            if (x == 0 && y == 0) return "origin";
+            if (x > 0 && y > 0) return "first";
+            if (x < 0 && y > 0) return "second";
+            if (x < 0 && y < 0) return "third";
+            if (x > 0 && y < 0) return "fourth";
+            return "origin";
         }
 
-        // Properties - Dont change code below
         public double X { get { return x; } set { x = value; } }
         public double Y { get { return y; } set { y = value; } }
     }

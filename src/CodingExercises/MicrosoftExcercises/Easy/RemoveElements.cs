@@ -13,14 +13,28 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.MicrosoftExcercises.Easy
+namespace CodingExercises.MicrosoftExcercises.Easy
 {
     public class RemoveElements
     {
         public int RemoveDuplicates(int[] nums)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (nums.Length < 2)
+            {
+                return nums.Length;
+            }
+            var leftPosition = 0;
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (nums[leftPosition] != nums[i])
+                {
+                    leftPosition++;
+                    nums[leftPosition] = nums[i];
+                }
+            }
+
+            return leftPosition + 1;
         }
     }
 }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System.Collections.Generic;
 
@@ -23,8 +23,25 @@ namespace CodingExercises.MicrosoftExcercises.Premium
     {
         public IList<int> BoundaryOfBinaryTree(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var boundary = new List<int>();
+
+            if (root == null)
+            {
+                return boundary;
+            }
+
+            boundary.Add(root.val);
+
+            AddLeft(root.left, boundary);
+
+            if (root.left != null || root.right != null)
+            {
+                AddLeaves(root, boundary);
+            }
+
+            AddRight(root.right, boundary);
+
+            return boundary;
         }
 
         //preorder

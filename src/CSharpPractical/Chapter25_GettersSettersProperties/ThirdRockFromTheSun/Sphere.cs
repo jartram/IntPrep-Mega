@@ -14,26 +14,25 @@
 
 using System;
 
-namespace CSharpPractical.Chapter25_GettersSettersProperties.ThirdRockFromTheSun;
-
-public class Sphere
+namespace CSharpPractical.Chapter25_GettersSettersProperties.ThirdRockFromTheSun
 {
-    public double Radius { get; set; }
-    public double Diameter
+    public class Sphere
     {
-        get => Radius * 2;
-        set => Radius = value / 2;
-    }
+        private double radius = 0;
 
-    public double Surface()
-    {
-        // TODO: Return 4 * PI * r^2
-        throw new NotImplementedException();
-    }
+        public double Radius
+        {
+            get => radius;
+            set => radius = Math.Abs(value);
+        }
 
-    public double Volume()
-    {
-        // TODO: Return (4/3) * PI * r^3
-        throw new NotImplementedException();
+        public double Diameter
+        {
+            get => radius * 2;
+            set => radius = Math.Abs(value) / 2;
+        }
+
+        public double Surface() => 4 * Math.PI * radius * radius;
+        public double Volume() => (4.0 / 3.0) * Math.PI * radius * radius * radius;
     }
 }

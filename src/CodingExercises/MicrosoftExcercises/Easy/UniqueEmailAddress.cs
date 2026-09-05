@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Text;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
@@ -22,8 +22,36 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public int NumUniqueEmails(string[] emails)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var finalEmails = new HashSet<string>();
+
+            foreach (var email in emails)
+            {
+                var parseEmail = new StringBuilder();
+                var atSignfound = false;
+                var plusSignFound = false;
+
+                for (var i = 0; i < email.Length; i++)
+                {
+                    var actual = email[i];
+
+                    atSignfound |= actual == '@';
+                    plusSignFound |= actual == '+';
+
+                    if (atSignfound)
+                    {
+                        parseEmail.Append(actual);
+                    }
+                    else if (!plusSignFound && actual != '.')
+                    {
+                        parseEmail.Append(actual);
+                    }
+                }
+
+                finalEmails.Add(parseEmail.ToString());
+
+            }
+
+            return finalEmails.Count;
         }
     }
 }

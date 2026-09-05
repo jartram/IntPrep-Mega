@@ -39,9 +39,8 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+using System.Linq;
 
 namespace CSharpPractical.Chapter11_Arrays.TurnTheTables
 {
@@ -49,16 +48,7 @@ namespace CSharpPractical.Chapter11_Arrays.TurnTheTables
     {
         public int[] Multiply(int[] left, int[] right)
         {
-            // TODO Create an array of int
-            // For its size take either the length of left or right (both should be the same size)
-            int[] result = null;
-
-            // TODO Multiply the elements in left with the elements in right.
-            // Place the result in the result array.
-
-
-            // Please don't change the code below (automatic unit tests)
-            return result;
+            return left.Zip(right, (a, b) => a * b).ToArray();
         }
     }
 }

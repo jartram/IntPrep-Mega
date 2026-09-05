@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Text;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
@@ -22,8 +22,11 @@ namespace CodingExercises.MicrosoftExcercises.Hard
     {
         public IList<IList<string>> SolveNQueens(int n)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            IList<IList<string>> combinations = new List<IList<string>>();
+
+            Backtrack(combinations, 0, CreateChessboard(n), n);
+
+            return combinations;
         }
 
         private IList<string> CreateResult(char[,] board)
@@ -82,8 +85,47 @@ namespace CodingExercises.MicrosoftExcercises.Hard
 
         public bool IsUnderAttack(int row, int column, char[,] board, int n)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            //check \ diagonal
+            var currentRow = row;
+            var currentColumn = column;
+
+            while (currentRow > 0 && currentColumn > 0)
+            {
+                if (board[currentRow - 1, currentColumn - 1] == 'Q')
+                {
+                    return true;
+                }
+
+                currentRow--;
+                currentColumn--;
+            }
+            //check / diagonal
+
+            currentRow = row;
+            currentColumn = column;
+
+            while (currentRow > 0 && currentColumn < n - 1)
+            {
+                if (board[currentRow - 1, currentColumn + 1] == 'Q')
+                {
+                    return true;
+                }
+
+                currentRow--;
+                currentColumn++;
+            }
+
+            //check vertical
+
+            for (currentRow = 0; currentRow < row; currentRow++)
+            {
+                if (board[currentRow, column] == 'Q')
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

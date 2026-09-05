@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System;
 
@@ -23,8 +23,7 @@ namespace CodingExercises.CommonExercises.Easy_Trees
     {
         public TreeNode SortedArrayToBST(int[] nums)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return SortedArrayToBST(nums, 0, nums.Length - 1);
         }
 
         private TreeNode SortedArrayToBST(int[] nums, int low, int high)

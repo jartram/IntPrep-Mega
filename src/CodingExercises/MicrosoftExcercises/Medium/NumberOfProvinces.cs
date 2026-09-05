@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,14 +21,47 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int FindCircleNum(int[][] M)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var count = 0;
+            var visited = new HashSet<int>();
+
+            for (int i = 0; i < M.Length; i++)
+            {
+                for (int j = 0; j < M[0].Length; j++)
+                {
+                    if (M[i][j] == 1 && !visited.Contains(i))
+                    {
+                        count++;
+                        BFS(M, i, visited);
+                    }
+                }
+            }
+
+            return count;
         }
 
         public void BFS(int[][] graph, int node, HashSet<int> visited)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var queue = new Queue<int>();
+
+            queue.Enqueue(node);
+
+            while (queue.Count > 0)
+            {
+                var actual = queue.Dequeue();
+
+                if (!visited.Contains(actual))
+                {
+                    visited.Add(actual);
+
+                    for (int i = 0; i < graph[actual].Length; i++)
+                    {
+                        if (graph[actual][i] == 1)
+                        {
+                            queue.Enqueue(i);
+                        }
+                    }
+                }
+            }
         }
     }
 }

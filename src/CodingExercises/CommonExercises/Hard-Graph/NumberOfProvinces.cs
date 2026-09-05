@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using System.Collections.Generic;
 
 namespace CodingExercises.CommonExercises.Hard_Graph
@@ -23,20 +23,60 @@ namespace CodingExercises.CommonExercises.Hard_Graph
         //Union-Find solution
         public int FindCircleNum(int[][] M)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+
+            int n = M.Length;
+            var uf = new UnionFind(n);
+
+            for (int i = 0; i < M.Length; i++)
+            {
+                for (int j = 0; j < M[0].Length; j++)
+                {
+                    if (M[i][j] == 1 && i != j) // i != j (can't be friend to oneself)
+                        uf.Union(i, j);
+                }
+            }
+            return uf.ConnectedComponents();
         }
 
         public int FindCircleNumBFS(int[][] isConnected)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var totalCount = 0;
+            var visited = new HashSet<int>();
+
+            for (int i = 0; i < isConnected.Length; i++)
+            {
+                if (!visited.Contains(i))
+                {
+                    totalCount++;
+                    BFS(i, isConnected, visited);
+                }
+            }
+
+            return totalCount;
         }
 
         public void BFS(int i, int[][] isConnected, HashSet<int> visited)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var queue = new Queue<int>();
+            queue.Enqueue(i);
+
+            while (queue.Count > 0)
+            {
+                var actual = queue.Dequeue();
+
+                if (!visited.Contains(actual))
+                {
+                    visited.Add(actual);
+
+                    for (int j = 0; j < isConnected[actual].Length; j++)
+                    {
+                        if (actual != j && !visited.Contains(j) && isConnected[actual][j] == 1)
+                        {
+                            queue.Enqueue(j);
+                        }
+                    }
+                }
+            }
         }
     }
 }

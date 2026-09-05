@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.Exercises
 {
@@ -21,8 +21,28 @@ namespace CodingExercises.Exercises
     {
         public bool Exist(char[][] board, string word)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var exist = false;
+
+            for (int i = 0; i < board.Length && !exist; i++)
+            {
+                for (int j = 0; j < board[0].Length && !exist; j++)
+                {
+                    if (board[i][j] == word[0])
+                    {
+                        var tmp = board[i][j];
+                        board[i][j] = '*';
+
+                        if (Exist(board, word, 1, i, j))
+                        {
+                            return true;
+                        }
+
+                        board[i][j] = tmp;
+                    }
+                }
+            }
+
+            return false;
         }
 
         private bool Exist(char[][] board,

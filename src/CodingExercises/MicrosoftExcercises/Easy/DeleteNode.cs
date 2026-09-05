@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
@@ -22,8 +22,18 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public void Solve(ListNode node)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var actual = node;
+            ListNode prev = null;
+
+            while (actual != null && actual.next != null)
+            {
+                actual.val = actual.next.val;
+
+                prev = actual;
+                actual = actual.next;
+            }
+
+            prev.next = null;
         }
     }
 }

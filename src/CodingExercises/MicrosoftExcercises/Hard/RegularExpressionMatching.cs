@@ -13,14 +13,15 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.MicrosoftExcercises.Hard
+namespace CodingExercises.MicrosoftExcercises.Hard
 {
     public class RegularExpressionMatching
     {
         public bool IsMatch(string text, string pattern)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var dp = new bool?[text.Length + 1, pattern.Length + 1];
+
+            return IsMatch(0, 0, text, pattern, dp);
         }
 
         private bool IsMatch(int i, int j, string text, string pattern, bool?[,] dp)

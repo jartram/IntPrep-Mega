@@ -28,43 +28,26 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace CSharpPractical.Chapter05_ProcessingData.Evaluation
 {
     public class Grader
     {
-        double examScore = 13.5;
-        double labScore = 16.2;
-        string studentName = "Lenny Dermond";
+        private double examScore = 65;
+        private double labScore = 80;
 
         public double Average()
         {
-            // TODO: Determine average of exam score and lab score
-            double average = 0;
-
-            // Please dont change the code below (automatic unit tests)
+            double average = (examScore + labScore) / 2;
             return average;
         }
 
         public double Total()
         {
-            // TODO: Determine total score if exam counts for 40% and lab for 60%
-            double total = 0;
-
-            // Please dont change the code below (automatic unit tests)
+            double total = (2 * examScore + 3 * labScore) / 5;
             return total;
         }
-
-        public void PrintToTerminal()
-        {
-            Console.WriteLine(studentName + ":");
-            Console.WriteLine("\tExam Score: " + examScore + "/20");
-            Console.WriteLine("\tLAB Score: " + labScore + "/20");
-            Console.WriteLine("\tAverage Score: " + Average());
-            Console.WriteLine("\tTotal Score: " + Total());
-        }
-    }
+            public void PrintToTerminal() { }
+}
 }

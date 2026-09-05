@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,8 +21,18 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public bool Solve(int[] nums)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            int canWalk = nums[0];
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (canWalk == 0) 
+                {
+                    return false;
+                }
+
+                canWalk--;
+                canWalk = Math.Max(canWalk, nums[i]);
+            }
+            return true;
         }
     }
 }

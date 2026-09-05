@@ -23,8 +23,12 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int MaxLength(IList<string> arr)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var max = 0;
+            var sets = BuildHashSets(arr);
+
+            Backtrack(0, sets, ref max, new HashSet<char>());
+
+            return max;
         }
 
         private void Backtrack(int start, IList<HashSet<char>> sets, ref int max, HashSet<char> current)

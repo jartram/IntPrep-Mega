@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
 {
@@ -21,8 +21,16 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public int SmallestRangeI(int[] A, int k)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var min = A[0];
+            var max = A[0];
+
+            for (int i = 1; i < A.Length; i++)
+            {
+                min = Math.Min(min, A[i]);
+                max = Math.Max(max, A[i]);
+            }
+
+            return Math.Max(0, (max - k) - (min + k));
         }
     }
 }

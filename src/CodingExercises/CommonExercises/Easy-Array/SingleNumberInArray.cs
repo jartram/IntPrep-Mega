@@ -13,14 +13,20 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.CommonExercises.Easy_Array
+namespace CodingExercises.CommonExercises.Easy_Array
 {
     public class SingleNumberInArray
     {
         public int SingleNumber(int[] nums)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            int result = 0;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                result = result ^ nums[i];
+            }
+
+            return result;
         }
     }
 }

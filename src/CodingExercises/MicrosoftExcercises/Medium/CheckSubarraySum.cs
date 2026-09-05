@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,8 +21,32 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public bool Solve(int[] nums, int k)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var indexes = new Dictionary<int, int>()
+        {
+            {0, -1}
+        };
+            var sum = 0;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                sum = (sum + nums[i]) % k;
+
+                if (indexes.ContainsKey(sum))
+                {
+                    var index = indexes[sum];
+
+                    if (i - index > 1)
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    indexes.Add(sum, i);
+                }
+            }
+
+            return false;
         }
     }
 }

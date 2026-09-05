@@ -31,9 +31,8 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+using System.Linq;
 
 namespace CSharpPractical.Chapter11_Arrays.TheSumOfAllNumbers
 {
@@ -41,13 +40,7 @@ namespace CSharpPractical.Chapter11_Arrays.TheSumOfAllNumbers
     {
         public int CalculateSum(int[] numbers)
         {
-            int sum = 0;
-
-            // TODO Determine the sum of the numbers using a for loop
-
-
-            // Please don't change the code below (automatic unit tests)
-            return sum;
+            return numbers.Sum();
         }
     }
 }

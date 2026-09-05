@@ -13,14 +13,25 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.MicrosoftExcercises.Premium
+namespace CodingExercises.MicrosoftExcercises.Premium
 {
     public class ReverseWords3
     {
         public void ReverseWords(char[] s)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            Reverse(s, 0, s.Length - 1);
+            var index = 0;
+            var left = 0;
+            while (index <= s.Length)
+            {
+                while (index < s.Length && s[index] != ' ')
+                {
+                    index++;
+                }
+                Reverse(s, left, index - 1);
+                index++;
+                left = index;
+            }
         }
         private void Reverse(char[] s, int left, int right)
         {

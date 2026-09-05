@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.CommonExercises.Easy_List
@@ -22,14 +22,39 @@ namespace CodingExercises.CommonExercises.Easy_List
     {
         public ListNode Solution(ListNode head)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (head == null || head.next == null)
+            {
+                return head;
+            }
+            else
+            {
+                var actual = Solution(head.next);
+                head.next.next = head;
+                head.next = null;
+
+                return actual;
+            }
         }
 
         public ListNode ReverseListTwoPointers(ListNode head)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (head == null)
+            {
+                return null;
+            }
+
+            var slow = head;
+            ListNode prev = null;
+
+            while (slow != null)
+            {
+                var tmp = slow.next;
+                slow.next = prev;
+                prev = slow;
+                slow = tmp;
+            }
+
+            return prev;
         }
     }
 }

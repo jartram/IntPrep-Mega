@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
@@ -22,8 +22,25 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public int[] Solve(int[] digits)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var carry = 1;
+
+            var list = new LinkedList<int>();
+
+            for (int i = digits.Length - 1; i >= 0; i--)
+            {
+                var sum = digits[i] + carry;
+
+
+                list.AddFirst(sum % 10);
+                carry = sum / 10;
+            }
+
+            if (carry > 0)
+            {
+                list.AddFirst(carry);
+            }
+
+            return list.ToArray();
         }
     }
 }

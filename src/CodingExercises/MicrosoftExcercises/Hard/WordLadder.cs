@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
 {
@@ -21,8 +21,72 @@ namespace CodingExercises.MicrosoftExcercises.Hard
     {
         public int LadderLength(string beginWord, string endWord, IList<string> wordList)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (!wordList.Contains(endWord) || beginWord == endWord)
+            {
+                return 0;
+            }
+            wordList.Add(beginWord);
+            var wordSet = CreateWordSet(wordList);
+            var queue = new Queue<string>();
+            var visited = new HashSet<string>();
+            var visitedEnd = new HashSet<string>();
+            var startQueueLevel = 0;
+            queue.Enqueue(beginWord);
+
+            var endQueueLevel = 0;
+            var endQueue = new Queue<string>();
+
+            endQueue.Enqueue(endWord);
+
+            while (queue.Count > 0 && endQueue.Count > 0)
+            {
+                var queueSize = queue.Count;
+                var endQueueSize = endQueue.Count;
+
+                startQueueLevel++;
+
+                while (queueSize > 0)
+                {
+                    var actual = queue.Dequeue();
+
+                    if (visitedEnd.Contains(actual))
+                    {
+                        return endQueueLevel + startQueueLevel - 1;
+                    }
+
+                    if (!visited.Contains(actual))
+                    {
+                        visited.Add(actual);
+                        EnqueueNeighbours(actual, wordSet, visited, queue);
+                    }
+
+                    queueSize--;
+                }
+
+                endQueueLevel++;
+
+                while (endQueueSize > 0)
+                {
+                    var actual = endQueue.Dequeue();
+
+
+                    if (visited.Contains(actual))
+                    {
+                        return endQueueLevel + startQueueLevel - 1;
+                    }
+
+                    if (!visitedEnd.Contains(actual))
+                    {
+                        visitedEnd.Add(actual);
+                        EnqueueNeighbours(actual, wordSet, visitedEnd, endQueue);
+                    }
+
+                    endQueueSize--;
+                }
+
+            }
+
+            return 0;
         }
 
         private Dictionary<string, HashSet<string>> CreateWordSet(IList<string> wordList)

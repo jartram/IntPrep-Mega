@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 
 namespace CodingExercises.CommonExercises.Easy_DynamicProgramming
 {
@@ -21,8 +21,16 @@ namespace CodingExercises.CommonExercises.Easy_DynamicProgramming
     {
         public int MaxProfit(int[] prices)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var profits = new int[prices.Length + 1];
+            var max = 0;
+
+            for (int i = 1; i < prices.Length; i++)
+            {
+                profits[i] = Math.Max(0, profits[i - 1] + (prices[i] - prices[i - 1]));
+                max = Math.Max(profits[i], max);
+            }
+
+            return max;
         }
     }
 }

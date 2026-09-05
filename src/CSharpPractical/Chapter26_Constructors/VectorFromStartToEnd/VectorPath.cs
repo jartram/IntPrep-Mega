@@ -14,32 +14,27 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CSharpPractical.Chapter26_Constructors.VectorFromStartToEnd
 {
     public class VectorPath
     {
-        public VectorPath()
-        {
-            // TODO: Initialize vector path
-        }
+        private List<Vector> vectors = new List<Vector>();
 
-        public void Add(Vector vector)
+        public void Add(Vector v)
         {
-            // TODO: Add vector to path
-            throw new NotImplementedException();
+            vectors.Add(v);
         }
 
         public Vector ResultingVector()
         {
-            // TODO: Calculate and return resulting net vector
-            throw new NotImplementedException();
+            return new Vector(vectors.Sum(v => v.X()), vectors.Sum(v => v.Y()));
         }
 
         public override string ToString()
         {
-            // TODO: Return path description string
-            throw new NotImplementedException();
+            return string.Join("\n", vectors.Select(v => v.ToString()));
         }
     }
 }

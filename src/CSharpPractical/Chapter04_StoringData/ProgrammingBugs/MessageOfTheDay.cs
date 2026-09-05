@@ -22,9 +22,7 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace CSharpPractical.Chapter04_StoringData.ProgrammingBugs
 {
@@ -34,15 +32,9 @@ namespace CSharpPractical.Chapter04_StoringData.ProgrammingBugs
         {
             string message = "If debugging is the process of removing software bugs, " +
                 "then programming must be the process of putting them in.";
-
             string author = "Edsger Dijkstra";
-
-            // TODO: Add quoted author to the message (on a new line), also prefix author with tab
-            string authoredMessage = "";
-
+            string authoredMessage = $"{message}\n\tBy \"{author}\"";
             Console.WriteLine(authoredMessage);
-
-            // Please dont change the code below (automatic unit tests)
             return authoredMessage;
         }
     }

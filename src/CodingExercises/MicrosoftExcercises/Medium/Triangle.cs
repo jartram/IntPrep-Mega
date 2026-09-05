@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -22,8 +22,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int MinimumTotal(IList<IList<int>> triangle)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var cache = new Dictionary<string, int>();
+            return MinimumTotal(triangle, 0, 0, cache);
         }
 
         private int MinimumTotal(IList<IList<int>> triangle, int row, int col, Dictionary<string, int> cache)

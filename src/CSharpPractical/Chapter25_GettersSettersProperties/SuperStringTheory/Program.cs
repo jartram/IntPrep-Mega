@@ -63,38 +63,38 @@ namespace CSharpPractical.Chapter25_GettersSettersProperties.SuperStringTheory
             Console.WriteLine("Lets append the word \" World\" to \"Hello\"");
             SuperString hello = new SuperString();
 
-            hello.SetText("Hello");
-            Console.WriteLine(" > Before: " + hello.GetText());
+            hello.Text = "Hello";
+            Console.WriteLine(" > Before: " + hello.Text);
 
             hello.Append(" World");
-            Console.WriteLine(" > After: " + hello.GetText());
+            Console.WriteLine(" > After: " + hello.Text);
 
             // IsValidNumber
             Console.WriteLine("\nLet's check some numbers ...");
             SuperString number = new SuperString();
 
-            number.SetText("1234");
-            Console.WriteLine($"Is {number.GetText()} a valid number? " + number.IsValidNumber());
+            number.Text = "1234";
+            Console.WriteLine($"Is {number.Text} a valid number? " + number.IsValidNumber());
 
-            number.SetText("SDFNBDSF");
-            Console.WriteLine($"Is {number.GetText()} a valid number? " + number.IsValidNumber());
+            number.Text = "SDFNBDSF";
+            Console.WriteLine($"Is {number.Text} a valid number? " + number.IsValidNumber());
 
-            number.SetText("#88");
-            Console.WriteLine($"Is {number.GetText()} a valid number? " + number.IsValidNumber());
+            number.Text = "#88";
+            Console.WriteLine($"Is {number.Text} a valid number? " + number.IsValidNumber());
 
             // Trim
             Console.WriteLine("\nOK, now for some trimming ...");
             SuperString text = new SuperString();
 
-            text.SetText("  Hello There!");
-            Console.Write($"If we trim at the beginning \"{text.GetText()}\"");
+            text.Text = "  Hello There!";
+            Console.Write($"If we trim at the beginning \"{text.Text}\"");
             text.TrimStart();
-            Console.WriteLine($", then we get \"{text.GetText()}\"");
+            Console.WriteLine($", then we get \"{text.Text}\"");
 
-            text.SetText("There is no place like home!    ");
-            Console.Write($"If we trim at the beginning \"{text.GetText()}\"");
+            text.Text = "There is no place like home!    ";
+            Console.Write($"If we trim at the beginning \"{text.Text}\"");
             text.TrimStart();
-            Console.WriteLine($", then we get \"{text.GetText()}\"");
+            Console.WriteLine($", then we get \"{text.Text}\"");
         }
     }
 }

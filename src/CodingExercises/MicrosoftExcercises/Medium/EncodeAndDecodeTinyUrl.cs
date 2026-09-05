@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -25,15 +25,19 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         // Encodes a URL to a shortened URL
         public string encode(string longUrl)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(longUrl);
+            var encode = System.Convert.ToBase64String(plainTextBytes);
+            var tinyUrl = $"http://tinyurl.com/{encode}";
+
+            dict.Add(tinyUrl, longUrl);
+
+            return tinyUrl;
         }
 
         // Decodes a shortened URL to its original URL.
         public string decode(string shortUrl)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return dict[shortUrl];
         }
     }
 }

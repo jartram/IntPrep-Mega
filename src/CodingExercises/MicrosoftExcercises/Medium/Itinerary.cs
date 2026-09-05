@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -23,8 +23,17 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         //greedy + backtracking
         public IList<string> FindItinerary(IList<IList<string>> tickets)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var totalTickets = tickets.Count;
+            var result = new List<string>();
+            var sortedTickets = tickets.OrderBy(ticket => ticket[0]).ToList();
+            var graph = CreateGraph(sortedTickets);
+            var currentExploration = new LinkedList<string>();
+            var start = "JFK";
+
+            currentExploration.AddLast(start);
+            Backtrack(totalTickets, graph, start, currentExploration, result);
+
+            return result;
         }
 
         private void Backtrack(int totalTickets,
@@ -66,8 +75,12 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         //magic stupid dfs
         public IList<string> FindItineraryDFS(IList<IList<string>> tickets)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var result = new LinkedList<string>();
+            var graph = CreateGraph(tickets);
+            var start = "JFK";
+            DFS(start, result, graph);
+
+            return result.ToList();
         }
 
         private void DFS(string start, LinkedList<string> result, Dictionary<string, List<string>> graph)

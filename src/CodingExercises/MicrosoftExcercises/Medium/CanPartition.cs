@@ -13,14 +13,25 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.MicrosoftExcercises.Medium
+namespace CodingExercises.MicrosoftExcercises.Medium
 {
     public class CanPartition
     {
         public bool Solve(int[] nums)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var sum = 0;
+
+            foreach (var num in nums)
+            {
+                sum += num;
+            }
+
+            if (sum % 2 == 0)
+            {
+                return CanPartitionAux(nums, sum / 2);
+            }
+
+            return false;
         }
 
         private bool CanPartitionAux(int[] nums, int target)

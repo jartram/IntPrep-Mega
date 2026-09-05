@@ -32,9 +32,7 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace CSharpPractical.Chapter06_GettingUserData.TimeMachine
 {
@@ -45,20 +43,19 @@ namespace CSharpPractical.Chapter06_GettingUserData.TimeMachine
 
         public void AddHours(int delta)
         {
-            // TODO: Add delta to hours
-            // Keep in mind that hours should stay in range of [0, 23]
+            hours = (hours + delta) % 24;
         }
 
         public void AddMinutes(int delta)
         {
-            // TODO: Add delta to minutes
-            // Keep in mind that minutes should stay in range of [0, 59]
-            // Don't forget to add to hours when it overflows
+            int total = minutes + delta;
+            hours = (hours + total / 60) % 24;
+            minutes = total % 60;
         }
 
         public void PrintToTerminal()
         {
-            Console.WriteLine($"Time: {hours.ToString("D2")}:{minutes.ToString("D2")}");
+            Console.WriteLine($"Time: {hours:D2}:{minutes:D2}");
         }
 
         public int Hours { get { return hours; } set { hours = value; } }

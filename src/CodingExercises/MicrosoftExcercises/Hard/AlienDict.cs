@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -24,10 +24,47 @@ namespace CodingExercises.MicrosoftExcercises.Hard
         public class Solution
         {
             public string AlienOrder(string[] words)
-        {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
-        }
+            {
+                var alienOrder = new StringBuilder();
+                var graph = BuildGraph(words.ToArray());
+
+                if (graph == null)
+                {
+                    return "";
+                }
+
+                var queue = new Queue<char>();
+
+                foreach (var tuple in graph)
+                {
+                    if (graph[tuple.Key].Count == 0)
+                    {
+                        queue.Enqueue(tuple.Key);
+                    }
+                }
+
+                while (queue.Count > 0)
+                {
+                    var actual = queue.Dequeue();
+
+                    alienOrder.Append(actual);
+
+                    foreach (var node in graph.Keys.ToList())
+                    {
+                        if (graph[node].Contains(actual))
+                        {
+                            graph[node].Remove(actual);
+
+                            if (graph[node].Count == 0)
+                            {
+                                queue.Enqueue(node);
+                            }
+                        }
+                    }
+                }
+
+                return alienOrder.Length == graph.Count ? alienOrder.ToString() : "";
+            }
 
             private Dictionary<char, IList<char>> BuildGraph(string[] words)
             {
@@ -126,10 +163,37 @@ namespace CodingExercises.MicrosoftExcercises.Hard
             }
 
             public bool AddWord(string word)
-        {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
-        }
+            {
+                var current = root;
+
+                for (int i = 0; i < word.Length; i++)
+                {
+                    var actualChar = word[i];
+                    var next = current.Children.FirstOrDefault(element => element.Value == actualChar);
+
+                    // Console.WriteLine($"{word}:{next?.Value}");
+
+                    if (next == null)
+                    {
+                        current.Children.AddLast(new TrieNode(actualChar));
+                        next = current.Children.Last();
+                    }
+                    else if (next != current.Children.Last())
+                    {
+                        // Console.WriteLine("enters");
+                        return false;
+                    }
+
+                    current = next;
+                }
+
+                if (current.Children.Count > 0)
+                {
+                    return false;
+                }
+
+                return true;
+            }
         }
 
         public class TrieNode

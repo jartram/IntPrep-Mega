@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,8 +21,14 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public bool ValidTree(int n, int[][] edges)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (n == 1)
+            {
+                return true;
+            }
+
+            var tree = GenerateTree(edges);
+
+            return IsTree(tree, n);
         }
 
         private Dictionary<int, HashSet<int>> GenerateTree(int[][] edges)

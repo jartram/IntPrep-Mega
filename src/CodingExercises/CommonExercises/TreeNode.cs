@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.Exercises
+namespace CodingExercises.Exercises
 {
     public class TreeNode
     {

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,8 +26,13 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public IList<IList<int>> Solve(int[] candidates, int target)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            combinations = new List<IList<int>>();
+
+            Array.Sort(candidates);
+
+            Backtrack(candidates, target, new Stack<int>(), 0);
+
+            return combinations;
         }
 
         private void Backtrack(int[] candidates, int target, Stack<int> currentCombination, int initialIndex)

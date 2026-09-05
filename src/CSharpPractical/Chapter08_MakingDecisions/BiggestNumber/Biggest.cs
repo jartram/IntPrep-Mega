@@ -35,21 +35,16 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace CSharpPractical.Chapter08_MakingDecisions.BiggestNumber
 {
     public class Biggest
     {
-        public int DetermineBiggest(int first, int second, int third)
+        public int BiggestNumber(int first, int second, int third)
         {
-            // TODO Determine the biggest number of the three
-            int biggest = 0;
-
-            // Please dont change the code below (automatic unit tests)
-            return biggest;
+            return Math.Max(first, Math.Max(second, third));
         }
-    }
+            public int DetermineBiggest(int a, int b, int c) => Math.Max(a, Math.Max(b, c));
+}
 }

@@ -13,14 +13,22 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.MicrosoftExcercises.Premium
+namespace CodingExercises.MicrosoftExcercises.Premium
 {
     public class WiggleSort
     {
         public void Solve(int[] nums)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            bool isLess = true;
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                if ((isLess && nums[i] > nums[i + 1]) || (!isLess && nums[i] < nums[i + 1]))
+                {
+                    Swap(nums, i, i + 1);
+                }
+
+                isLess = !isLess;
+            }
         }
 
         private void Swap(int[] nums, int i, int j)

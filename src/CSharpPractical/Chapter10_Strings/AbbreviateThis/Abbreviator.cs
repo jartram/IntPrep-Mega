@@ -28,9 +28,8 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+using System.Linq;
 
 namespace CSharpPractical.Chapter10_Strings.AbbreviateThis
 {
@@ -38,13 +37,9 @@ namespace CSharpPractical.Chapter10_Strings.AbbreviateThis
     {
         public string Abbreviate(string text)
         {
-            string letters = "";
-
-            // TODO Convert text to an abbreviation
-            // TODO Make sure that the end result contains upper-case letters only
-            // TODO If text is empty, than so should letters be
-
-            return letters;
+            if (string.IsNullOrWhiteSpace(text)) return "";
+            var words = text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            return string.Concat(words.Select(w => char.ToUpper(w[0])));
         }
     }
 }

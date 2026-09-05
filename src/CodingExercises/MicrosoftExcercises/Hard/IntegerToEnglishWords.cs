@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Text;
+using System.Text;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
 {
@@ -21,8 +21,54 @@ namespace CodingExercises.MicrosoftExcercises.Hard
     {
         public string NumberToWords(int num)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (num == 0)
+            {
+                return "Zero";
+            }
+
+            var billions = num / 1000000000;
+            var millions = (num % 1000000000) / 1000000;
+            var thousand = (num % 1000000000 % 1000000) / 1000;
+            var rest = num % 1000000000 % 1000000 % 1000;
+
+            var sb = new StringBuilder();
+
+            if (billions > 0)
+            {
+                sb.Append($"{GenerateBlock(billions)} Billion");
+            }
+
+            if (millions > 0)
+            {
+                if (sb.Length > 0)
+                {
+                    sb.Append(" ");
+                }
+
+                sb.Append($"{GenerateBlock(millions)} Million");
+            }
+
+            if (thousand > 0)
+            {
+                if (sb.Length > 0)
+                {
+                    sb.Append(" ");
+                }
+
+                sb.Append($"{GenerateBlock(thousand)} Thousand");
+            }
+
+            if (rest > 0)
+            {
+                if (sb.Length > 0)
+                {
+                    sb.Append(" ");
+                }
+
+                sb.Append($"{GenerateBlock(rest)}");
+            }
+
+            return sb.ToString();
         }
 
         private string One(int num)

@@ -13,14 +13,16 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.Exercises
+namespace CodingExercises.Exercises
 {
     public class SearchRangeBS
     {
         public int[] SearchRange(int[] nums, int target)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var initial = GetInitial(nums, target);
+            var last = initial == -1 ? -1 : GetLast(nums, target);
+
+            return new int[] { initial, last }; ;
         }
 
         private int GetInitial(int[] nums, int target)

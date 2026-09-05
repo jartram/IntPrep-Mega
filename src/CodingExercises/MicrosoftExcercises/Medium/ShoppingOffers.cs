@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,8 +26,9 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public int Solved(IList<int> price, IList<IList<int>> special, IList<int> needs)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            memo = new Dictionary<string, int>();
+
+            return Shopping(price.ToArray(), special.ToArray(), needs.ToArray());
         }
 
         private int Shopping(int[] price, IList<int>[] special, int[] needs)
@@ -74,14 +75,26 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public int GetCost(int[] price, int[] needs)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var cost = 0;
+
+            for (int i = 0; i < price.Length; i++)
+            {
+                cost += price[i] * needs[i];
+            }
+
+            return cost;
         }
 
         public string GetNeedsKey(int[] needs)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var sb = new StringBuilder();
+
+            foreach (var need in needs)
+            {
+                sb.Append($"{need}#");
+            }
+
+            return sb.ToString();
         }
     }
 }

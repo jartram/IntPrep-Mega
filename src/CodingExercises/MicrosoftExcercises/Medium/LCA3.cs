@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,8 +21,30 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public Node LowestCommonAncestor(Node p, Node q)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var visited = new HashSet<Node>();
+
+            var current = p;
+
+            while (current != null)
+            {
+                visited.Add(current);
+
+                current = current.parent;
+            }
+
+            current = q;
+
+            while (current != null)
+            {
+                if (visited.Contains(current))
+                {
+                    return current;
+                }
+
+                current = current.parent;
+            }
+
+            return null;
         }
     }
 }

@@ -73,22 +73,16 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace CSharpPractical.Chapter10_Strings.BinaryNibble
 {
     public class NumberSystemConverter
     {
-        public string DecimalToBinary(int decimalValue)
+        public string DecimalToBinary(int value)
         {
-            // TODO Convert the decimal value to
-            // binary string representation
-            string binary = "";
-
-            // Please dont change the code below (automatic unit tests)
-            return binary;
+            string bin = Convert.ToString(value, 2).PadLeft(8, '0');
+            return bin.Substring(0, 4) + " " + bin.Substring(4);
         }
     }
 }

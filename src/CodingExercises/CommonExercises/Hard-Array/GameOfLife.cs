@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.CommonExercises.Hard_Array
+namespace CodingExercises.CommonExercises.Hard_Array
 {
     public class GameOfLife
     {
@@ -21,8 +21,30 @@
         
         public void Solve(int[][] board)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            neighbours = new int[board.Length, board[0].Length];
+
+            for (int i = 0; i < board.Length; i++)
+            {
+                for (int j = 0; j < board[i].Length; j++)
+                {
+                    CalculateNeighbours(board, i, j);
+                }
+            }
+
+            for (int i = 0; i < board.Length; i++)
+            {
+                for (int j = 0; j < board[i].Length; j++)
+                {
+                    if (board[i][j] == 1 && (neighbours[i, j] < 2 || neighbours[i, j] > 3))
+                    {
+                        board[i][j] = 0;
+                    }
+                    else if (board[i][j] == 0 && neighbours[i, j] == 3)
+                    {
+                        board[i][j] = 1;
+                    }
+                }
+            }
         }
 
         private void CalculateNeighbours(int[][] board, int i, int j)

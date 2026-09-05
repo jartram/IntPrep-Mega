@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.Exercises
 {
@@ -21,8 +21,19 @@ namespace CodingExercises.Exercises
     {
         public IList<IList<int>> Permute(int[] nums)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var result = new List<IList<int>>();
+            var visited = new HashSet<int>();
+
+            foreach (var num in nums)
+            {
+                visited.Add(num);
+
+                Backtrack(new List<int>() { num }, nums, visited, result);
+
+                visited.Remove(num);
+            }
+
+            return result;
         }
 
         private void Backtrack(List<int> actual,

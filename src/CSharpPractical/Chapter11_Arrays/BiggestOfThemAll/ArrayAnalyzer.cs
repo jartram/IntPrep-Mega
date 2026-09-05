@@ -36,39 +36,14 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Linq;
-using System.Text;
 
 namespace CSharpPractical.Chapter11_Arrays.BiggestOfThemAll
 {
     public class ArrayAnalyzer
     {
-        public int BiggestValue(int[] values)
-        {
-            int biggest = 0;
-
-            // TODO Determine the biggest value in the array and place the result in biggest
-            // Return 0 if the array is empty (Length == 0)
-
-
-            // Please don't change the code below (automatic unit tests)
-            return biggest;
-        }
-
-        public int BiggestIndex(int[] values)
-        {
-            int indexBiggest = -1;
-
-            // TODO Determine the index of the biggest value in the array
-            // Place the resulting index in indexBiggest
-            // Return -1 if the array is empty (Length == 0)
-            // If multiple values exist, keep the first
-
-
-            // Please don't change the code below (automatic unit tests)
-            return indexBiggest;
-        }
+        public int BiggestValue(int[] values) => (values == null || values.Length == 0) ? 0 : values.Max();
+        public int BiggestIndex(int[] values) => (values == null || values.Length == 0) ? -1 : Array.IndexOf(values, values.Max());
     }
 }

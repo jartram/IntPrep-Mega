@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.CommonExercises.Easy_Array
 {
@@ -22,8 +22,38 @@ namespace CodingExercises.CommonExercises.Easy_Array
     {
         public bool IsValidSudoku(char[][] board)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+
+            var columnsHs = new Dictionary<char, int>[9];
+
+            for (int i = 0; i < columnsHs.Length; i++)
+            {
+                columnsHs[i] = new Dictionary<char, int>();
+            }
+
+            for (int i = 0; i < board.Length; i++)
+            {
+                var rowHs = new HashSet<char>();
+
+                for (int j = 0; j < board[0].Length; j++)
+                {
+                    var actual = board[i][j];
+
+                    if (actual != '.')
+                    {
+                        if (rowHs.Contains(actual) || columnsHs[j].ContainsKey(actual) || SameBox(actual, i, j, columnsHs))
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            rowHs.Add(actual);
+                            columnsHs[j].Add(actual, CalculateBox(i, j));
+                        }
+                    }
+                }
+            }
+
+            return true;
         }
 
         private bool SameBox(char actual, int i, int j, Dictionary<char, int>[] columns)

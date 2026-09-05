@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
@@ -22,8 +22,17 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public bool HasPathSum(TreeNode root, int sum)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (root == null)
+            {
+                return false;
+            }
+
+            if (sum - root.val == 0 && root.left == null && root.right == null)
+            {
+                return true;
+            }
+
+            return HasPathSum(root.left, sum - root.val) || HasPathSum(root.right, sum - root.val);
         }
     }
 }

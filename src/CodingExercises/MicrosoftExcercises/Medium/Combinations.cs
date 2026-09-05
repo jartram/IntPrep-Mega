@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -24,14 +24,37 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public IList<IList<int>> Combine(int n, int k)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            Combinations = new List<IList<int>>();
+
+            var candidates = new int[n];
+
+            for (int i = 0; i < candidates.Length; i++)
+            {
+                candidates[i] = i + 1;
+            }
+
+            Backtrack(candidates, 0, k, new HashSet<int>());
+
+            return Combinations;
         }
 
         public void Backtrack(int[] candidates, int start, int k, HashSet<int> combination)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (k == 0)
+            {
+                Combinations.Add(combination.ToList());
+
+                return;
+            }
+
+            for (int currentIndex = start; currentIndex < candidates.Length; currentIndex++)
+            {
+                var candidate = candidates[currentIndex];
+
+                combination.Add(candidate);
+                Backtrack(candidates, currentIndex + 1, k - 1, combination);
+                combination.Remove(candidate);
+            }
         }
     }
 }

@@ -41,30 +41,41 @@
  =======================================================================================
 */
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
+using System.Linq;
 
 namespace CSharpPractical.Chapter09_Loops.NumberManipulator
 {
     public class Manipulator
     {
-        public static int Reverse(int value)
+        public static int Reverse(int number)
         {
-            // TODO - Reverse the digits back to front
-            return -1;
+            if (number == 0) return 0;
+            int rev = 0;
+            int n = number;
+            while (n > 0)
+            {
+                rev = rev * 10 + n % 10;
+                n /= 10;
+            }
+            return rev;
         }
 
-        public static int Complement(int value)
+        public static int Complement(int number)
         {
-            // TODO - Calculate the complement by subtracting each digit from '9'
-            return -1;
+            if (number == 0) return 9;
+            string s = number.ToString();
+            string res = "";
+            foreach (char c in s)
+            {
+                res += (9 - (c - '0')).ToString();
+            }
+            return int.Parse(res);
         }
 
-        public static int DigitSum(int value)
+        public static int DigitSum(int number)
         {
-            // TODO - Determine the sum of the individual digits
-            return -1;
+            return number.ToString().Sum(c => c - '0');
         }
     }
 }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -23,8 +23,23 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public string ConvertToTitle(int columnNumber)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var sb = new StringBuilder();
+            var stack = new Stack<char>();
+
+            while (columnNumber > 0)
+            {
+                columnNumber--;
+                stack.Push((char)(columnNumber % 26 + 'A'));
+                columnNumber /= 26;
+            }
+
+            while (stack.Count > 0)
+            {
+                Console.WriteLine(stack.Peek());
+                sb.Append(stack.Pop());
+            }
+
+            return sb.ToString();
         }
     }
 }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 
 namespace CodingExercises.Exercises
 {
@@ -22,14 +22,26 @@ namespace CodingExercises.Exercises
         private int diameter;
         public int DiameterOfBinaryTree(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            diameter = 0;
+
+            LongestPath(root);
+
+            return diameter;
         }
 
         public int LongestPath(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (root == null)
+            {
+                return 0;
+            }
+
+            var leftDepth = LongestPath(root.left);
+            var rightDepth = LongestPath(root.right);
+
+            diameter = Math.Max(diameter, leftDepth + rightDepth);
+
+            return Math.Max(leftDepth, rightDepth) + 1;
         }
     }
 }

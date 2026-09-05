@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System;
 
@@ -25,14 +25,28 @@ namespace CodingExercises.MicrosoftExcercises.Easy
 
         public int Solve(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            diameter = 0;
+
+            DiameterOfBinaryTreeAux(root);
+
+            return diameter;
         }
 
         public int DiameterOfBinaryTreeAux(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            if (root == null)
+            {
+                return 0;
+            }
+            else
+            {
+                var left = DiameterOfBinaryTreeAux(root.left);
+                var right = DiameterOfBinaryTreeAux(root.right);
+
+                diameter = Math.Max(diameter, left + right);
+
+                return Math.Max(left, right) + 1;
+            }
         }
     }
 }

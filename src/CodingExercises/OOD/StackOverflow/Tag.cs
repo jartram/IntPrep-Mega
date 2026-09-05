@@ -11,7 +11,7 @@
  =======================================================================================
 */
 
-﻿namespace CodingExercises.OOD.StackOverflow
+namespace CodingExercises.OOD.StackOverflow
 {
     public class Tag
     {

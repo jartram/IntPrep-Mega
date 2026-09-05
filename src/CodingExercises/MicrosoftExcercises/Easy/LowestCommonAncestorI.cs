@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
@@ -22,8 +22,26 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public TreeNode Solve(TreeNode root, TreeNode p, TreeNode q)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var actual = root;
+
+            while (actual != null)
+            {
+                if ((actual.val >= p.val && actual.val <= q.val) ||
+                  (actual.val <= p.val && actual.val >= q.val))
+                {
+                    return actual;
+                }
+                else if (actual.val > p.val && actual.val > q.val)
+                {
+                    actual = actual.left;
+                }
+                else
+                {
+                    actual = actual.right;
+                }
+            }
+
+            return actual;
         }
     }
 }

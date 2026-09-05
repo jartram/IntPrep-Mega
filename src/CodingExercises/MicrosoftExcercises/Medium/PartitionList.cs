@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -22,8 +22,34 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public ListNode Partition(ListNode head, int x)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var dummyLesser = new ListNode();
+            var dummyGreaterOrEqual = new ListNode();
+
+            var currentLesser = dummyLesser;
+            var currentGreaterOrEqual = dummyGreaterOrEqual;
+
+            var current = head;
+
+            while (current != null)
+            {
+                if (current.val < x)
+                {
+                    currentLesser.next = current;
+                    currentLesser = currentLesser.next;
+                }
+                else
+                {
+                    currentGreaterOrEqual.next = current;
+                    currentGreaterOrEqual = currentGreaterOrEqual.next;
+                }
+
+                current = current.next;
+            }
+            currentGreaterOrEqual.next = null;
+
+            currentLesser.next = dummyGreaterOrEqual.next;
+
+            return dummyLesser.next;
         }
     }
 }

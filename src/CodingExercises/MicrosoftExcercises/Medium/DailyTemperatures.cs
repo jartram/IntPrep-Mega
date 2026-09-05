@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,8 +21,25 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int[] DailyTemperatures(int[] temperatures)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var stack = new Stack<IndexedTemperature>();
+            var index = 0;
+            var numberOfDaysToGetWarmer = new int[temperatures.Length];
+
+            while (index < temperatures.Length)
+            {
+                while (stack.Count > 0 && stack.Peek().Temperature < temperatures[index])
+                {
+                    var coldDay = stack.Pop();
+
+                    numberOfDaysToGetWarmer[coldDay.Index] = index - coldDay.Index;
+                }
+
+                stack.Push(new IndexedTemperature(index, temperatures[index]));
+
+                index++;
+            }
+
+            return numberOfDaysToGetWarmer;
         }
     }
 

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using CodingExercises.Shared;
+using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -22,8 +22,7 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public bool IsValidBST(TreeNode root)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            return IsValidBST(root, null, null);
         }
 
         private bool IsValidBST(TreeNode root, int? min, int? max)

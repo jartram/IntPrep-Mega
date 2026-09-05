@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
@@ -23,10 +23,39 @@ namespace CodingExercises.MicrosoftExcercises.Hard
         public class Solution
         {
             public int MaximalRectangle(char[][] matrix)
-        {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
-        }
+            {
+                if (matrix == null)
+                    return 0;
+                var rows = matrix.Length;
+
+                if (rows == 0)
+                {
+                    return 0;
+                }
+
+                int columns = matrix[0].Length;
+                var heights = new int[columns + 1];
+
+                int max = 0;
+                foreach (char[] row in matrix)
+                {
+                    for (int col = 0; col < columns; col++)
+                    {
+                        if (row[col] == '1')
+                        {
+                            heights[col] += 1;
+                        }
+                        else
+                        {
+                            heights[col] = 0;
+                        }
+                    }
+
+                    max = Math.Max(max, CalculateMaximumRectangleInHistogram(heights));
+                }
+
+                return max;
+            }
 
             private int CalculateMaximumRectangleInHistogram(int[] histogram)
             {

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.CommonExercises.Easy_Array
 {
@@ -22,8 +22,19 @@ namespace CodingExercises.CommonExercises.Easy_Array
     {
         public bool ContainsDuplicate(int[] nums)
         {
-            // TODO: Implement your solution here
-            throw new NotImplementedException();
+            var hs = new HashSet<int>();
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (hs.Contains(nums[i]))
+                {
+                    return true;
+                }
+
+                hs.Add(nums[i]);
+            }
+
+            return false;
         }
     }
 }
