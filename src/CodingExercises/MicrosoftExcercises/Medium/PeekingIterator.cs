@@ -27,7 +27,7 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         {
             // initialize any member here.
             _iterator = iterator;
-            hasNext = iterator.Current != null;
+            hasNext = iterator != null;
         }
 
         // Returns the next element in the iteration without advancing the iterator.

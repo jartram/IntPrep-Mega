@@ -1,4 +1,4 @@
-﻿namespace CodingExercises.Solutions.Exercises
+namespace CodingExercises.Solutions.Exercises
 {
     public class ThirdMaximum
     {
@@ -21,7 +21,7 @@
 
         public static void Process(int value, ref long max1, ref long max2, ref long max3, ref long count)
         {
-            if (value == long.MinValue || (value != max1 && value != max3 && value != max2))
+            if (value != max1 && value != max3 && value != max2)
             {
                 count++;
                 long aux;

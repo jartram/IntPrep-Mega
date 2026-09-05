@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace CodingExercises.Solutions.MicrosoftExcercises.Medium
 {
@@ -12,7 +12,7 @@ namespace CodingExercises.Solutions.MicrosoftExcercises.Medium
         {
             // initialize any member here.
             _iterator = iterator;
-            hasNext = iterator.Current != null;
+            hasNext = iterator != null;
         }
 
         // Returns the next element in the iteration without advancing the iterator.
