@@ -1,0 +1,20 @@
+{
+  "name": "DotNet Development",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit"
+      ],
+      "settings": {
+        "terminal.integrated.env.linux": {
+          "DOTNET_ROLL_FORWARD": "LatestMajor"
+        }
+      }
+    }
+  },
+  "remoteEnv": {
+    "DOTNET_ROLL_FORWARD": "LatestMajor"
+  }
+}
