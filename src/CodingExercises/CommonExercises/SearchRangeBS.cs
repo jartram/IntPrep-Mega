@@ -1,0 +1,82 @@
+/*
+ =======================================================================================
+ CHALLENGE: SearchRangeBS
+ CATEGORY: CommonExercises
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the SearchRangeBS problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SearchRangeBSTests
+ =======================================================================================
+*/
+
+﻿namespace CodingExercises.Exercises
+{
+    public class SearchRangeBS
+    {
+        public int[] SearchRange(int[] nums, int target)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+
+        private int GetInitial(int[] nums, int target)
+        {
+            int index = -1;
+            int low = 0;
+            int high = nums.Length - 1;
+
+            while (low <= high)
+            {
+                var mid = low + (high - low) / 2;
+
+                if (nums[mid] >= target)
+                {
+                    high = mid - 1;
+                }
+                else
+                {
+                    low = mid + 1;
+                }
+
+                if (nums[mid] == target)
+                {
+                    index = mid;
+                }
+            }
+
+            return index;
+        }
+
+        private int GetLast(int[] nums, int target)
+        {
+            int index = -1;
+            int low = 0;
+            int high = nums.Length - 1;
+
+            while (low <= high)
+            {
+                var mid = low + (high - low) / 2;
+
+                if (nums[mid] <= target)
+                {
+                    low = mid + 1;
+                }
+                else
+                {
+                    high = mid - 1;
+                }
+
+                if (nums[mid] == target)
+                {
+                    index = mid;
+                }
+            }
+
+            return index;
+        }
+    }
+}

@@ -1,0 +1,654 @@
+# IntPrep-Mega: .NET Interview Preparation & Practical Coding Challenges
+
+Welcome to **IntPrep-Mega**, the ultimate consolidated C# and .NET Core coding preparation repository! This solution combines practical C# programming assignments and algorithmic interview challenges into a single, unified .NET 8.0 solution.
+
+## Overview
+- **Target Framework:** Modern .NET 8.0 LTS
+- **Solution Architecture:**
+  - `src/CSharpPractical`: Practical C# foundational & OOP challenges (from [IntPrep-csharp_practical](https://github.com/jartram/IntPrep-csharp_practical))
+  - `src/CodingExercises`: Algorithmic & LeetCode interview challenges stubbed for completion (from [IntPrep-coding-exercises](https://github.com/jartram/IntPrep-coding-exercises))
+  - `src/CodingExercises.Solutions`: Reference implementations for all algorithm challenges
+  - `tests/CSharpPractical.Tests`: Unit test suite for practical challenges
+  - `tests/CodingExercises.Tests`: Unit test suite for algorithmic challenges
+
+## How to Use
+1. **Select a Challenge:** Pick any challenge from the index below or browse `src/`.
+2. **Read the Prompt:** Open the challenge file to view the problem specification, examples, and instructions in the header comment.
+3. **Implement Your Solution:** Complete the method or class (replacing `throw new NotImplementedException();`).
+4. **Validate with dotnet test:** Run the challenge's validation command shown in its header (or below) in the terminal.
+5. **Track Your Progress:** Check off the `[ ]` checkboxes in this README as you complete them!
+
+---
+
+## Part 1: C# Practical Challenges (Fundamentals to OOP)
+
+| Status | Chapter | Challenge | Description | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | `Chapter03_StartingInCsharp` | [BasicSyntaxError](src/CSharpPractical/Chapter03_StartingInCsharp/BasicSyntaxError/Program.cs) | # Basic Syntax Error The application has a small syntax error. Find... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp.BasicSyntaxErrorTest` |
+| [ ] | `Chapter03_StartingInCsharp` | [DevelopedBy](src/CSharpPractical/Chapter03_StartingInCsharp/DevelopedBy/Program.cs) | # Developed By Modify the application so it prints out a welcome... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp` |
+| [ ] | `Chapter03_StartingInCsharp` | [HelloWorld](src/CSharpPractical/Chapter03_StartingInCsharp/HelloWorld/Program.cs) | # Hello World Open the C# project in this directory and edit... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp` |
+| [ ] | `Chapter03_StartingInCsharp` | [JavaProgrammer](src/CSharpPractical/Chapter03_StartingInCsharp/JavaProgrammer/Program.cs) | # Java Programmers The problem with Java programmers is that they can't... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp.JavaProgrammerTest` |
+| [ ] | `Chapter03_StartingInCsharp` | [NeedABreak](src/CSharpPractical/Chapter03_StartingInCsharp/NeedABreak/Program.cs) | # Need a Break The application has two small syntax errors. Find... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp.NeedABreakTest` |
+| [ ] | `Chapter03_StartingInCsharp` | [PersonalDetails](src/CSharpPractical/Chapter03_StartingInCsharp/PersonalDetails/Program.cs) | # Personal Details Complete the application so it prints out some personal... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp` |
+| [ ] | `Chapter04_StoringData` | [CsharpLand](src/CSharpPractical/Chapter04_StoringData/CsharpLand/Program.cs) | # RollerCoaster The C# RollerCoaster app is an app that informs the... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter04_StoringData.CsharpLand.RollerCoasterTest` |
+| [ ] | `Chapter04_StoringData` | [FrameDelimiter](src/CSharpPractical/Chapter04_StoringData/FrameDelimiter/Frame.cs) | # Frame Delimiter Frame delimiters are often used in communication protocols. They... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter04_StoringData.FrameDelimiter.FrameTest` |
+| [ ] | `Chapter04_StoringData` | [MarcoPolo](src/CSharpPractical/Chapter04_StoringData/MarcoPolo/MarcoPolo.cs) | # Marco Polo This application tries to display some personal information about... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter04_StoringData.MarcoPolo.UnitTestPersonalInformation` |
+| [ ] | `Chapter04_StoringData` | [ProgrammingBugs](src/CSharpPractical/Chapter04_StoringData/ProgrammingBugs/MessageOfTheDay.cs) | # Programming Bugs This little application shows a funny message of the... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter04_StoringData.ProgrammingBugs.UnitTestMessageOfTheDay` |
+| [ ] | `Chapter05_ProcessingData` | [CalculateVat](src/CSharpPractical/Chapter05_ProcessingData/CalculateVat/Invoice.cs) | # Calculate VAT When buying a product in the store you always... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.CalculateVat.UnitTestInvoice` |
+| [ ] | `Chapter05_ProcessingData` | [Evaluation](src/CSharpPractical/Chapter05_ProcessingData/Evaluation/Grader.cs) | # Evaluation The evaluation app is a tool that calculates the average... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.Evaluation.UnitTestGrader` |
+| [ ] | `Chapter05_ProcessingData` | [FundamentalCalculus](src/CSharpPractical/Chapter05_ProcessingData/FundamentalCalculus/Calculator.cs) | # Fundamental Calculus This app models a basic calculator. Implement all the... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.FundamentalCalculus.UnitTestCalculator` |
+| [ ] | `Chapter05_ProcessingData` | [PizzaTime](src/CSharpPractical/Chapter05_ProcessingData/PizzaTime/PizzaDivider.cs) | # Pizza Time This little app lets us divide slices of pizza... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.PizzaTime.UnitTestPizzaDivider` |
+| [ ] | `Chapter05_ProcessingData` | [Pythagoras](src/CSharpPractical/Chapter05_ProcessingData/Pythagoras/Program.cs) | # Pythagoras Search the Internet for the Pythagorean theorem. It is a... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.Pythagoras.UnitTestRightHandTriangle` |
+| [ ] | `Chapter05_ProcessingData` | [RectangleProperties](src/CSharpPractical/Chapter05_ProcessingData/RectangleProperties/Program.cs) | # Rectangle Properties This application was build to determine the `area` and... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.RectangleProperties.UnitTestRectangle` |
+| [ ] | `Chapter06_GettingUserData` | [StudentId](src/CSharpPractical/Chapter06_GettingUserData/StudentId/Program.cs) | # Student ID The Student ID app is used by the administrative... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter06_GettingUserData.StudentId.UnitTestStudent` |
+| [ ] | `Chapter06_GettingUserData` | [The_metric_system](src/CSharpPractical/Chapter06_GettingUserData/The_metric_system/Program.cs) | Convert between metric units and imperial units. | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter06_GettingUserData.The_metric_system` |
+| [ ] | `Chapter06_GettingUserData` | [TimeMachine](src/CSharpPractical/Chapter06_GettingUserData/TimeMachine/Clock.cs) | # Time Machine The year is 2014. You just turned 14 years... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter06_GettingUserData.TimeMachine.UnitTestClock` |
+| [ ] | `Chapter07_Methods` | [HailCSharp](src/CSharpPractical/Chapter07_Methods/HailCSharp/Program.cs) | # Hail C Sharp It's time to tell C# what we think... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods` |
+| [ ] | `Chapter07_Methods` | [HelloMisterRoboto](src/CSharpPractical/Chapter07_Methods/HelloMisterRoboto/Program.cs) | # Hello Mister Roboto Hello Mister Roboto is the start of Bot... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods` |
+| [ ] | `Chapter07_Methods` | [LaResistance](src/CSharpPractical/Chapter07_Methods/LaResistance/Program.cs) | # La Resistance Electronics / ICT students of VIVES often have to... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods` |
+| [ ] | `Chapter07_Methods` | [SumAndDifference](src/CSharpPractical/Chapter07_Methods/SumAndDifference/Program.cs) | # Sum and Difference Sum and Difference is a small application that... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods` |
+| [ ] | `Chapter07_Methods` | [TossADieToYourWitcher](src/CSharpPractical/Chapter07_Methods/TossADieToYourWitcher/Program.cs) | # Toss a Die to Your Witcher This app simulates a die... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods` |
+| [ ] | `Chapter08_MakingDecisions` | [BiggestNumber](src/CSharpPractical/Chapter08_MakingDecisions/BiggestNumber/Biggest.cs) | --- name: Biggest Number description: Biggest number out of 3. details: ./07_making_decisions/biggest_number/README.md... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.BiggestNumber.UnitTestBiggest` |
+| [ ] | `Chapter08_MakingDecisions` | [Converternator](src/CSharpPractical/Chapter08_MakingDecisions/Converternator/Converter.cs) | # ConverterNator The ConverterNator is the next gen conversion app that allows... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.Converternator.UnitTestConverter` |
+| [ ] | `Chapter08_MakingDecisions` | [CoordinatePlane](src/CSharpPractical/Chapter08_MakingDecisions/CoordinatePlane/Point.cs) | # Coordinate Plane Request both the `x` and `y` value of a... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.CoordinatePlane.UnitTestPoint` |
+| [ ] | `Chapter08_MakingDecisions` | [DriftingYears](src/CSharpPractical/Chapter08_MakingDecisions/DriftingYears/LeapYearChecker.cs) | # Drifting Years A leap year is a calendar year containing an... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.DriftingYears.UnitTestLeapYearChecker` |
+| [ ] | `Chapter08_MakingDecisions` | [LedSeriesResistor](src/CSharpPractical/Chapter08_MakingDecisions/LedSeriesResistor/Program.cs) | # LED Series Resistor An LED (Light Emiting Diode) is an electronic... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.LedSeriesResistor.UnitTestsResistorCalculator` |
+| [ ] | `Chapter08_MakingDecisions` | [RectangleArea](src/CSharpPractical/Chapter08_MakingDecisions/RectangleArea/Program.cs) | # Rectangle Area The rectangle app allows you to calculate the area... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.RectangleArea.UnitTestRectangle` |
+| [ ] | `Chapter09_Loops` | [AppleCake](src/CSharpPractical/Chapter09_Loops/AppleCake/AppleCakeGenerator.cs) | # AppleCake AppleCake is a kind of word-game for children. The purpose... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.AppleCake.UnitTestsAppleCakeGenerator` |
+| [ ] | `Chapter09_Loops` | [GreatestCommonFactor](src/CSharpPractical/Chapter09_Loops/GreatestCommonFactor/MathHelper.cs) | # Greatest Common Factor Finish the application so it can determine the... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.GreatestCommonFactor.UnitTestMathHelper` |
+| [ ] | `Chapter09_Loops` | [NumberManipulator](src/CSharpPractical/Chapter09_Loops/NumberManipulator/Manipulator.cs) | # Number Manipulator Number Manipulator is a small app that allows us... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.NumberManipulator.UnitTestManipulator` |
+| [ ] | `Chapter09_Loops` | [SeriesOfSquares](src/CSharpPractical/Chapter09_Loops/SeriesOfSquares/Program.cs) | # Series of Squares Many special sets of numbers are defined in... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.SeriesOfSquares.UnitTestSquaredSeries` |
+| [ ] | `Chapter09_Loops` | [StartToEnd](src/CSharpPractical/Chapter09_Loops/StartToEnd/Program.cs) | # Start to End This C# application can make the sum of... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.StartToEnd.UnitTestSeries` |
+| [ ] | `Chapter10_Strings` | [AbbreviateThis](src/CSharpPractical/Chapter10_Strings/AbbreviateThis/Abbreviator.cs) | # Abbreviate This Abbreviate This is an application that can transform a... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.AbbreviateThis.UnitTestAbbreviator` |
+| [ ] | `Chapter10_Strings` | [BinaryCoding](src/CSharpPractical/Chapter10_Strings/BinaryCoding/BinaryConverter.cs) | # Binary Coding Binary Coding determines the decimal representation of a binary... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.BinaryCoding.UnitTestBinaryConverter` |
+| [ ] | `Chapter10_Strings` | [BinaryNibble](src/CSharpPractical/Chapter10_Strings/BinaryNibble/NumberSystemConverter.cs) | # Binary Nibble This application should allow a user to enter a... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.BinaryNibble.UnitTestNumberSystemConverter` |
+| [ ] | `Chapter10_Strings` | [HoloGram](src/CSharpPractical/Chapter10_Strings/HoloGram/PangramChecker.cs) | # HoloGram A pangram (Greek: pan gramma, "all letters") or holo-alphabetical sentence... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.HoloGram.UnitTestPangramChecker` |
+| [ ] | `Chapter10_Strings` | [HowManyTimes](src/CSharpPractical/Chapter10_Strings/HowManyTimes/Program.cs) | # How Many Times This app allows a user to enter a... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.HowManyTimes.UnitTestStringFinder` |
+| [ ] | `Chapter10_Strings` | [NotMyMail](src/CSharpPractical/Chapter10_Strings/NotMyMail/EmailValidator.cs) | # Not My Mail This application allows you to check the correctness... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.NotMyMail.UnitTestEmailValidator` |
+| [ ] | `Chapter10_Strings` | [Palindrome](src/CSharpPractical/Chapter10_Strings/Palindrome/PalindromeChecker.cs) | # Palindrome A palindrome is a word, number or phrase of characters... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.Palindrome.UnitTestPalindromeChecker` |
+| [ ] | `Chapter10_Strings` | [ParenthesesChecker](src/CSharpPractical/Chapter10_Strings/ParenthesesChecker/CodeLinter.cs) | # Parentheses Checker This application is a smaller part of a compiler.... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.ParenthesesChecker.UnitTestCodeLinter` |
+| [ ] | `Chapter10_Strings` | [ReplacePerformance](src/CSharpPractical/Chapter10_Strings/ReplacePerformance/Program.cs) | # Replace Performance This application allows replacicing substrings inside of other strings.... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.ReplacePerformance.UnitTestStringHelper` |
+| [ ] | `Chapter10_Strings` | [Reversal](src/CSharpPractical/Chapter10_Strings/Reversal/Program.cs) | # Reversal This application allows the user to enter a tex. The... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.Reversal.UnitTestStringReverser` |
+| [ ] | `Chapter10_Strings` | [TextProperties](src/CSharpPractical/Chapter10_Strings/TextProperties/Program.cs) | # String Properties String Properties is an application that can analyze a... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.TextProperties.UnitTestStringAnalyzer` |
+| [ ] | `Chapter10_Strings` | [WordsEverywhere](src/CSharpPractical/Chapter10_Strings/WordsEverywhere/Program.cs) | # Words Everywhere Words Everywhere is a simple and user friendly app... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.WordsEverywhere.UnitTestWordCounter` |
+| [ ] | `Chapter11_Arrays` | [AbsoluteSum](src/CSharpPractical/Chapter11_Arrays/AbsoluteSum/Program.cs) | # Absolute Sum Absolute Sum is a small application that can determine... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.AbsoluteSum.UnitTest1` |
+| [ ] | `Chapter11_Arrays` | [BiggestOfThemAll](src/CSharpPractical/Chapter11_Arrays/BiggestOfThemAll/ArrayAnalyzer.cs) | # Biggest of them All Biggest of them All is an application... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.BiggestOfThemAll.UnitTestsArrayAnalyzer` |
+| [ ] | `Chapter11_Arrays` | [MultiplesOfThree](src/CSharpPractical/Chapter11_Arrays/MultiplesOfThree/MultipleGenerator.cs) | # Multiples of Three Multiples of Three is a small application that... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.MultiplesOfThree.UnitTestsMultipleGenerator` |
+| [ ] | `Chapter11_Arrays` | [ParallelArrays](src/CSharpPractical/Chapter11_Arrays/ParallelArrays/ArrayHelper.cs) | # Parallel Arrays Jantje is working on a C# project for school... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.ParallelArrays.UnitTestArrayHelper` |
+| [ ] | `Chapter11_Arrays` | [StringsToNumbers](src/CSharpPractical/Chapter11_Arrays/StringsToNumbers/Program.cs) | # Strings to Numbers Strings to numbers allows the conversion of user... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.StringsToNumbers.UnitTestsStringArrayConverter` |
+| [ ] | `Chapter11_Arrays` | [TheSumOfAllNumbers](src/CSharpPractical/Chapter11_Arrays/TheSumOfAllNumbers/Program.cs) | # The Sum of All Numbers The Sum of All Numbers is... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.TheSumOfAllNumbers.UnitTestsSumOfIntegers` |
+| [ ] | `Chapter11_Arrays` | [TurnTheTables](src/CSharpPractical/Chapter11_Arrays/TurnTheTables/ArrayMultiplier.cs) | # Turn the Tables Turn the Tables is a small App to... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.TurnTheTables.UnitTestsArrayMultiplier` |
+| [ ] | `Chapter23_CreatingAndUsingObjects` | [PointInSpace](src/CSharpPractical/Chapter23_CreatingAndUsingObjects/PointInSpace/Point.cs) | Create a 2D Point class with GetX, GetY, SetX, and SetY methods. | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter23_CreatingAndUsingObjects.PointInSpace.UnitTestPoint` |
+| [ ] | `Chapter23_CreatingAndUsingObjects` | [RoundAbout](src/CSharpPractical/Chapter23_CreatingAndUsingObjects/RoundAbout/Circle.cs) | Create a Circle class with radius, diameter, area, and circumference calculation. | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter23_CreatingAndUsingObjects.RoundAbout.UnitTestCircle` |
+| [ ] | `Chapter24_DefiningCustomClasses` | [KingsOfNothing](src/CSharpPractical/Chapter24_DefiningCustomClasses/KingsOfNothing/Player.cs) | # Kings of Nothing Kings of Nothing is the start of a... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter24_DefiningCustomClasses.KingsOfNothing.UnitTestPlayer` |
+| [ ] | `Chapter24_DefiningCustomClasses` | [TeachTheTeacher](src/CSharpPractical/Chapter24_DefiningCustomClasses/TeachTheTeacher/Program.cs) | --- name: Teach the Teacher description: Store personal details of teacher details:... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter24_DefiningCustomClasses.TeachTheTeacher.UnitTestTeacher` |
+| [ ] | `Chapter24_DefiningCustomClasses` | [ThePaintFactory](src/CSharpPractical/Chapter24_DefiningCustomClasses/ThePaintFactory/PaintCalculator.cs) | # The Paint Factory The Paint Factory is a company in Bruges... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter24_DefiningCustomClasses.ThePaintFactory.UnitTestPaintCalculator` |
+| [ ] | `Chapter25_GettersSettersProperties` | [SuperStringTheory](src/CSharpPractical/Chapter25_GettersSettersProperties/SuperStringTheory/Program.cs) | # Super String Theory `SuperString` class is a class that provides a... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter25_GettersSettersProperties.SuperStringTheory.UnitTestSuperString` |
+| [ ] | `Chapter25_GettersSettersProperties` | [ThirdRockFromTheSun](src/CSharpPractical/Chapter25_GettersSettersProperties/ThirdRockFromTheSun/Program.cs) | # Third Rock from the Sun THe Earth has a surface area... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter25_GettersSettersProperties.ThirdRockFromTheSun.UnitTestSphere` |
+| [ ] | `Chapter26_Constructors` | [BackToTheFuture](src/CSharpPractical/Chapter26_Constructors/BackToTheFuture/Program.cs) | # Back to the Future Often as a programmer one needs to... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.BackToTheFuture.UnitTestTimeStamp` |
+| [ ] | `Chapter26_Constructors` | [ICanHearColors](src/CSharpPractical/Chapter26_Constructors/ICanHearColors/Color.cs) | Refactor the Color class with Red, Green, and Blue byte properties (0-255)... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.ICanHearColors.UnitTestColor` |
+| [ ] | `Chapter26_Constructors` | [Quadratic](src/CSharpPractical/Chapter26_Constructors/Quadratic/Program.cs) | --- name: Quadratic description: Solve a quadratic equation details: ./23-defining-custom-classes/quadratic/README.md difficulty: Medium... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.Quadratic.UnitTest1` |
+| [ ] | `Chapter26_Constructors` | [ThingsAreComplex](src/CSharpPractical/Chapter26_Constructors/ThingsAreComplex/ComplexNumber.cs) | Implement a ComplexNumber class with Real() and Imaginary() methods, addition, subtraction, multiplication,... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.ThingsAreComplex.UnitTestComplexNumber` |
+| [ ] | `Chapter26_Constructors` | [VectorFromStartToEnd](src/CSharpPractical/Chapter26_Constructors/VectorFromStartToEnd/Program.cs) | --- name: Vector from Start to End description: Create vectors and calculate... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.VectorFromStartToEnd.VectorPathUnitTests` |
+| [ ] | `Chapter28_Interfaces` | [Generator_of_numbers](src/CSharpPractical/Chapter28_Interfaces/Generator_of_numbers/Program.cs) | # Generator of Numbers In this application we will be building different... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter28_Interfaces` |
+| [ ] | `Chapter28_Interfaces` | [Total_surface](src/CSharpPractical/Chapter28_Interfaces/Total_surface/AreaListing.cs) | # Total Surface Total Surface is a small part of an application... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter28_Interfaces` |
+| [ ] | `Chapter50_IntroductionToWpf` | [Hangman_refactored](src/CSharpPractical/Chapter50_IntroductionToWpf/Hangman_refactored/Program.cs) | --- name: Hangman Refactored description: Refactor the hangman game to a library... | `dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter50_IntroductionToWpf` |
+
+---
+
+## Part 2: Algorithm & Data Structure Challenges
+
+### AmazonJourney (1 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **PriorityQueue** | N/A | [PriorityQueue.cs](src/CodingExercises/AmazonJourney/PriorityQueue.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.AmazonJourney.PriorityQueueTests` |
+
+### AmazonJourney - Hard (1 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **ConcatenatedWords** | N/A | [ConcatenatedWords.cs](src/CodingExercises/AmazonJourney/Hard/ConcatenatedWords.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.AmazonJourney.SolutionTests` |
+
+### AmazonJourney - Medium (2 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **Dijsktra** | N/A | [Dijsktra.cs](src/CodingExercises/AmazonJourney/Medium/Dijsktra.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.AmazonJourney.SolutionTests` |
+| [ ] | **RobotBounded** | N/A | [RobotBounded.cs](src/CodingExercises/AmazonJourney/Medium/RobotBounded.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.AmazonJourney.RobotBoundedTests` |
+
+### CommonExercises (40 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **AllPathFromOriginToEnd** | N/A | [AllPathFromOriginToEnd.cs](src/CodingExercises/CommonExercises/AllPathFromOriginToEnd.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.AllPathFromOriginToEndTests` |
+| [ ] | **BSTFromInorderPreorder** | N/A | [BSTFromInorderPreorder.cs](src/CodingExercises/CommonExercises/BSTFromInorderPreorder.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.BSTFromInorderPreorderTests` |
+| [ ] | **ConnectRight** | N/A | [ConnectRight.cs](src/CodingExercises/CommonExercises/ConnectRight.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ConnectRightTests` |
+| [ ] | **DiameterOfBTree** | N/A | [DiameterOfBTree.cs](src/CodingExercises/CommonExercises/DiameterOfBTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.DiameterOfBTreeTests` |
+| [ ] | **GenerateAllBalancedParenthesis** | N/A | [GenerateAllBalancedParenthesis.cs](src/CodingExercises/CommonExercises/GenerateAllBalancedParenthesis.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.GenerateAllBalancedParenthesisTests` |
+| [ ] | **GetAllSubsets** | N/A | [GetAllSubsets.cs](src/CodingExercises/CommonExercises/GetAllSubsets.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.GetAllSubsetsTests` |
+| [ ] | **GroupAnagramsSolved** | N/A | [GroupAnagramsSolved.cs](src/CodingExercises/CommonExercises/GroupAnagramsSolved.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.GroupAnagramsSolvedTests` |
+| [ ] | **IncreasingTripletSolutions** | N/A | [IncreasingTripletSolutions.cs](src/CodingExercises/CommonExercises/IncreasingTripletSolutions.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.IncreasingTripletSolutionsTests` |
+| [ ] | **Intersection2Lists** | N/A | [Intersection2Lists.cs](src/CodingExercises/CommonExercises/Intersection2Lists.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.Intersection2ListsTests` |
+| [ ] | **InvertBinaryTree** | N/A | [InvertBinaryTree.cs](src/CodingExercises/CommonExercises/InvertBinaryTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.InvertBinaryTreeTests` |
+| [ ] | **KadaneAlgorithm** | N/A | [KadaneAlgorithm.cs](src/CodingExercises/CommonExercises/KadaneAlgorithm.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.KadaneAlgorithmTests` |
+| [ ] | **LetterTotalCombinations** | N/A | [LetterTotalCombinations.cs](src/CodingExercises/CommonExercises/LetterTotalCombinations.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.LetterTotalCombinationsTests` |
+| [ ] | **ListNode** | N/A | [ListNode.cs](src/CodingExercises/CommonExercises/ListNode.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ListNodeTests` |
+| [ ] | **LongestMountain** | N/A | [LongestMountain.cs](src/CodingExercises/CommonExercises/LongestMountain.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.LongestMountainTests` |
+| [ ] | **LongestPalindromeEx** | N/A | [LongestPalindromeEx.cs](src/CodingExercises/CommonExercises/LongestPalindromeEx.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.LongestPalindromeExTests` |
+| [ ] | **LongestSubstringWORepeated** | N/A | [LongestSubstringWORepeated.cs](src/CodingExercises/CommonExercises/LongestSubstringWORepeated.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.LongestSubstringWORepeatedTests` |
+| [ ] | **MaximumDepth** | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/submissions/) | [MaximumDepth.cs](src/CodingExercises/CommonExercises/MaximumDepth.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MaximumDepthTests` |
+| [ ] | **MergeIntervals** | N/A | [MergeIntervals.cs](src/CodingExercises/CommonExercises/MergeIntervals.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MergeIntervalsTests` |
+| [ ] | **MinHeight** | [Link](https://www.youtube.com/watch?v=ZfzVig8UqBQ&ab_channel=SaiAnishMalla) | [MinHeight.cs](src/CodingExercises/CommonExercises/MinHeight.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MinHeightTests` |
+| [ ] | **Monotonic** | N/A | [Monotonic.cs](src/CodingExercises/CommonExercises/Monotonic.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MonotonicTests` |
+| [ ] | **MoveZeros** | N/A | [MoveZeros.cs](src/CodingExercises/CommonExercises/MoveZeros.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MoveZeroesClassTests` |
+| [ ] | **Node** | N/A | [Node.cs](src/CodingExercises/CommonExercises/Node.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.NodeTests` |
+| [ ] | **NumberOfIslands** | N/A | [NumberOfIslands.cs](src/CodingExercises/CommonExercises/NumberOfIslands.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.NumberOfIslandsTests` |
+| [ ] | **OddEvenList** | N/A | [OddEvenList.cs](src/CodingExercises/CommonExercises/OddEvenList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.OddEvenListExTests` |
+| [ ] | **PathSum** | [Link](https://leetcode.com/problems/path-sum/submissions/) | [PathSum.cs](src/CodingExercises/CommonExercises/PathSum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.PathSumTests` |
+| [ ] | **PeakElement** | [Link](https://stackoverflow.com/questions/25571359/why-we-write-lohi-lo-2-in-binary-search) | [PeakElement.cs](src/CodingExercises/CommonExercises/PeakElement.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.PeakElementTests` |
+| [ ] | **SearchRangeBS** | N/A | [SearchRangeBS.cs](src/CodingExercises/CommonExercises/SearchRangeBS.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SearchRangeBSTests` |
+| [ ] | **SetZeroesMatrix** | N/A | [SetZeroesMatrix.cs](src/CodingExercises/CommonExercises/SetZeroesMatrix.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SetZeroesMatrixTests` |
+| [ ] | **SortColorsEx** | N/A | [SortColorsEx.cs](src/CodingExercises/CommonExercises/SortColorsEx.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SortColorsExTests` |
+| [ ] | **SpiralOrdering** | N/A | [SpiralOrdering.cs](src/CodingExercises/CommonExercises/SpiralOrdering.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SpiralOrderingTests` |
+| [ ] | **SubSequenceCheck** | [Link](https://leetcode.com/problems/is-subsequence/) | [SubSequenceCheck.cs](src/CodingExercises/CommonExercises/SubSequenceCheck.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SubSequenceCheckTests` |
+| [ ] | **SumTwoNumbers** | N/A | [SumTwoNumbers.cs](src/CodingExercises/CommonExercises/SumTwoNumbers.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SumTwoNumbersTests` |
+| [ ] | **ThirdMaximum** | [Link](https://leetcode.com/problems/third-maximum-number/) | [ThirdMaximum.cs](src/CodingExercises/CommonExercises/ThirdMaximum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ThirdMaximumTests` |
+| [ ] | **ThreeSum** | N/A | [ThreeSum.cs](src/CodingExercises/CommonExercises/ThreeSum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ThreeSumClassTests` |
+| [ ] | **TopFrequentK** | N/A | [TopFrequentK.cs](src/CodingExercises/CommonExercises/TopFrequentK.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.TopFrequentKTests` |
+| [ ] | **TotalPermutations** | N/A | [TotalPermutations.cs](src/CodingExercises/CommonExercises/TotalPermutations.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.TotalPermutationsTests` |
+| [ ] | **TreeNode** | N/A | [TreeNode.cs](src/CodingExercises/CommonExercises/TreeNode.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.TreeNodeTests` |
+| [ ] | **ValidateBST** | N/A | [ValidateBST.cs](src/CodingExercises/CommonExercises/ValidateBST.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ValidateBSTTests` |
+| [ ] | **WordSearch** | N/A | [WordSearch.cs](src/CodingExercises/CommonExercises/WordSearch.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.WordSearchTests` |
+| [ ] | **ZigzagOrderTrasversal** | N/A | [ZigzagOrderTrasversal.cs](src/CodingExercises/CommonExercises/ZigzagOrderTrasversal.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ZigzagOrderTrasversalTests` |
+
+### CommonExercises - Easy-Array (10 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **AddOne** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/559/) | [AddOne.cs](src/CodingExercises/CommonExercises/Easy-Array/AddOne.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.AddOneTests` |
+| [ ] | **Duplicates** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/578/) | [Duplicates.cs](src/CodingExercises/CommonExercises/Easy-Array/Duplicates.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.DuplicatesTests` |
+| [ ] | **IntersectionTwoArrays** | N/A | [IntersectionTwoArrays.cs](src/CodingExercises/CommonExercises/Easy-Array/IntersectionTwoArrays.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.IntersectionTwoArraysTests` |
+| [ ] | **MoveZeroes** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/) | [MoveZeroes.cs](src/CodingExercises/CommonExercises/Easy-Array/MoveZeroes.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MoveZeroesTests` |
+| [ ] | **RemoveDuplicates** | N/A | [RemoveDuplicates.cs](src/CodingExercises/CommonExercises/Easy-Array/RemoveDuplicates.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.RemoveDuplicatesFromSortedArrayTests` |
+| [ ] | **RotateArray** | N/A | [RotateArray.cs](src/CodingExercises/CommonExercises/Easy-Array/RotateArray.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.RotateArrayTests` |
+| [ ] | **RotateImage** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/) | [RotateImage.cs](src/CodingExercises/CommonExercises/Easy-Array/RotateImage.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.RotateImageTests` |
+| [ ] | **SingleNumberInArray** | N/A | [SingleNumberInArray.cs](src/CodingExercises/CommonExercises/Easy-Array/SingleNumberInArray.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SingleNumberInArrayTests` |
+| [ ] | **TwoSum** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/546/) | [TwoSum.cs](src/CodingExercises/CommonExercises/Easy-Array/TwoSum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.TwoSumTests` |
+| [ ] | **ValidSudoku** | [Link](https://leetcode.com/problems/valid-sudoku) | [ValidSudoku.cs](src/CodingExercises/CommonExercises/Easy-Array/ValidSudoku.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ValidSudokuTests` |
+
+### CommonExercises - Easy-DynamicProgramming (3 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **BuyAndSellStocks** | N/A | [BuyAndSellStocks.cs](src/CodingExercises/CommonExercises/Easy-DynamicProgramming/BuyAndSellStocks.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.BuyAndSellStocksTests` |
+| [ ] | **ClimbingStairs** | N/A | [ClimbingStairs.cs](src/CodingExercises/CommonExercises/Easy-DynamicProgramming/ClimbingStairs.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ClimbingStairsTests` |
+| [ ] | **HouseRobber** | N/A | [HouseRobber.cs](src/CodingExercises/CommonExercises/Easy-DynamicProgramming/HouseRobber.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.HouseRobberTests` |
+
+### CommonExercises - Easy-List (6 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **DeleteNode** | N/A | [DeleteNode.cs](src/CodingExercises/CommonExercises/Easy-List/DeleteNode.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.DeleteNodeTests` |
+| [ ] | **DetectCycle** | N/A | [DetectCycle.cs](src/CodingExercises/CommonExercises/Easy-List/DetectCycle.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.DetectCycleTests` |
+| [ ] | **MergeTwoSortedLists** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/771/) | [MergeTwoSortedLists.cs](src/CodingExercises/CommonExercises/Easy-List/MergeTwoSortedLists.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MergeTwoSortedListsTests` |
+| [ ] | **Palindrome** | N/A | [Palindrome.cs](src/CodingExercises/CommonExercises/Easy-List/Palindrome.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.PalindromeTests` |
+| [ ] | **RemoveNTHElement** | N/A | [RemoveNTHElement.cs](src/CodingExercises/CommonExercises/Easy-List/RemoveNTHElement.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.RemoveNTHElementTests` |
+| [ ] | **ReverseList** | N/A | [ReverseList.cs](src/CodingExercises/CommonExercises/Easy-List/ReverseList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ReverseListTests` |
+
+### CommonExercises - Easy-SearchAndSorting (2 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **FirstBadVersion** | N/A | [FirstBadVersion.cs](src/CodingExercises/CommonExercises/Easy-SearchAndSorting/FirstBadVersion.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.FirstBadVersionTests` |
+| [ ] | **MergeTwoSortedArray** | N/A | [MergeTwoSortedArray.cs](src/CodingExercises/CommonExercises/Easy-SearchAndSorting/MergeTwoSortedArray.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MergeTwoSortedArrayTests` |
+
+### CommonExercises - Easy-String (9 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **Atoi** | [Link](https://leetcode.com/problems/string-to-integer-atoi/) | [Atoi.cs](src/CodingExercises/CommonExercises/Easy-String/Atoi.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.AtoiTests` |
+| [ ] | **CountAndSay** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/886/) | [CountAndSay.cs](src/CodingExercises/CommonExercises/Easy-String/CountAndSay.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.CountAndSayExTests` |
+| [ ] | **FirstUniqueCharcs** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/) | [FirstUniqueCharcs.cs](src/CodingExercises/CommonExercises/Easy-String/FirstUniqueCharcs.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.FirstUniqueCharcsTests` |
+| [ ] | **LongestPrefix** | [Link](https://leetcode.com/problems/longest-common-prefix) | [LongestPrefix.cs](src/CodingExercises/CommonExercises/Easy-String/LongestPrefix.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.LongestPrefixTests` |
+| [ ] | **Palindrome** | N/A | [Palindrome.cs](src/CodingExercises/CommonExercises/Easy-String/Palindrome.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.PalindromeTests` |
+| [ ] | **ReverseInteger** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/879/) | [ReverseInteger.cs](src/CodingExercises/CommonExercises/Easy-String/ReverseInteger.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ReverseIntegerTests` |
+| [ ] | **ReverseString** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/879/) | [ReverseString.cs](src/CodingExercises/CommonExercises/Easy-String/ReverseString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ReverseStringTests` |
+| [ ] | **StrStr** | N/A | [StrStr.cs](src/CodingExercises/CommonExercises/Easy-String/StrStr.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.StrStrTests` |
+| [ ] | **ValidAnagram** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/882/) | [ValidAnagram.cs](src/CodingExercises/CommonExercises/Easy-String/ValidAnagram.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ValidAnagramTests` |
+
+### CommonExercises - Easy-Trees (3 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **ConvertSortedArrayToBinarySearchTree** | N/A | [ConvertSortedArrayToBinarySearchTree.cs](src/CodingExercises/CommonExercises/Easy-Trees/ConvertSortedArrayToBinarySearchTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ConvertSortedArrayToBinarySearchTreeTests` |
+| [ ] | **LevelOrderTrasversal** | N/A | [LevelOrderTrasversal.cs](src/CodingExercises/CommonExercises/Easy-Trees/LevelOrderTrasversal.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.LevelOrderTrasversalTests` |
+| [ ] | **SymmetricTree** | [Link](https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/627/) | [SymmetricTree.cs](src/CodingExercises/CommonExercises/Easy-Trees/SymmetricTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SymmetricTreeTests` |
+
+### CommonExercises - Hard-Array (9 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **4SumII** | N/A | [4SumII.cs](src/CodingExercises/CommonExercises/Hard-Array/4SumII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises._4SumIITests` |
+| [ ] | **ContainerWithMostWater** | N/A | [ContainerWithMostWater.cs](src/CodingExercises/CommonExercises/Hard-Array/ContainerWithMostWater.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ContainerWithMostWaterTests` |
+| [ ] | **FindDuplicate** | N/A | [FindDuplicate.cs](src/CodingExercises/CommonExercises/Hard-Array/FindDuplicate.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.FindDuplicateTests` |
+| [ ] | **FirstMissingPositive** | N/A | [FirstMissingPositive.cs](src/CodingExercises/CommonExercises/Hard-Array/FirstMissingPositive.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.FirstMissingPositiveTests` |
+| [ ] | **GameOfLife** | N/A | [GameOfLife.cs](src/CodingExercises/CommonExercises/Hard-Array/GameOfLife.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.GameOfLifeTests` |
+| [ ] | **LongestConsecutive** | N/A | [LongestConsecutive.cs](src/CodingExercises/CommonExercises/Hard-Array/LongestConsecutive.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.LongestConsecutiveTests` |
+| [ ] | **MinWindowString** | N/A | [MinWindowString.cs](src/CodingExercises/CommonExercises/Hard-Array/MinWindowString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MinWindowStringTests` |
+| [ ] | **ProductOfArrayExceptSelf** | N/A | [ProductOfArrayExceptSelf.cs](src/CodingExercises/CommonExercises/Hard-Array/ProductOfArrayExceptSelf.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.ProductOfArrayExceptSelfTests` |
+| [ ] | **SlidingWindowMaximum** | N/A | [SlidingWindowMaximum.cs](src/CodingExercises/CommonExercises/Hard-Array/SlidingWindowMaximum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SlidingWindowMaximumTests` |
+
+### CommonExercises - Hard-DynamicProgramming (1 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **MaximumProduct** | N/A | [MaximumProduct.cs](src/CodingExercises/CommonExercises/Hard-DynamicProgramming/MaximumProduct.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MaximumProductTests` |
+
+### CommonExercises - Hard-Graph (6 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **BinaryTreeMaximumPathSum** | N/A | [BinaryTreeMaximumPathSum.cs](src/CodingExercises/CommonExercises/Hard-Graph/BinaryTreeMaximumPathSum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.BinaryTreeMaximumPathSumTests` |
+| [ ] | **CourseSchedule** | N/A | [CourseSchedule.cs](src/CodingExercises/CommonExercises/Hard-Graph/CourseSchedule.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.CourseScheduleTests` |
+| [ ] | **CourseScheduleII** | N/A | [CourseScheduleII.cs](src/CodingExercises/CommonExercises/Hard-Graph/CourseScheduleII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.CourseScheduleIITests` |
+| [ ] | **CriticalEdge** | N/A | [CriticalEdge.cs](src/CodingExercises/CommonExercises/Hard-Graph/CriticalEdge.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.CriticalEdgeTests` |
+| [ ] | **NumberOfProvinces** | N/A | [NumberOfProvinces.cs](src/CodingExercises/CommonExercises/Hard-Graph/NumberOfProvinces.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.NumberOfProvincesTests` |
+| [ ] | **WorldLadder** | N/A | [WorldLadder.cs](src/CodingExercises/CommonExercises/Hard-Graph/WorldLadder.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.WorldLadderTests` |
+
+### CommonExercises - Hard-List (1 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **MergeKSortedLists** | N/A | [MergeKSortedLists.cs](src/CodingExercises/CommonExercises/Hard-List/MergeKSortedLists.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MergeKSortedListsTests` |
+
+### CommonExercises - Medium-DynamicProgramming (6 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **AllUniquePaths** | N/A | [AllUniquePaths.cs](src/CodingExercises/CommonExercises/Medium-DynamicProgramming/AllUniquePaths.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.AllUniquePathsTests` |
+| [ ] | **CoinChangeDP** | N/A | [CoinChangeDP.cs](src/CodingExercises/CommonExercises/Medium-DynamicProgramming/CoinChangeDP.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.CoinChangeDPTests` |
+| [ ] | **JumpGame** | N/A | [JumpGame.cs](src/CodingExercises/CommonExercises/Medium-DynamicProgramming/JumpGame.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.JumpGameTests` |
+| [ ] | **LongestCommonSubsequence** | N/A | [LongestCommonSubsequence.cs](src/CodingExercises/CommonExercises/Medium-DynamicProgramming/LongestCommonSubsequence.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.LongestCommonSubsequenceTests` |
+| [ ] | **LongestIncreasingSubsequence** | N/A | [LongestIncreasingSubsequence.cs](src/CodingExercises/CommonExercises/Medium-DynamicProgramming/LongestIncreasingSubsequence.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.LongestIncreasingSubsequenceTests` |
+| [ ] | **MinimumAscii** | N/A | [MinimumAscii.cs](src/CodingExercises/CommonExercises/Medium-DynamicProgramming/MinimumAscii.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MinimumAsciiTests` |
+
+### CommonExercises - Medium-Other (1 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **MajorityElement** | N/A | [MajorityElement.cs](src/CodingExercises/CommonExercises/Medium-Other/MajorityElement.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MajorityElementTests` |
+
+### CommonExercises - Medium-Search (2 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **SearchIn2DArrayII** | N/A | [SearchIn2DArrayII.cs](src/CodingExercises/CommonExercises/Medium-Search/SearchIn2DArrayII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SearchIn2DArrayIITests` |
+| [ ] | **SearchInRotatedSortedArray** | N/A | [SearchInRotatedSortedArray.cs](src/CodingExercises/CommonExercises/Medium-Search/SearchInRotatedSortedArray.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.SearchInRotatedSortedArrayTests` |
+
+### KthLargestInBST.cs (1 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **KthLargestInBST** | N/A | [KthLargestInBST.cs](src/CodingExercises/KthLargestInBST.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.General.KthLargestInBSTTests` |
+
+### MicrosoftExcercises (1 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **Node** | N/A | [Node.cs](src/CodingExercises/MicrosoftExcercises/Node.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.NodeTests` |
+
+### MicrosoftExcercises - Easy (67 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **AddStrings** | N/A | [AddStrings.cs](src/CodingExercises/MicrosoftExcercises/Easy/AddStrings.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.AddStringsTests` |
+| [ ] | **BalancedHeightTree** | N/A | [BalancedHeightTree.cs](src/CodingExercises/MicrosoftExcercises/Easy/BalancedHeightTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BalancedHeightTreeTests` |
+| [ ] | **BalancedTreeFromSortedArray** | N/A | [BalancedTreeFromSortedArray.cs](src/CodingExercises/MicrosoftExcercises/Easy/BalancedTreeFromSortedArray.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BalancedTreeFromSortedArrayTests` |
+| [ ] | **BestTimeToSellAndBuy** | N/A | [BestTimeToSellAndBuy.cs](src/CodingExercises/MicrosoftExcercises/Easy/BestTimeToSellAndBuy.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BestTimeToSellAndBuyTests` |
+| [ ] | **BestTimetoBuyandSellStockII** | N/A | [BestTimetoBuyandSellStockII.cs](src/CodingExercises/MicrosoftExcercises/Easy/BestTimetoBuyandSellStockII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BestTimetoBuyandSellStockIITests` |
+| [ ] | **BinarySum** | N/A | [BinarySum.cs](src/CodingExercises/MicrosoftExcercises/Easy/BinarySum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BinarySumTests` |
+| [ ] | **BinaryTreePath** | N/A | [BinaryTreePath.cs](src/CodingExercises/MicrosoftExcercises/Easy/BinaryTreePath.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BinaryTreePathTests` |
+| [ ] | **BuyStock** | N/A | [BuyStock.cs](src/CodingExercises/MicrosoftExcercises/Easy/BuyStock.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BuyStockTests` |
+| [ ] | **ClimbingStairs** | N/A | [ClimbingStairs.cs](src/CodingExercises/MicrosoftExcercises/Easy/ClimbingStairs.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ClimbingStairsTests` |
+| [ ] | **CountPrimes** | N/A | [CountPrimes.cs](src/CodingExercises/MicrosoftExcercises/Easy/CountPrimes.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CountPrimesTests` |
+| [ ] | **DeleteDuplicates** | N/A | [DeleteDuplicates.cs](src/CodingExercises/MicrosoftExcercises/Easy/DeleteDuplicates.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DeleteDuplicatesTests` |
+| [ ] | **DeleteNode** | N/A | [DeleteNode.cs](src/CodingExercises/MicrosoftExcercises/Easy/DeleteNode.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DeleteNodeTests` |
+| [ ] | **DiameterOfBinaryTree** | N/A | [DiameterOfBinaryTree.cs](src/CodingExercises/MicrosoftExcercises/Easy/DiameterOfBinaryTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DiameterOfBinaryTreeTests` |
+| [ ] | **ExcelTitle** | N/A | [ExcelTitle.cs](src/CodingExercises/MicrosoftExcercises/Easy/ExcelTitle.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ExcelTitleTests` |
+| [ ] | **ExcelTitleToNumber** | N/A | [ExcelTitleToNumber.cs](src/CodingExercises/MicrosoftExcercises/Easy/ExcelTitleToNumber.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ExcelTitleToNumberTests` |
+| [ ] | **FactorialTralingZeroes** | N/A | [FactorialTralingZeroes.cs](src/CodingExercises/MicrosoftExcercises/Easy/FactorialTralingZeroes.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FactorialTralingZeroesTests` |
+| [ ] | **Fibonacci** | N/A | [Fibonacci.cs](src/CodingExercises/MicrosoftExcercises/Easy/Fibonacci.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FibonacciTests` |
+| [ ] | **FindAllNumbersDisappearedArray** | N/A | [FindAllNumbersDisappearedArray.cs](src/CodingExercises/MicrosoftExcercises/Easy/FindAllNumbersDisappearedArray.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FindAllNumbersDisappearedArrayTests` |
+| [ ] | **FindSecondMinimumValue** | N/A | [FindSecondMinimumValue.cs](src/CodingExercises/MicrosoftExcercises/Easy/FindSecondMinimumValue.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FindSecondMinimumValueTests` |
+| [ ] | **FirstUniqueCharInString** | N/A | [FirstUniqueCharInString.cs](src/CodingExercises/MicrosoftExcercises/Easy/FirstUniqueCharInString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FirstUniqueCharInStringTests` |
+| [ ] | **FizzBuzz** | N/A | [FizzBuzz.cs](src/CodingExercises/MicrosoftExcercises/Easy/FizzBuzz.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FizzBuzzTests` |
+| [ ] | **IntersectionOfTwoList** | N/A | [IntersectionOfTwoList.cs](src/CodingExercises/MicrosoftExcercises/Easy/IntersectionOfTwoList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.IntersectionOfTwoListTests` |
+| [ ] | **IsPalindrome** | N/A | [IsPalindrome.cs](src/CodingExercises/MicrosoftExcercises/Easy/IsPalindrome.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.IsPalindromeTests` |
+| [ ] | **IsSubtree** | N/A | [IsSubtree.cs](src/CodingExercises/MicrosoftExcercises/Easy/IsSubtree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.IsSubtreeTests` |
+| [ ] | **IsSymmetric** | N/A | [IsSymmetric.cs](src/CodingExercises/MicrosoftExcercises/Easy/IsSymmetric.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.IsSymmetricTests` |
+| [ ] | **LinkedListCycle** | N/A | [LinkedListCycle.cs](src/CodingExercises/MicrosoftExcercises/Easy/LinkedListCycle.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LinkedListCycleTests` |
+| [ ] | **LongestPrefix** | N/A | [LongestPrefix.cs](src/CodingExercises/MicrosoftExcercises/Easy/LongestPrefix.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LongestPrefixTests` |
+| [ ] | **LowestCommonAncestor** | N/A | [LowestCommonAncestor.cs](src/CodingExercises/MicrosoftExcercises/Easy/LowestCommonAncestor.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LowestCommonAncestorTests` |
+| [ ] | **LowestCommonAncestorI** | N/A | [LowestCommonAncestorI.cs](src/CodingExercises/MicrosoftExcercises/Easy/LowestCommonAncestorI.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LowestCommonAncestorITests` |
+| [ ] | **MajorityElement** | N/A | [MajorityElement.cs](src/CodingExercises/MicrosoftExcercises/Easy/MajorityElement.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MajorityElementTests` |
+| [ ] | **MinDepth** | N/A | [MinDepth.cs](src/CodingExercises/MicrosoftExcercises/Easy/MinDepth.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MinDepthTests` |
+| [ ] | **MinStack** | N/A | [MinStack.cs](src/CodingExercises/MicrosoftExcercises/Easy/MinStack.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MinStackTests` |
+| [ ] | **MostCommonWords** | N/A | [MostCommonWords.cs](src/CodingExercises/MicrosoftExcercises/Easy/MostCommonWords.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MostCommonWordsTests` |
+| [ ] | **MoveZeroes** | N/A | [MoveZeroes.cs](src/CodingExercises/MicrosoftExcercises/Easy/MoveZeroes.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MoveZeroesTests` |
+| [ ] | **MyHashMap** | N/A | [MyHashMap.cs](src/CodingExercises/MicrosoftExcercises/Easy/MyHashMap.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MyHashMapTests` |
+| [ ] | **MyQueue** | N/A | [MyQueue.cs](src/CodingExercises/MicrosoftExcercises/Easy/MyQueue.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MyQueueTests` |
+| [ ] | **MyStack** | N/A | [MyStack.cs](src/CodingExercises/MicrosoftExcercises/Easy/MyStack.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MyStackTests` |
+| [ ] | **NumberOfBalloons** | N/A | [NumberOfBalloons.cs](src/CodingExercises/MicrosoftExcercises/Easy/NumberOfBalloons.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.NumberOfBalloonsTests` |
+| [ ] | **PalindromeLinkedList** | N/A | [PalindromeLinkedList.cs](src/CodingExercises/MicrosoftExcercises/Easy/PalindromeLinkedList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PalindromeLinkedListTests` |
+| [ ] | **PascalTriangle** | N/A | [PascalTriangle.cs](src/CodingExercises/MicrosoftExcercises/Easy/PascalTriangle.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PascalTriangleTests` |
+| [ ] | **PathSum** | N/A | [PathSum.cs](src/CodingExercises/MicrosoftExcercises/Easy/PathSum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PathSumTests` |
+| [ ] | **PeakElement** | N/A | [PeakElement.cs](src/CodingExercises/MicrosoftExcercises/Easy/PeakElement.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PeakElementTests` |
+| [ ] | **PerformShiftString** | N/A | [PerformShiftString.cs](src/CodingExercises/MicrosoftExcercises/Easy/PerformShiftString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PerformShiftStringTests` |
+| [ ] | **PivotIndex** | N/A | [PivotIndex.cs](src/CodingExercises/MicrosoftExcercises/Easy/PivotIndex.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PivotIndexTests` |
+| [ ] | **PlusOne** | N/A | [PlusOne.cs](src/CodingExercises/MicrosoftExcercises/Easy/PlusOne.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PlusOneTests` |
+| [ ] | **RectangleOverlap** | N/A | [RectangleOverlap.cs](src/CodingExercises/MicrosoftExcercises/Easy/RectangleOverlap.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RectangleOverlapTests` |
+| [ ] | **RemoveElements** | N/A | [RemoveElements.cs](src/CodingExercises/MicrosoftExcercises/Easy/RemoveElements.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RemoveElementsTests` |
+| [ ] | **RemoveElementsFromList** | N/A | [RemoveElementsFromList.cs](src/CodingExercises/MicrosoftExcercises/Easy/RemoveElementsFromList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RemoveElementsFromListTests` |
+| [ ] | **ReverseInteger** | N/A | [ReverseInteger.cs](src/CodingExercises/MicrosoftExcercises/Easy/ReverseInteger.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReverseIntegerTests` |
+| [ ] | **ReverseOnlyLetters** | N/A | [ReverseOnlyLetters.cs](src/CodingExercises/MicrosoftExcercises/Easy/ReverseOnlyLetters.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReverseOnlyLettersTests` |
+| [ ] | **ReverseString** | N/A | [ReverseString.cs](src/CodingExercises/MicrosoftExcercises/Easy/ReverseString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReverseStringTests` |
+| [ ] | **ReverseString2** | N/A | [ReverseString2.cs](src/CodingExercises/MicrosoftExcercises/Easy/ReverseString2.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RevereString2Tests` |
+| [ ] | **ReverseStringIII** | N/A | [ReverseStringIII.cs](src/CodingExercises/MicrosoftExcercises/Easy/ReverseStringIII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReverseStringIIITests` |
+| [ ] | **RomanToInteger** | N/A | [RomanToInteger.cs](src/CodingExercises/MicrosoftExcercises/Easy/RomanToInteger.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RomanToIntegerTests` |
+| [ ] | **RotateString** | N/A | [RotateString.cs](src/CodingExercises/MicrosoftExcercises/Easy/RotateString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RotateStringTests` |
+| [ ] | **SQRT** | N/A | [SQRT.cs](src/CodingExercises/MicrosoftExcercises/Easy/SQRT.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SQRTTests` |
+| [ ] | **SmallestRange** | N/A | [SmallestRange.cs](src/CodingExercises/MicrosoftExcercises/Easy/SmallestRange.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SmallestRangeTests` |
+| [ ] | **SortByParity** | N/A | [SortByParity.cs](src/CodingExercises/MicrosoftExcercises/Easy/SortByParity.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SortByParityTests` |
+| [ ] | **StrStr** | N/A | [StrStr.cs](src/CodingExercises/MicrosoftExcercises/Easy/StrStr.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.StrStrTests` |
+| [ ] | **SummaryRanges** | N/A | [SummaryRanges.cs](src/CodingExercises/MicrosoftExcercises/Easy/SummaryRanges.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SummaryRangesTests` |
+| [ ] | **ThirdNumber** | N/A | [ThirdNumber.cs](src/CodingExercises/MicrosoftExcercises/Easy/ThirdNumber.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ThirdNumberTests` |
+| [ ] | **TwoSumSorted** | N/A | [TwoSumSorted.cs](src/CodingExercises/MicrosoftExcercises/Easy/TwoSumSorted.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TwoSumSortedTests` |
+| [ ] | **UniqueEmailAddress** | N/A | [UniqueEmailAddress.cs](src/CodingExercises/MicrosoftExcercises/Easy/UniqueEmailAddress.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.UniqueEmailAddressTests` |
+| [ ] | **VPalindrome** | N/A | [VPalindrome.cs](src/CodingExercises/MicrosoftExcercises/Easy/VPalindrome.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.VPalindromeTests` |
+| [ ] | **ValidAnagram** | N/A | [ValidAnagram.cs](src/CodingExercises/MicrosoftExcercises/Easy/ValidAnagram.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ValidAnagramTests` |
+| [ ] | **ValidParentheses** | N/A | [ValidParentheses.cs](src/CodingExercises/MicrosoftExcercises/Easy/ValidParentheses.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ValidParenthesesTests` |
+| [ ] | **WordPattern** | N/A | [WordPattern.cs](src/CodingExercises/MicrosoftExcercises/Easy/WordPattern.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WordPatternTests` |
+
+### MicrosoftExcercises - Hard (36 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **AlienDict** | N/A | [AlienDict.cs](src/CodingExercises/MicrosoftExcercises/Hard/AlienDict.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.AlienDictTests` |
+| [ ] | **Autocomplete** | N/A | [Autocomplete.cs](src/CodingExercises/MicrosoftExcercises/Hard/Autocomplete.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.AutocompleteSystemTests` |
+| [ ] | **BasicCalculator** | N/A | [BasicCalculator.cs](src/CodingExercises/MicrosoftExcercises/Hard/BasicCalculator.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BasicCalculatorTests` |
+| [ ] | **DungeonGame** | N/A | [DungeonGame.cs](src/CodingExercises/MicrosoftExcercises/Hard/DungeonGame.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DungeonGameTests` |
+| [ ] | **EditDistance** | N/A | [EditDistance.cs](src/CodingExercises/MicrosoftExcercises/Hard/EditDistance.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.EditDistanceTests` |
+| [ ] | **FirstMissingPositiveSWAP** | N/A | [FirstMissingPositiveSWAP.cs](src/CodingExercises/MicrosoftExcercises/Hard/FirstMissingPositiveSWAP.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FirstMissingPositiveSWAPTests` |
+| [ ] | **FrogGame** | N/A | [FrogGame.cs](src/CodingExercises/MicrosoftExcercises/Hard/FrogGame.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FrogGameTests` |
+| [ ] | **IntegerToEnglishWords** | N/A | [IntegerToEnglishWords.cs](src/CodingExercises/MicrosoftExcercises/Hard/IntegerToEnglishWords.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.IntegerToEnglishWordsTests` |
+| [ ] | **LargestHistogram** | N/A | [LargestHistogram.cs](src/CodingExercises/MicrosoftExcercises/Hard/LargestHistogram.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LargestHistogramTests` |
+| [ ] | **LargestRectangleInMatrix** | N/A | [LargestRectangleInMatrix.cs](src/CodingExercises/MicrosoftExcercises/Hard/LargestRectangleInMatrix.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LargestRectangleInMatrixTests` |
+| [ ] | **LongestIncreasingPathInMatrix** | N/A | [LongestIncreasingPathInMatrix.cs](src/CodingExercises/MicrosoftExcercises/Hard/LongestIncreasingPathInMatrix.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LongestIncreasingPathInMatrixTests` |
+| [ ] | **LongestValidParentheses** | N/A | [LongestValidParentheses.cs](src/CodingExercises/MicrosoftExcercises/Hard/LongestValidParentheses.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LongestValidParenthesesTests` |
+| [ ] | **MaxFreqStack** | N/A | [MaxFreqStack.cs](src/CodingExercises/MicrosoftExcercises/Hard/MaxFreqStack.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FreqStackTests` |
+| [ ] | **MaximumPathBinaryTree** | N/A | [MaximumPathBinaryTree.cs](src/CodingExercises/MicrosoftExcercises/Hard/MaximumPathBinaryTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MaximumPathBinaryTreeTests` |
+| [ ] | **MedianOfDataStream** | N/A | [MedianOfDataStream.cs](src/CodingExercises/MicrosoftExcercises/Hard/MedianOfDataStream.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MedianFinderTests` |
+| [ ] | **MedianSorted** | N/A | [MedianSorted.cs](src/CodingExercises/MicrosoftExcercises/Hard/MedianSorted.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MedianSortedTests` |
+| [ ] | **MergeKLists** | N/A | [MergeKLists.cs](src/CodingExercises/MicrosoftExcercises/Hard/MergeKLists.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MergeKListsTests` |
+| [ ] | **MinWindowSubstring** | N/A | [MinWindowSubstring.cs](src/CodingExercises/MicrosoftExcercises/Hard/MinWindowSubstring.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MinWindowSubstringTests` |
+| [ ] | **QueensChess** | N/A | [QueensChess.cs](src/CodingExercises/MicrosoftExcercises/Hard/QueensChess.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.QueensChessTests` |
+| [ ] | **RegularExpressionMatching** | N/A | [RegularExpressionMatching.cs](src/CodingExercises/MicrosoftExcercises/Hard/RegularExpressionMatching.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RegularExpressionMatchingTests` |
+| [ ] | **ReverseKNodes** | N/A | [ReverseKNodes.cs](src/CodingExercises/MicrosoftExcercises/Hard/ReverseKNodes.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReverseKNodesTests` |
+| [ ] | **ReversePairs** | N/A | [ReversePairs.cs](src/CodingExercises/MicrosoftExcercises/Hard/ReversePairs.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReversePairsTests` |
+| [ ] | **SerializeAndDeserialize** | N/A | [SerializeAndDeserialize.cs](src/CodingExercises/MicrosoftExcercises/Hard/SerializeAndDeserialize.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SerializeAndDeserializeTests` |
+| [ ] | **SerializeDeserializeNTree** | N/A | [SerializeDeserializeNTree.cs](src/CodingExercises/MicrosoftExcercises/Hard/SerializeDeserializeNTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SerializeDeserializeNTreeTests` |
+| [ ] | **SkyLine** | N/A | [SkyLine.cs](src/CodingExercises/MicrosoftExcercises/Hard/SkyLine.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SkyLineTests` |
+| [ ] | **SlidingWindowMaximum** | N/A | [SlidingWindowMaximum.cs](src/CodingExercises/MicrosoftExcercises/Hard/SlidingWindowMaximum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SlidingWindowMaximumTests` |
+| [ ] | **SudokuSolver** | N/A | [SudokuSolver.cs](src/CodingExercises/MicrosoftExcercises/Hard/SudokuSolver.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SudokuSolverTests` |
+| [ ] | **TrappingRainWater** | N/A | [TrappingRainWater.cs](src/CodingExercises/MicrosoftExcercises/Hard/TrappingRainWater.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TrappingRainWaterTests` |
+| [ ] | **UniquePaths3** | N/A | [UniquePaths3.cs](src/CodingExercises/MicrosoftExcercises/Hard/UniquePaths3.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.UniquePaths3Tests` |
+| [ ] | **ValidNumber** | N/A | [ValidNumber.cs](src/CodingExercises/MicrosoftExcercises/Hard/ValidNumber.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ValidNumberTests` |
+| [ ] | **WildCardMatch** | N/A | [WildCardMatch.cs](src/CodingExercises/MicrosoftExcercises/Hard/WildCardMatch.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WildCardMatchTests` |
+| [ ] | **WildcardMatching** | N/A | [WildcardMatching.cs](src/CodingExercises/MicrosoftExcercises/Hard/WildcardMatching.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WildcardMatchingTests` |
+| [ ] | **WordBreakII** | N/A | [WordBreakII.cs](src/CodingExercises/MicrosoftExcercises/Hard/WordBreakII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WordBreakIITests` |
+| [ ] | **WordLadder** | N/A | [WordLadder.cs](src/CodingExercises/MicrosoftExcercises/Hard/WordLadder.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WordLadderTests` |
+| [ ] | **WordLadderII** | N/A | [WordLadderII.cs](src/CodingExercises/MicrosoftExcercises/Hard/WordLadderII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WordLadderIITests` |
+| [ ] | **WordSearchII** | N/A | [WordSearchII.cs](src/CodingExercises/MicrosoftExcercises/Hard/WordSearchII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SolutionTests` |
+
+### MicrosoftExcercises - Medium (163 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **3Sum** | N/A | [3Sum.cs](src/CodingExercises/MicrosoftExcercises/Medium/3Sum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises._3SumTests` |
+| [ ] | **3SumClosest** | N/A | [3SumClosest.cs](src/CodingExercises/MicrosoftExcercises/Medium/3SumClosest.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises._3SumClosestTests` |
+| [ ] | **4Sum** | N/A | [4Sum.cs](src/CodingExercises/MicrosoftExcercises/Medium/4Sum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises._4SumTests` |
+| [ ] | **AllNodesDistanceK** | N/A | [AllNodesDistanceK.cs](src/CodingExercises/MicrosoftExcercises/Medium/AllNodesDistanceK.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.AllNodesDistanceKTests` |
+| [ ] | **BSTIterator** | N/A | [BSTIterator.cs](src/CodingExercises/MicrosoftExcercises/Medium/BSTIterator.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BSTIteratorTests` |
+| [ ] | **BasicCalculatorII** | N/A | [BasicCalculatorII.cs](src/CodingExercises/MicrosoftExcercises/Medium/BasicCalculatorII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BasicCalculatorIITests` |
+| [ ] | **BattleShip** | N/A | [BattleShip.cs](src/CodingExercises/MicrosoftExcercises/Medium/BattleShip.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BattleShipTests` |
+| [ ] | **BiPartite** | N/A | [BiPartite.cs](src/CodingExercises/MicrosoftExcercises/Medium/BiPartite.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BiPartiteTests` |
+| [ ] | **BinaryTreeLevelOrderTraversalII** | N/A | [BinaryTreeLevelOrderTraversalII.cs](src/CodingExercises/MicrosoftExcercises/Medium/BinaryTreeLevelOrderTraversalII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BinaryTreeLevelOrderTraversalIITests` |
+| [ ] | **BinaryTreeRightSideView** | N/A | [BinaryTreeRightSideView.cs](src/CodingExercises/MicrosoftExcercises/Medium/BinaryTreeRightSideView.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BinaryTreeRightSideViewTests` |
+| [ ] | **BuildTreePostorderInorder** | N/A | [BuildTreePostorderInorder.cs](src/CodingExercises/MicrosoftExcercises/Medium/BuildTreePostorderInorder.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BuildTreePostorderInorderTests` |
+| [ ] | **BuildingsWithanOceanView** | N/A | [BuildingsWithanOceanView.cs](src/CodingExercises/MicrosoftExcercises/Medium/BuildingsWithanOceanView.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BuildingsWithanOceanViewTests` |
+| [ ] | **Calendar2** | N/A | [Calendar2.cs](src/CodingExercises/MicrosoftExcercises/Medium/Calendar2.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MyCalendarTwoTests` |
+| [ ] | **CalendarI** | N/A | [CalendarI.cs](src/CodingExercises/MicrosoftExcercises/Medium/CalendarI.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CalendarITests` |
+| [ ] | **CanJump** | N/A | [CanJump.cs](src/CodingExercises/MicrosoftExcercises/Medium/CanJump.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CanJumpTests` |
+| [ ] | **CanPartition** | N/A | [CanPartition.cs](src/CodingExercises/MicrosoftExcercises/Medium/CanPartition.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CanPartitionTests` |
+| [ ] | **CheapestFlightsWithinKStops** | N/A | [CheapestFlightsWithinKStops.cs](src/CodingExercises/MicrosoftExcercises/Medium/CheapestFlightsWithinKStops.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CheapestFlightsWithinKStopsTests` |
+| [ ] | **CheckCompletenessOfABinaryTree** | N/A | [CheckCompletenessOfABinaryTree.cs](src/CodingExercises/MicrosoftExcercises/Medium/CheckCompletenessOfABinaryTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CheckCompletenessOfABinaryTreeTests` |
+| [ ] | **CheckSubarraySum** | N/A | [CheckSubarraySum.cs](src/CodingExercises/MicrosoftExcercises/Medium/CheckSubarraySum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CheckSubarraySumTests` |
+| [ ] | **ChessKnightProbability** | N/A | [ChessKnightProbability.cs](src/CodingExercises/MicrosoftExcercises/Medium/ChessKnightProbability.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ChessKnightProbabilityTests` |
+| [ ] | **CloneGraph** | N/A | [CloneGraph.cs](src/CodingExercises/MicrosoftExcercises/Medium/CloneGraph.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CloneGraphTests` |
+| [ ] | **ClosestKPoints** | N/A | [ClosestKPoints.cs](src/CodingExercises/MicrosoftExcercises/Medium/ClosestKPoints.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ClosestKPointsTests` |
+| [ ] | **CoinChange** | N/A | [CoinChange.cs](src/CodingExercises/MicrosoftExcercises/Medium/CoinChange.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CoinChangeTests` |
+| [ ] | **CoinChangeII** | N/A | [CoinChangeII.cs](src/CodingExercises/MicrosoftExcercises/Medium/CoinChangeII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CoinChangeIITests` |
+| [ ] | **CombinationSum** | N/A | [CombinationSum.cs](src/CodingExercises/MicrosoftExcercises/Medium/CombinationSum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CombinationSumTests` |
+| [ ] | **CombinationSumIII** | N/A | [CombinationSumIII.cs](src/CodingExercises/MicrosoftExcercises/Medium/CombinationSumIII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CombinationSumIIITests` |
+| [ ] | **Combinations** | N/A | [Combinations.cs](src/CodingExercises/MicrosoftExcercises/Medium/Combinations.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CombinationsITests` |
+| [ ] | **CombinationsII** | N/A | [CombinationsII.cs](src/CodingExercises/MicrosoftExcercises/Medium/CombinationsII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CombinationsIITests` |
+| [ ] | **CompareVersion** | N/A | [CompareVersion.cs](src/CodingExercises/MicrosoftExcercises/Medium/CompareVersion.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CompareVersionTests` |
+| [ ] | **CompressString** | N/A | [CompressString.cs](src/CodingExercises/MicrosoftExcercises/Medium/CompressString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CompressStringTests` |
+| [ ] | **ConnectRightcs** | N/A | [ConnectRightcs.cs](src/CodingExercises/MicrosoftExcercises/Medium/ConnectRightcs.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ConnectRightcsTests` |
+| [ ] | **ContainerWithMostWater** | N/A | [ContainerWithMostWater.cs](src/CodingExercises/MicrosoftExcercises/Medium/ContainerWithMostWater.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ContainerWithMostWaterTests` |
+| [ ] | **CopyListWithRandomPointer** | N/A | [CopyListWithRandomPointer.cs](src/CodingExercises/MicrosoftExcercises/Medium/CopyListWithRandomPointer.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CopyListWithRandomPointerTests` |
+| [ ] | **CountAllPalindromesDP** | N/A | [CountAllPalindromesDP.cs](src/CodingExercises/MicrosoftExcercises/Medium/CountAllPalindromesDP.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CountAllPalindromesDPTests` |
+| [ ] | **CountAndSay** | N/A | [CountAndSay.cs](src/CodingExercises/MicrosoftExcercises/Medium/CountAndSay.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CountAndSayTests` |
+| [ ] | **CountSquares** | N/A | [CountSquares.cs](src/CodingExercises/MicrosoftExcercises/Medium/CountSquares.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CountSquaresTests` |
+| [ ] | **CourseSchedule** | N/A | [CourseSchedule.cs](src/CodingExercises/MicrosoftExcercises/Medium/CourseSchedule.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CourseScheduleTests` |
+| [ ] | **CourseScheduleII** | N/A | [CourseScheduleII.cs](src/CodingExercises/MicrosoftExcercises/Medium/CourseScheduleII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.CourseScheduleIITests` |
+| [ ] | **DailyTemperatures** | N/A | [DailyTemperatures.cs](src/CodingExercises/MicrosoftExcercises/Medium/DailyTemperatures.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DailyTemperaturesClassTests` |
+| [ ] | **DecodeString** | N/A | [DecodeString.cs](src/CodingExercises/MicrosoftExcercises/Medium/DecodeString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DecodeStringTests` |
+| [ ] | **DecodeWays** | N/A | [DecodeWays.cs](src/CodingExercises/MicrosoftExcercises/Medium/DecodeWays.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DecodeWaysTests` |
+| [ ] | **DeleteNodeInBST** | N/A | [DeleteNodeInBST.cs](src/CodingExercises/MicrosoftExcercises/Medium/DeleteNodeInBST.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DeleteNodeInBSTTests` |
+| [ ] | **DetectCycleII** | N/A | [DetectCycleII.cs](src/CodingExercises/MicrosoftExcercises/Medium/DetectCycleII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DetectCycleIITests` |
+| [ ] | **DistribuiteCoins** | N/A | [DistribuiteCoins.cs](src/CodingExercises/MicrosoftExcercises/Medium/DistribuiteCoins.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DistribuiteCoinsTests` |
+| [ ] | **DivideTwoIntegers** | N/A | [DivideTwoIntegers.cs](src/CodingExercises/MicrosoftExcercises/Medium/DivideTwoIntegers.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DivideTwoIntegersTests` |
+| [ ] | **EncodeAndDecodeTinyUrl** | [Link](http://tinyurl.com/{encode}";) | [EncodeAndDecodeTinyUrl.cs](src/CodingExercises/MicrosoftExcercises/Medium/EncodeAndDecodeTinyUrl.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.EncodeAndDecodeTinyUrlTests` |
+| [ ] | **ExclusiveTime** | N/A | [ExclusiveTime.cs](src/CodingExercises/MicrosoftExcercises/Medium/ExclusiveTime.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ExclusiveTimesTests` |
+| [ ] | **FindAllDuplicates** | N/A | [FindAllDuplicates.cs](src/CodingExercises/MicrosoftExcercises/Medium/FindAllDuplicates.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FindAllDuplicatesTests` |
+| [ ] | **FindClosestElements** | N/A | [FindClosestElements.cs](src/CodingExercises/MicrosoftExcercises/Medium/FindClosestElements.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FindClosestElementsTests` |
+| [ ] | **FindDuplicatesSubtree** | N/A | [FindDuplicatesSubtree.cs](src/CodingExercises/MicrosoftExcercises/Medium/FindDuplicatesSubtree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FindDuplicatesSubtreeTests` |
+| [ ] | **FindPeakElement** | N/A | [FindPeakElement.cs](src/CodingExercises/MicrosoftExcercises/Medium/FindPeakElement.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FindPeakElementTests` |
+| [ ] | **FindSmallestKPairs** | N/A | [FindSmallestKPairs.cs](src/CodingExercises/MicrosoftExcercises/Medium/FindSmallestKPairs.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FindSmallestKPairsTests` |
+| [ ] | **FindTheDuplicateNumber** | N/A | [FindTheDuplicateNumber.cs](src/CodingExercises/MicrosoftExcercises/Medium/FindTheDuplicateNumber.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FindTheDuplicateNumberTests` |
+| [ ] | **FirstAndLast** | N/A | [FirstAndLast.cs](src/CodingExercises/MicrosoftExcercises/Medium/FirstAndLast.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FirstAndLastTests` |
+| [ ] | **Flatten** | N/A | [Flatten.cs](src/CodingExercises/MicrosoftExcercises/Medium/Flatten.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FlattenTests` |
+| [ ] | **FlattenNestedListIterator** | N/A | [FlattenNestedListIterator.cs](src/CodingExercises/MicrosoftExcercises/Medium/FlattenNestedListIterator.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FlattenNestedListIteratorTests` |
+| [ ] | **GameOfLife** | N/A | [GameOfLife.cs](src/CodingExercises/MicrosoftExcercises/Medium/GameOfLife.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.GameOfLifeTests` |
+| [ ] | **GasStation** | N/A | [GasStation.cs](src/CodingExercises/MicrosoftExcercises/Medium/GasStation.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.GasStationTests` |
+| [ ] | **GenerateBalancedParenthesis** | N/A | [GenerateBalancedParenthesis.cs](src/CodingExercises/MicrosoftExcercises/Medium/GenerateBalancedParenthesis.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.GenerateBalancedParenthesisTests` |
+| [ ] | **GroupAnagrams** | N/A | [GroupAnagrams.cs](src/CodingExercises/MicrosoftExcercises/Medium/GroupAnagrams.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.GroupAnagramsTests` |
+| [ ] | **HouseRobber** | N/A | [HouseRobber.cs](src/CodingExercises/MicrosoftExcercises/Medium/HouseRobber.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.HouseRobberTests` |
+| [ ] | **HtmlParser** | N/A | [HtmlParser.cs](src/CodingExercises/MicrosoftExcercises/Medium/HtmlParser.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.HtmlParserTests` |
+| [ ] | **InorderTraversal** | N/A | [InorderTraversal.cs](src/CodingExercises/MicrosoftExcercises/Medium/InorderTraversal.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.InorderTraversalTests` |
+| [ ] | **InsertInterval** | N/A | [InsertInterval.cs](src/CodingExercises/MicrosoftExcercises/Medium/InsertInterval.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.InsertIntervalTests` |
+| [ ] | **InsertIntoBST** | N/A | [InsertIntoBST.cs](src/CodingExercises/MicrosoftExcercises/Medium/InsertIntoBST.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.InsertIntoBSTTests` |
+| [ ] | **IntegerToRoman** | N/A | [IntegerToRoman.cs](src/CodingExercises/MicrosoftExcercises/Medium/IntegerToRoman.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.IntegerToRomanTests` |
+| [ ] | **IntegerToString** | N/A | [IntegerToString.cs](src/CodingExercises/MicrosoftExcercises/Medium/IntegerToString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.IntegerToStringTests` |
+| [ ] | **InterleavingString** | N/A | [InterleavingString.cs](src/CodingExercises/MicrosoftExcercises/Medium/InterleavingString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.InterleavingStringTests` |
+| [ ] | **Itinerary** | N/A | [Itinerary.cs](src/CodingExercises/MicrosoftExcercises/Medium/Itinerary.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ItineraryTests` |
+| [ ] | **KSmallestInMatrix** | N/A | [KSmallestInMatrix.cs](src/CodingExercises/MicrosoftExcercises/Medium/KSmallestInMatrix.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.KSmallestInMatrixTests` |
+| [ ] | **KnightDialer** | N/A | [KnightDialer.cs](src/CodingExercises/MicrosoftExcercises/Medium/KnightDialer.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.KnightDialerTests` |
+| [ ] | **KthElementInBST** | N/A | [KthElementInBST.cs](src/CodingExercises/MicrosoftExcercises/Medium/KthElementInBST.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.KthElementInBSTTests` |
+| [ ] | **LCA3** | N/A | [LCA3.cs](src/CodingExercises/MicrosoftExcercises/Medium/LCA3.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LCA3Tests` |
+| [ ] | **LIS** | N/A | [LIS.cs](src/CodingExercises/MicrosoftExcercises/Medium/LIS.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LISTests` |
+| [ ] | **LRUCache** | N/A | [LRUCache.cs](src/CodingExercises/MicrosoftExcercises/Medium/LRUCache.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LRUCacheTests` |
+| [ ] | **LargestNumber** | N/A | [LargestNumber.cs](src/CodingExercises/MicrosoftExcercises/Medium/LargestNumber.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LargestNumberTests` |
+| [ ] | **LetterCasePermutation** | N/A | [LetterCasePermutation.cs](src/CodingExercises/MicrosoftExcercises/Medium/LetterCasePermutation.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LetterCasePermutationTests` |
+| [ ] | **LetterCombination** | N/A | [LetterCombination.cs](src/CodingExercises/MicrosoftExcercises/Medium/LetterCombination.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LetterCombinationTests` |
+| [ ] | **LevelOrder** | N/A | [LevelOrder.cs](src/CodingExercises/MicrosoftExcercises/Medium/LevelOrder.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LevelOrderTests` |
+| [ ] | **LongestIncreasingConsecutive** | N/A | [LongestIncreasingConsecutive.cs](src/CodingExercises/MicrosoftExcercises/Medium/LongestIncreasingConsecutive.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LongestIncreasingConsecutiveTests` |
+| [ ] | **LongestPalindrome** | N/A | [LongestPalindrome.cs](src/CodingExercises/MicrosoftExcercises/Medium/LongestPalindrome.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LongestPalindromeTests` |
+| [ ] | **LongestPalindromeSubSeq** | N/A | [LongestPalindromeSubSeq.cs](src/CodingExercises/MicrosoftExcercises/Medium/LongestPalindromeSubSeq.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LongestPalindromeSubSeqTests` |
+| [ ] | **LongestSubstringNoRepeat** | N/A | [LongestSubstringNoRepeat.cs](src/CodingExercises/MicrosoftExcercises/Medium/LongestSubstringNoRepeat.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LongestSubstringNoRepeatTests` |
+| [ ] | **LowestCommonAncestorBinaryTree** | N/A | [LowestCommonAncestorBinaryTree.cs](src/CodingExercises/MicrosoftExcercises/Medium/LowestCommonAncestorBinaryTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LowestCommonAncestorBinaryTreeTests` |
+| [ ] | **MajorityII** | N/A | [MajorityII.cs](src/CodingExercises/MicrosoftExcercises/Medium/MajorityII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MajorityIITests` |
+| [ ] | **MaxProduct** | N/A | [MaxProduct.cs](src/CodingExercises/MicrosoftExcercises/Medium/MaxProduct.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MaxProductTests` |
+| [ ] | **MaximalNetworkRank** | N/A | [MaximalNetworkRank.cs](src/CodingExercises/MicrosoftExcercises/Medium/MaximalNetworkRank.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MaximalNetworkRankTests` |
+| [ ] | **MaximalSquare** | N/A | [MaximalSquare.cs](src/CodingExercises/MicrosoftExcercises/Medium/MaximalSquare.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MaximalSquareTests` |
+| [ ] | **MaximumUniqueCharacters** | N/A | [MaximumUniqueCharacters.cs](src/CodingExercises/MicrosoftExcercises/Medium/MaximumUniqueCharacters.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MaximumUniqueCharactersTests` |
+| [ ] | **MaximumWidthBinaryTree** | N/A | [MaximumWidthBinaryTree.cs](src/CodingExercises/MicrosoftExcercises/Medium/MaximumWidthBinaryTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MaximumWidthBinaryTreeTests` |
+| [ ] | **MergeIntervals** | N/A | [MergeIntervals.cs](src/CodingExercises/MicrosoftExcercises/Medium/MergeIntervals.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MergeIntervalsTests` |
+| [ ] | **Min2Anagram** | N/A | [Min2Anagram.cs](src/CodingExercises/MicrosoftExcercises/Medium/Min2Anagram.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.Min2AnagramTests` |
+| [ ] | **MinPathSum** | N/A | [MinPathSum.cs](src/CodingExercises/MicrosoftExcercises/Medium/MinPathSum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MinPathSumTests` |
+| [ ] | **Minesweeper** | N/A | [Minesweeper.cs](src/CodingExercises/MicrosoftExcercises/Medium/Minesweeper.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MinesweeperTests` |
+| [ ] | **MinimumInSorted** | N/A | [MinimumInSorted.cs](src/CodingExercises/MicrosoftExcercises/Medium/MinimumInSorted.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MinimumInSortedTests` |
+| [ ] | **MinimumSubarraySumK** | N/A | [MinimumSubarraySumK.cs](src/CodingExercises/MicrosoftExcercises/Medium/MinimumSubarraySumK.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MinimumSubarraySumKTests` |
+| [ ] | **MultiplyStrings** | N/A | [MultiplyStrings.cs](src/CodingExercises/MicrosoftExcercises/Medium/MultiplyStrings.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MultiplyStringsTests` |
+| [ ] | **MyLinkedList** | N/A | [MyLinkedList.cs](src/CodingExercises/MicrosoftExcercises/Medium/MyLinkedList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MyLinkedListTests` |
+| [ ] | **MyPow** | N/A | [MyPow.cs](src/CodingExercises/MicrosoftExcercises/Medium/MyPow.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SolveMyPowTests` |
+| [ ] | **NextGreaterElementII** | N/A | [NextGreaterElementII.cs](src/CodingExercises/MicrosoftExcercises/Medium/NextGreaterElementII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.NextGreaterElementIITests` |
+| [ ] | **NextPermutation** | N/A | [NextPermutation.cs](src/CodingExercises/MicrosoftExcercises/Medium/NextPermutation.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.NextPermutationTests` |
+| [ ] | **NumberOfProvinces** | N/A | [NumberOfProvinces.cs](src/CodingExercises/MicrosoftExcercises/Medium/NumberOfProvinces.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.NumberOfProvincesTests` |
+| [ ] | **OddEvenList** | N/A | [OddEvenList.cs](src/CodingExercises/MicrosoftExcercises/Medium/OddEvenList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.OddEvenListTests` |
+| [ ] | **PacificAtlantic** | N/A | [PacificAtlantic.cs](src/CodingExercises/MicrosoftExcercises/Medium/PacificAtlantic.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PacificAtlanticTests` |
+| [ ] | **PartitionLabels** | N/A | [PartitionLabels.cs](src/CodingExercises/MicrosoftExcercises/Medium/PartitionLabels.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PartitionLabelsTests` |
+| [ ] | **PartitionList** | N/A | [PartitionList.cs](src/CodingExercises/MicrosoftExcercises/Medium/PartitionList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PartitionListTests` |
+| [ ] | **PathSumII** | N/A | [PathSumII.cs](src/CodingExercises/MicrosoftExcercises/Medium/PathSumII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PathSumIITests` |
+| [ ] | **PeekingIterator** | N/A | [PeekingIterator.cs](src/CodingExercises/MicrosoftExcercises/Medium/PeekingIterator.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PeekingIteratorTests` |
+| [ ] | **Permutations** | N/A | [Permutations.cs](src/CodingExercises/MicrosoftExcercises/Medium/Permutations.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PermutationsTests` |
+| [ ] | **PopulateRightII** | N/A | [PopulateRightII.cs](src/CodingExercises/MicrosoftExcercises/Medium/PopulateRightII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PopulateRightIITests` |
+| [ ] | **PrintedTree** | N/A | [PrintedTree.cs](src/CodingExercises/MicrosoftExcercises/Medium/PrintedTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PrintedTreeTests` |
+| [ ] | **ProductExcept** | N/A | [ProductExcept.cs](src/CodingExercises/MicrosoftExcercises/Medium/ProductExcept.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ProductExceptTests` |
+| [ ] | **RandomPickWithWeight** | N/A | [RandomPickWithWeight.cs](src/CodingExercises/MicrosoftExcercises/Medium/RandomPickWithWeight.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RandomPickWithWeightTests` |
+| [ ] | **RangeSumQuery2D** | N/A | [RangeSumQuery2D.cs](src/CodingExercises/MicrosoftExcercises/Medium/RangeSumQuery2D.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RangeSumQuery2DTests` |
+| [ ] | **RectangleArea** | N/A | [RectangleArea.cs](src/CodingExercises/MicrosoftExcercises/Medium/RectangleArea.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RectangleAreaTests` |
+| [ ] | **RemoveAllOcurrences** | N/A | [RemoveAllOcurrences.cs](src/CodingExercises/MicrosoftExcercises/Medium/RemoveAllOcurrences.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RemoveAllOcurrencesTests` |
+| [ ] | **RemoveCommnets** | N/A | [RemoveCommnets.cs](src/CodingExercises/MicrosoftExcercises/Medium/RemoveCommnets.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RemoveCommnetsTests` |
+| [ ] | **RemoveDuplicatesStringLexo** | N/A | [RemoveDuplicatesStringLexo.cs](src/CodingExercises/MicrosoftExcercises/Medium/RemoveDuplicatesStringLexo.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RemoveDuplicatesStringLexoTests` |
+| [ ] | **RemoveKDigits** | N/A | [RemoveKDigits.cs](src/CodingExercises/MicrosoftExcercises/Medium/RemoveKDigits.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RemoveKDigitsTests` |
+| [ ] | **RemoveNthElementList** | N/A | [RemoveNthElementList.cs](src/CodingExercises/MicrosoftExcercises/Medium/RemoveNthElementList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RemoveNthElementListTests` |
+| [ ] | **ReorderList** | N/A | [ReorderList.cs](src/CodingExercises/MicrosoftExcercises/Medium/ReorderList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReorderListTests` |
+| [ ] | **RestoreIpAddress** | N/A | [RestoreIpAddress.cs](src/CodingExercises/MicrosoftExcercises/Medium/RestoreIpAddress.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RestoreIpAddressTests` |
+| [ ] | **ReverseLinkedListII** | N/A | [ReverseLinkedListII.cs](src/CodingExercises/MicrosoftExcercises/Medium/ReverseLinkedListII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReverseLinkedListIITests` |
+| [ ] | **ReversePolishNotation** | N/A | [ReversePolishNotation.cs](src/CodingExercises/MicrosoftExcercises/Medium/ReversePolishNotation.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReversePolishNotationTests` |
+| [ ] | **ReverseWords** | N/A | [ReverseWords.cs](src/CodingExercises/MicrosoftExcercises/Medium/ReverseWords.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReverseWordsTests` |
+| [ ] | **RotateArray** | N/A | [RotateArray.cs](src/CodingExercises/MicrosoftExcercises/Medium/RotateArray.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RotateArrayTests` |
+| [ ] | **RotateList** | N/A | [RotateList.cs](src/CodingExercises/MicrosoftExcercises/Medium/RotateList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RotateListTests` |
+| [ ] | **RotatingTheBox** | N/A | [RotatingTheBox.cs](src/CodingExercises/MicrosoftExcercises/Medium/RotatingTheBox.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RotatingTheBoxTests` |
+| [ ] | **Search2DArray** | N/A | [Search2DArray.cs](src/CodingExercises/MicrosoftExcercises/Medium/Search2DArray.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.Search2DArrayTests` |
+| [ ] | **SearchArraySortedSecret** | N/A | [SearchArraySortedSecret.cs](src/CodingExercises/MicrosoftExcercises/Medium/SearchArraySortedSecret.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SearchArraySortedSecretTests` |
+| [ ] | **SearchIn2dMatrix** | N/A | [SearchIn2dMatrix.cs](src/CodingExercises/MicrosoftExcercises/Medium/SearchIn2dMatrix.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SearchIn2dMatrixTests` |
+| [ ] | **SearchSuggestionsSystem** | N/A | [SearchSuggestionsSystem.cs](src/CodingExercises/MicrosoftExcercises/Medium/SearchSuggestionsSystem.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SearchSuggestionsSystemTests` |
+| [ ] | **SetMatrixToZeroInPlace** | N/A | [SetMatrixToZeroInPlace.cs](src/CodingExercises/MicrosoftExcercises/Medium/SetMatrixToZeroInPlace.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SetMatrixToZeroInPlaceTests` |
+| [ ] | **ShoppingOffers** | N/A | [ShoppingOffers.cs](src/CodingExercises/MicrosoftExcercises/Medium/ShoppingOffers.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ShoppingOffersTests` |
+| [ ] | **Shuffle** | N/A | [Shuffle.cs](src/CodingExercises/MicrosoftExcercises/Medium/Shuffle.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ShuffleTests` |
+| [ ] | **SimplifyPath** | N/A | [SimplifyPath.cs](src/CodingExercises/MicrosoftExcercises/Medium/SimplifyPath.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SimplifyPathTests` |
+| [ ] | **SortCharactersByFrequency** | N/A | [SortCharactersByFrequency.cs](src/CodingExercises/MicrosoftExcercises/Medium/SortCharactersByFrequency.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SortCharactersByFrequencyTests` |
+| [ ] | **SortDiagonally** | N/A | [SortDiagonally.cs](src/CodingExercises/MicrosoftExcercises/Medium/SortDiagonally.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SortDiagonallyTests` |
+| [ ] | **SortList** | N/A | [SortList.cs](src/CodingExercises/MicrosoftExcercises/Medium/SortList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SortListTests` |
+| [ ] | **SortedListToBST** | N/A | [SortedListToBST.cs](src/CodingExercises/MicrosoftExcercises/Medium/SortedListToBST.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SolveSortedListToBSTTests` |
+| [ ] | **SpiralMatrix** | N/A | [SpiralMatrix.cs](src/CodingExercises/MicrosoftExcercises/Medium/SpiralMatrix.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SpiralMatrixTests` |
+| [ ] | **StringWOAAABBB** | N/A | [StringWOAAABBB.cs](src/CodingExercises/MicrosoftExcercises/Medium/StringWOAAABBB.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.StringWOAAABBBTests` |
+| [ ] | **SubArraySum** | N/A | [SubArraySum.cs](src/CodingExercises/MicrosoftExcercises/Medium/SubArraySum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SubArraySumTests` |
+| [ ] | **Subsets** | N/A | [Subsets.cs](src/CodingExercises/MicrosoftExcercises/Medium/Subsets.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SubsetsTests` |
+| [ ] | **SwapPairs** | N/A | [SwapPairs.cs](src/CodingExercises/MicrosoftExcercises/Medium/SwapPairs.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SwapPairsTests` |
+| [ ] | **SwappingNodesInALinkedList** | N/A | [SwappingNodesInALinkedList.cs](src/CodingExercises/MicrosoftExcercises/Medium/SwappingNodesInALinkedList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SwappingNodesInALinkedListTests` |
+| [ ] | **TOPKFrequent** | N/A | [TOPKFrequent.cs](src/CodingExercises/MicrosoftExcercises/Medium/TOPKFrequent.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TOPKFrequentTests` |
+| [ ] | **TaskScheduler** | N/A | [TaskScheduler.cs](src/CodingExercises/MicrosoftExcercises/Medium/TaskScheduler.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TaskSchedulerTests` |
+| [ ] | **TopKFrequentWords** | N/A | [TopKFrequentWords.cs](src/CodingExercises/MicrosoftExcercises/Medium/TopKFrequentWords.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TopKFrequentWordsTests` |
+| [ ] | **TotalAnagrams** | N/A | [TotalAnagrams.cs](src/CodingExercises/MicrosoftExcercises/Medium/TotalAnagrams.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TotalAnagramsTests` |
+| [ ] | **Triangle** | N/A | [Triangle.cs](src/CodingExercises/MicrosoftExcercises/Medium/Triangle.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TriangleTests` |
+| [ ] | **TriangleNumber** | N/A | [TriangleNumber.cs](src/CodingExercises/MicrosoftExcercises/Medium/TriangleNumber.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TriangleNumberTests` |
+| [ ] | **Trie** | N/A | [Trie.cs](src/CodingExercises/MicrosoftExcercises/Medium/Trie.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TrieTests` |
+| [ ] | **TrimBST** | N/A | [TrimBST.cs](src/CodingExercises/MicrosoftExcercises/Medium/TrimBST.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TrimBSTTests` |
+| [ ] | **UniquePaths** | N/A | [UniquePaths.cs](src/CodingExercises/MicrosoftExcercises/Medium/UniquePaths.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.UniquePathsTests` |
+| [ ] | **UniquePathsII** | N/A | [UniquePathsII.cs](src/CodingExercises/MicrosoftExcercises/Medium/UniquePathsII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.UniquePathsIITests` |
+| [ ] | **ValidSudoku** | N/A | [ValidSudoku.cs](src/CodingExercises/MicrosoftExcercises/Medium/ValidSudoku.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ValidSudokuTests` |
+| [ ] | **ValidTicTacToe** | N/A | [ValidTicTacToe.cs](src/CodingExercises/MicrosoftExcercises/Medium/ValidTicTacToe.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ValidTicTacToeTests` |
+| [ ] | **ValidTree** | N/A | [ValidTree.cs](src/CodingExercises/MicrosoftExcercises/Medium/ValidTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ValidTreeSolutionTests` |
+| [ ] | **ValidateBST** | N/A | [ValidateBST.cs](src/CodingExercises/MicrosoftExcercises/Medium/ValidateBST.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ValidateBSTTests` |
+| [ ] | **WebCrawler** | N/A | [WebCrawler.cs](src/CodingExercises/MicrosoftExcercises/Medium/WebCrawler.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WebCrawlerTests` |
+| [ ] | **WordBreak** | N/A | [WordBreak.cs](src/CodingExercises/MicrosoftExcercises/Medium/WordBreak.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WordBreakExTests` |
+| [ ] | **WordSearch** | N/A | [WordSearch.cs](src/CodingExercises/MicrosoftExcercises/Medium/WordSearch.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WordSearchTests` |
+
+### MicrosoftExcercises - Premium (18 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **BSTToList** | N/A | [BSTToList.cs](src/CodingExercises/MicrosoftExcercises/Premium/BSTToList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BSTToListTests` |
+| [ ] | **BoundaryOfABTree** | N/A | [BoundaryOfABTree.cs](src/CodingExercises/MicrosoftExcercises/Premium/BoundaryOfABTree.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BoundaryOfABTreeTests` |
+| [ ] | **ClosestBinaryTreeValue** | N/A | [ClosestBinaryTreeValue.cs](src/CodingExercises/MicrosoftExcercises/Premium/ClosestBinaryTreeValue.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ClosestBinaryTreeValueTests` |
+| [ ] | **DesignHitCounter** | N/A | [DesignHitCounter.cs](src/CodingExercises/MicrosoftExcercises/Premium/DesignHitCounter.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DesignHitCounterTests` |
+| [ ] | **DistinctIslands** | N/A | [DistinctIslands.cs](src/CodingExercises/MicrosoftExcercises/Premium/DistinctIslands.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.DistinctIslandsTests` |
+| [ ] | **FindCelebrity** | N/A | [FindCelebrity.cs](src/CodingExercises/MicrosoftExcercises/Premium/FindCelebrity.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FindCelebrityTests` |
+| [ ] | **InsertInCyclicSortedList** | N/A | [InsertInCyclicSortedList.cs](src/CodingExercises/MicrosoftExcercises/Premium/InsertInCyclicSortedList.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.InsertInCyclicSortedListTests` |
+| [ ] | **LargestBST** | N/A | [LargestBST.cs](src/CodingExercises/MicrosoftExcercises/Premium/LargestBST.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.LargestBSTTests` |
+| [ ] | **MeetingRoomsII** | N/A | [MeetingRoomsII.cs](src/CodingExercises/MicrosoftExcercises/Premium/MeetingRoomsII.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MeetingRoomsIITests` |
+| [ ] | **MovingAverage** | N/A | [MovingAverage.cs](src/CodingExercises/MicrosoftExcercises/Premium/MovingAverage.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.MovingAverageTests` |
+| [ ] | **OneEditDistance** | N/A | [OneEditDistance.cs](src/CodingExercises/MicrosoftExcercises/Premium/OneEditDistance.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.OneEditDistanceTests` |
+| [ ] | **PalindromePermutation** | N/A | [PalindromePermutation.cs](src/CodingExercises/MicrosoftExcercises/Premium/PalindromePermutation.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PalindromePermutationTests` |
+| [ ] | **ReverseWords3** | N/A | [ReverseWords3.cs](src/CodingExercises/MicrosoftExcercises/Premium/ReverseWords3.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ReverseWords3Tests` |
+| [ ] | **TheMaze** | N/A | [TheMaze.cs](src/CodingExercises/MicrosoftExcercises/Premium/TheMaze.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TheMazeTests` |
+| [ ] | **TicTacToeDesign** | N/A | [TicTacToeDesign.cs](src/CodingExercises/MicrosoftExcercises/Premium/TicTacToeDesign.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.TicTacToeDesignTests` |
+| [ ] | **VerticalOrder** | N/A | [VerticalOrder.cs](src/CodingExercises/MicrosoftExcercises/Premium/VerticalOrder.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.VerticalOrderTests` |
+| [ ] | **WallsAndGates** | N/A | [WallsAndGates.cs](src/CodingExercises/MicrosoftExcercises/Premium/WallsAndGates.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WallsAndGatesTests` |
+| [ ] | **WiggleSort** | N/A | [WiggleSort.cs](src/CodingExercises/MicrosoftExcercises/Premium/WiggleSort.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WiggleSortTests` |
+
+### OOD - StackOverflow (14 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **Account** | N/A | [Account.cs](src/CodingExercises/OOD/StackOverflow/Account.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.AccountTests` |
+| [ ] | **Admin** | N/A | [Admin.cs](src/CodingExercises/OOD/StackOverflow/Admin.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.AdminTests` |
+| [ ] | **Answer** | N/A | [Answer.cs](src/CodingExercises/OOD/StackOverflow/Answer.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.AnswerTests` |
+| [ ] | **Badge** | N/A | [Badge.cs](src/CodingExercises/OOD/StackOverflow/Badge.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.BadgeTests` |
+| [ ] | **Bounty** | N/A | [Bounty.cs](src/CodingExercises/OOD/StackOverflow/Bounty.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.BountyTests` |
+| [ ] | **Comment** | N/A | [Comment.cs](src/CodingExercises/OOD/StackOverflow/Comment.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.CommentTests` |
+| [ ] | **Enums** | N/A | [Enums.cs](src/CodingExercises/OOD/StackOverflow/Enums.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.EnumsTests` |
+| [ ] | **Guest** | N/A | [Guest.cs](src/CodingExercises/OOD/StackOverflow/Guest.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.GuestTests` |
+| [ ] | **ISearch** | N/A | [ISearch.cs](src/CodingExercises/OOD/StackOverflow/ISearch.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.ISearchTests` |
+| [ ] | **Member** | N/A | [Member.cs](src/CodingExercises/OOD/StackOverflow/Member.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.MemberTests` |
+| [ ] | **Moderator** | N/A | [Moderator.cs](src/CodingExercises/OOD/StackOverflow/Moderator.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.ModeratorTests` |
+| [ ] | **Notification** | N/A | [Notification.cs](src/CodingExercises/OOD/StackOverflow/Notification.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.NotificationTests` |
+| [ ] | **Question** | N/A | [Question.cs](src/CodingExercises/OOD/StackOverflow/Question.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.QuestionTests` |
+| [ ] | **Tag** | N/A | [Tag.cs](src/CodingExercises/OOD/StackOverflow/Tag.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.TagTests` |
+
+### TrainExercises - DailyChallengesLC (2 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **DeepestLeavesSum** | N/A | [DeepestLeavesSum.cs](src/CodingExercises/TrainExercises/DailyChallengesLC/DeepestLeavesSum.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.DeepestLeavesSumTests` |
+| [ ] | **LongestIncreasingPathInMatrix** | N/A | [LongestIncreasingPathInMatrix.cs](src/CodingExercises/TrainExercises/DailyChallengesLC/LongestIncreasingPathInMatrix.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.LongestIncreasingPathInMatrixTests` |
+
+### TrainExercises - Easy (12 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **BuyAndSellStocks** | N/A | [BuyAndSellStocks.cs](src/CodingExercises/TrainExercises/Easy/BuyAndSellStocks.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.BuyAndSellStocksTests` |
+| [ ] | **CommonChars** | N/A | [CommonChars.cs](src/CodingExercises/TrainExercises/Easy/CommonChars.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.CommonCharsTests` |
+| [ ] | **CountBinarySubStrings** | N/A | [CountBinarySubStrings.cs](src/CodingExercises/TrainExercises/Easy/CountBinarySubStrings.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.CountBinarySubStringsTests` |
+| [ ] | **FindDiff** | [Link](https://leetcode.com/problems/find-the-difference/) | [FindDiff.cs](src/CodingExercises/TrainExercises/Easy/FindDiff.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.FindDiffTests` |
+| [ ] | **LargestSubstringBetweenTwoEqualCharacters** | N/A | [LargestSubstringBetweenTwoEqualCharacters.cs](src/CodingExercises/TrainExercises/Easy/LargestSubstringBetweenTwoEqualCharacters.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.LargestSubstringBetweenTwoEqualCharactersTests` |
+| [ ] | **LicensePlate** | [Link](https://leetcode.com/problems/shortest-completing-word) | [LicensePlate.cs](src/CodingExercises/TrainExercises/Easy/LicensePlate.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.LicensePlateTests` |
+| [ ] | **MaximumScoreAfterSplittingaString** | [Link](https://leetcode.com/problems/maximum-score-after-splitting-a-string/) | [MaximumScoreAfterSplittingaString.cs](src/CodingExercises/TrainExercises/Easy/MaximumScoreAfterSplittingaString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.MaximumScoreAfterSplittingaStringTests` |
+| [ ] | **MinimunChangesAlternatingBinaryString** | [Link](https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/) | [MinimunChangesAlternatingBinaryString.cs](src/CodingExercises/TrainExercises/Easy/MinimunChangesAlternatingBinaryString.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.MinimunChangesAlternatingBinaryStringTests` |
+| [ ] | **Shuffle** | N/A | [Shuffle.cs](src/CodingExercises/TrainExercises/Easy/Shuffle.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.SolutionTests` |
+| [ ] | **SplitStringInBalancedStrings** | N/A | [SplitStringInBalancedStrings.cs](src/CodingExercises/TrainExercises/Easy/SplitStringInBalancedStrings.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.SplitStringInBalancedStringsTests` |
+| [ ] | **SumAllDigits** | [Link](https://leetcode.com/problems/add-digits/submissions/) | [SumAllDigits.cs](src/CodingExercises/TrainExercises/Easy/SumAllDigits.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.SumAllDigitsTests` |
+| [ ] | **ValidAnagrams** | N/A | [ValidAnagrams.cs](src/CodingExercises/TrainExercises/Easy/ValidAnagrams.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.ValidAnagramsTests` |
+
+### TrainExercises - Medium (2 challenges)
+
+| Status | Challenge | LeetCode / Source | File Path | Validation Command |
+| :---: | :--- | :--- | :--- | :--- |
+| [ ] | **SerializeAndDeserializedBST** | N/A | [SerializeAndDeserializedBST.cs](src/CodingExercises/TrainExercises/Medium/SerializeAndDeserializedBST.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.SerializeAndDeserializedBSTTests` |
+| [ ] | **SurroundedRegionscs** | N/A | [SurroundedRegionscs.cs](src/CodingExercises/TrainExercises/Medium/SurroundedRegionscs.cs) | `dotnet test --filter FullyQualifiedName~CodingExercises.Tests.TrainExercises.SurroundedRegionscsTests` |
+

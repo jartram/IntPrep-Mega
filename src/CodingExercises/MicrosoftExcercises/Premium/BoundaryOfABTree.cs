@@ -1,0 +1,83 @@
+/*
+ =======================================================================================
+ CHALLENGE: BoundaryOfABTree
+ CATEGORY: MicrosoftExcercises / Premium
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the BoundaryOfABTree problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.BoundaryOfABTreeTests
+ =======================================================================================
+*/
+
+﻿using CodingExercises.Shared;
+using CodingExercises.CommonExercises;
+using System.Collections.Generic;
+
+namespace CodingExercises.MicrosoftExcercises.Premium
+{
+    public class BoundaryOfABTree
+    {
+        public IList<int> BoundaryOfBinaryTree(TreeNode root)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+
+        //preorder
+        private void AddLeft(TreeNode root, IList<int> boundary)
+        {
+            if (root != null && (root.left != null || root.right != null))
+            {
+                boundary.Add(root.val);
+
+
+                if (root.left != null)
+                {
+                    AddLeft(root.left, boundary);
+                }
+                else
+                {
+                    AddLeft(root.right, boundary);
+                }
+            }
+        }
+
+        //inorder
+        private void AddLeaves(TreeNode root, IList<int> boundary)
+        {
+            if (root != null)
+            {
+                AddLeaves(root.left, boundary);
+
+                if (root.left == null && root.right == null)
+                {
+                    boundary.Add(root.val);
+                }
+               
+                AddLeaves(root.right, boundary);
+            }
+        }
+
+        //postorder
+        private void AddRight(TreeNode root, IList<int> boundary)
+        {
+            if (root != null && (root.left != null || root.right != null))
+            {
+                if (root.right != null)
+                {
+                    AddRight(root.right, boundary);
+                }
+                else
+                {
+                    AddRight(root.left, boundary);
+                }
+
+                boundary.Add(root.val);
+            }
+        }
+    }
+}

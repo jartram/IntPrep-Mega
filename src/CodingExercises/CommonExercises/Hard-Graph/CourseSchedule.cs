@@ -1,0 +1,28 @@
+/*
+ =======================================================================================
+ CHALLENGE: CourseSchedule
+ CATEGORY: CommonExercises / Hard-Graph
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the CourseSchedule problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.CourseScheduleTests
+ =======================================================================================
+*/
+
+﻿using System.Collections.Generic;
+
+namespace CodingExercises.CommonExercises.Hard_Graph
+{
+    public class CourseSchedule
+    {
+        public bool CanFinish(int numCourses, int[][] prerequisites)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+    }
+}

@@ -1,0 +1,26 @@
+/*
+ =======================================================================================
+ CHALLENGE: FindPeakElement
+ CATEGORY: MicrosoftExcercises / Medium
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the FindPeakElement problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FindPeakElementTests
+ =======================================================================================
+*/
+
+﻿namespace CodingExercises.MicrosoftExcercises.Medium
+{
+    public class FindPeakElement
+    {
+        public int Solve(int[] nums)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+    }
+}

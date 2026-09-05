@@ -1,0 +1,65 @@
+/*
+ =======================================================================================
+ CHALLENGE: FrogGame
+ CATEGORY: MicrosoftExcercises / Hard
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the FrogGame problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.FrogGameTests
+ =======================================================================================
+*/
+
+﻿using System.Collections.Generic;
+
+namespace CodingExercises.MicrosoftExcercises.Hard
+{
+    public class FrogGame
+    {
+        private int lastIndex;
+
+        public bool CanCross(int[] stones)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+
+        private bool CanCross(Dictionary<int, int> stones, int index, int stone, int jump, Dictionary<string, bool> cache)
+        {
+            if (stone == lastIndex)
+            {
+                return true;
+            }
+
+            var key = $"{index}#{jump}";
+            var result = false;
+
+            if (cache.ContainsKey(key))
+            {
+                return cache[key];
+            }
+
+            if (stones.ContainsKey(stone + jump) && stones[stone + jump] > index)
+            {
+                result |= CanCross(stones, stones[stone + jump], stone + jump, jump, cache);
+            }
+
+            if (index > 0 && stones.ContainsKey(stone + jump + 1) && stones[stone + jump + 1] > index)
+            {
+                result |= CanCross(stones, stones[stone + jump + 1], stone + jump + 1, jump + 1, cache);
+            }
+
+            if (index > 0 && stones.ContainsKey(stone + jump - 1) && stones[stone + jump - 1] > index)
+            {
+                result |= CanCross(stones, stones[stone + jump - 1], stone + jump - 1, jump - 1, cache);
+            }
+
+            cache.Add(key, result);
+
+            return result;
+        }
+    }
+}

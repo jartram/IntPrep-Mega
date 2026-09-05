@@ -1,0 +1,36 @@
+/*
+ =======================================================================================
+ CHALLENGE: MergeIntervals
+ CATEGORY: CommonExercises
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the MergeIntervals problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.MergeIntervalsTests
+ =======================================================================================
+*/
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CodingExercises.Exercises
+{
+    public class MergeIntervals
+    {
+        public int[][] Merge(int[][] intervals)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+        //my guess
+        public int MeetingRoomsII(int[][] intervals)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+    }
+}

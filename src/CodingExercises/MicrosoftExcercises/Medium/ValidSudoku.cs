@@ -1,0 +1,90 @@
+/*
+ =======================================================================================
+ CHALLENGE: ValidSudoku
+ CATEGORY: MicrosoftExcercises / Medium
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the ValidSudoku problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.ValidSudokuTests
+ =======================================================================================
+*/
+
+﻿using System.Collections.Generic;
+
+namespace CodingExercises.MicrosoftExcercises.Medium
+{
+    public class ValidSudoku
+    {
+        public bool IsValidSudoku(char[][] board)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+
+        private int GetBox(int i, int j)
+        {
+            if (i >= 0 && i <= 2 && j >= 0 && j <= 2)
+            {
+                return 1;
+            }
+            if (i >= 0 && i <= 2 && j >= 3 && j <= 5)
+            {
+                return 2;
+            }
+            if (i >= 0 && i <= 2 && j >= 6 && j <= 9)
+            {
+                return 3;
+            }
+            //-----------------
+            if (i >= 3 && i <= 5 && j >= 0 && j <= 2)
+            {
+                return 4;
+            }
+            if (i >= 3 && i <= 5 && j >= 3 && j <= 5)
+            {
+                return 5;
+            }
+            if (i >= 3 && i <= 5 && j >= 6 && j <= 9)
+            {
+                return 6;
+            }
+            //------------------
+            if (i >= 6 && i <= 9 && j >= 0 && j <= 2)
+            {
+                return 7;
+            }
+            if (i >= 6 && i <= 9 && j >= 3 && j <= 5)
+            {
+                return 8;
+            }
+            if (i >= 6 && i <= 9 && j >= 6 && j <= 9)
+            {
+                return 9;
+            }
+
+            return -1;
+        }
+
+        private Dictionary<int, HashSet<char>> GenerateCandidates(char[][] board)
+        {
+            var seen = new Dictionary<int, HashSet<char>>();
+
+            for (int i = 1; i < 10; i++)
+            {
+                seen.Add(i, new HashSet<char>());
+            }
+
+            return seen;
+        }
+
+        public bool IsValid(char current, int row, int col, char[][] board)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+    }
+}

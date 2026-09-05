@@ -1,0 +1,118 @@
+/*
+ =======================================================================================
+ CHALLENGE: TopFrequentK
+ CATEGORY: CommonExercises
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the TopFrequentK problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.CommonExercises.TopFrequentKTests
+ =======================================================================================
+*/
+
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace CodingExercises.Exercises
+{
+    public class TopFrequentK
+    {
+        public int[] TopKFrequent(int[] nums, int k)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+
+        private int[] TopKFrequent(int[] values, int[] keys, int k, int left, int right)
+        {
+            var pivotPosition = partition(values, k, left, right, keys);
+
+            if (pivotPosition == values.Length - k)
+            {
+                return keys.Skip(pivotPosition).Take(k).ToArray();
+            }
+            else if (pivotPosition < values.Length - k)
+            {
+                return TopKFrequent(values, keys, k, pivotPosition + 1, right);
+            }
+            else
+            {
+                return TopKFrequent(values, keys, k, left, pivotPosition - 1);
+            }
+        }
+
+        private int partition(int[] values, int k, int left, int right, int[] keys)
+        {
+            int pivotValue = values[right];
+            int pivotLocation = left;
+
+            for (int i = left; i < right; i++)
+            {
+                if (pivotValue > values[i])
+                {
+                    Swap(pivotLocation, i, keys);
+                    Swap(pivotLocation, i, values);
+                    pivotLocation++;
+                }
+            }
+
+            Swap(pivotLocation, right, keys);
+            Swap(pivotLocation, right, values);
+
+            return pivotLocation;
+        }
+
+        public int FindKthLargest(int[] nums, int k)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+
+        private int FindKthLargest(int[] nums, int k, int left, int right)
+        {
+            var pivotPosition = partition(nums, left, right);
+
+            if (pivotPosition == nums.Length - k)
+            {
+                return nums[pivotPosition];
+            } // [2,3,4,5,7t,8,9,10p,12]
+            else if (pivotPosition < nums.Length - k)
+            {
+                return FindKthLargest(nums, k, pivotPosition + 1, right);
+            }
+            else
+            {
+                return FindKthLargest(nums, k, left, pivotPosition - 1);
+            }
+        }
+
+        private int partition(int[] nums, int left, int right)
+        {
+            var pivotValue = nums[right];
+            var pivotIndex = left;
+
+            for (int i = left; i < right; i++)
+            {
+                if (pivotValue > nums[i])
+                {
+                    Swap(pivotIndex, i, nums);
+                    pivotIndex++;
+                }
+            }
+
+            Swap(pivotIndex, right, nums);
+
+            return pivotIndex;
+        }
+
+        private void Swap(int i, int j, int[] arr)
+        {
+            int aux = arr[i];
+            arr[i] = arr[j];
+            arr[j] = aux;
+        }
+    }
+}

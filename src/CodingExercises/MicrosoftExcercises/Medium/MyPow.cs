@@ -1,0 +1,26 @@
+/*
+ =======================================================================================
+ CHALLENGE: SolveMyPow
+ CATEGORY: MicrosoftExcercises / Medium
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the SolveMyPow problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SolveMyPowTests
+ =======================================================================================
+*/
+
+﻿namespace CodingExercises.MicrosoftExcercises.Medium
+{
+    public class SolveMyPow
+    {
+        public double Solve(double x, int n)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+    }
+}

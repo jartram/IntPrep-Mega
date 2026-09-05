@@ -1,0 +1,55 @@
+/*
+ =======================================================================================
+ CHALLENGE: WildcardMatching
+ CATEGORY: MicrosoftExcercises / Hard
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the WildcardMatching problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.WildcardMatchingTests
+ =======================================================================================
+*/
+
+﻿namespace CodingExercises.MicrosoftExcercises.Hard
+{
+    public class WildcardMatching
+    {
+        public bool IsMatch(string s, string p)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+
+        private bool IsMatch(string s, string p, int sI, int pI, bool?[,] cache)
+        {
+            if (pI == p.Length)
+            {
+                return s.Length == sI;
+            }
+
+            if (cache[sI, pI] != null)
+            {
+                return cache[sI, pI].Value;
+            }
+
+            var firstMatch = sI < s.Length && (s[sI] == p[pI] || p[pI] == '?');
+            var result = false;
+
+            if (p[pI] == '*')
+            {
+                result = IsMatch(s, p, sI, pI + 1, cache) || (sI < s.Length && IsMatch(s, p, sI + 1, pI, cache));
+            }
+            else
+            {
+                result = firstMatch && IsMatch(s, p, sI + 1, pI + 1, cache);
+            }
+
+            cache[sI, pI] = result;
+
+            return result;
+        }
+    }
+}

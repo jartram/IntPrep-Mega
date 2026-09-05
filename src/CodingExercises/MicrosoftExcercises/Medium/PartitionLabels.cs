@@ -1,0 +1,67 @@
+/*
+ =======================================================================================
+ CHALLENGE: PartitionLabels
+ CATEGORY: MicrosoftExcercises / Medium
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the PartitionLabels problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.PartitionLabelsTests
+ =======================================================================================
+*/
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CodingExercises.MicrosoftExcercises.Medium
+{
+    public class PartitionLabels
+    {
+        public IList<int> Solve(string s)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+
+        private IList<int[]> MergeIntervals(IList<int[]> intervals)
+        {
+            var merged = new List<int[]>();
+
+            intervals = intervals.OrderBy(interval => interval[0]).ToList();
+
+            var i = 0;
+            var j = i + 1;
+
+            while (i < intervals.Count)
+            {
+                var current = intervals[i];
+                var start = current[0];
+                var end = current[1];
+
+                while (j < intervals.Count && intervals[j][0] < end)
+                {
+                    end = Math.Max(end, intervals[j][1]);
+                    j++;
+                }
+
+                merged.Add(new int[] { start, end });
+                i = j;
+                j = j + 1;
+            }
+
+            return merged;
+        }
+
+        // GREEDY
+
+        public IList<int> PartitionLabelsGreedy(string s)
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
+    }
+}
