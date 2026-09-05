@@ -7,7 +7,7 @@
  Implement the object-oriented design component for Question.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.QuestionTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.QuestionTests
  =======================================================================================
 */
 

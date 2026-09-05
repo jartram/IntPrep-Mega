@@ -27,7 +27,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods
  =======================================================================================
 */
 
@@ -45,13 +45,12 @@ namespace CSharpPractical.Chapter07_Methods.SumAndDifference
             return number;
         }
 
-        static int Add(int first, int second)
+        internal static int Add(int first, int second)
         {
             return (first + second);
         }
 
-        // TODO Create a method Subtract that substracts
-        // a second argument from a first argument and returns the result.
+        internal static int Subtract(int first, int second) => first - second;
 
 
         static void Main(string[] args)

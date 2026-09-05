@@ -8,7 +8,7 @@
  multiplication, division, magnitude, reciprocal, and string representation.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.ThingsAreComplex.UnitTestComplexNumber
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.ThingsAreComplex.UnitTestComplexNumber
  =======================================================================================
 */
 

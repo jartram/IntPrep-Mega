@@ -48,13 +48,13 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter28_Interfaces
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter28_Interfaces
  =======================================================================================
 */
 
 namespace CSharpPractical.Chapter28_Interfaces.Total_surface
 {
-  class Circle
+  public class Circle
     {
     public Circle(double radius)
     {

@@ -13,7 +13,7 @@
  * Make sure to convert the word to lowercase before starting your check. You should also apply the `Trim()` method to remove all whitespace before and after the word.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.Palindrome.UnitTestPalindromeChecker
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.Palindrome.UnitTestPalindromeChecker
  =======================================================================================
 */
 

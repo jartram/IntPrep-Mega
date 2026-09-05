@@ -9,7 +9,7 @@
  all automated unit tests.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.Shared.UnionFindTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.Shared.UnionFindTests
  =======================================================================================
 */
 

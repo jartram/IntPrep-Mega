@@ -23,7 +23,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.MultiplesOfThree.UnitTestsMultipleGenerator
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.MultiplesOfThree.UnitTestsMultipleGenerator
  =======================================================================================
 */
 

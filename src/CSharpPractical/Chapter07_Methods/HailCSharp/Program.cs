@@ -17,7 +17,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods
  =======================================================================================
 */
 
@@ -27,7 +27,7 @@ namespace CSharpPractical.Chapter07_Methods.HailCSharp
 {
     class Program
     {
-        static void HailCSharp()
+        internal static void HailCSharp()
         {
             Console.WriteLine("C# is good starter language as its syntax is easy to learn.");
             Console.WriteLine("Microsoft used the name C# for the first time in 1988.");
@@ -36,6 +36,7 @@ namespace CSharpPractical.Chapter07_Methods.HailCSharp
 
         static void Main(string[] args)
         {
+            HailCSharp();
             // TODO Call the HailCSharp method here so it outputs
             // its statements to the terminal.
 

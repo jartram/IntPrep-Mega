@@ -7,7 +7,7 @@
  Implement the object-oriented design component for Bounty.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.BountyTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.BountyTests
  =======================================================================================
 */
 

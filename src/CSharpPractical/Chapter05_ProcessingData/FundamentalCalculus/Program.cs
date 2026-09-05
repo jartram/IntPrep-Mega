@@ -13,7 +13,7 @@
  * You can also extend the `Main()` with more code to test your implementation.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.FundamentalCalculus.UnitTestCalculator
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.FundamentalCalculus.UnitTestCalculator
  =======================================================================================
 */
 

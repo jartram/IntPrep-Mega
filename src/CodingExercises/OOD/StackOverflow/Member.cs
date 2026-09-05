@@ -7,7 +7,7 @@
  Implement the object-oriented design component for Member.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.MemberTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.MemberTests
  =======================================================================================
 */
 

@@ -31,7 +31,7 @@
  * Implement the method `HasMatchingParentheses(string code)` in the class `CodeLinter` so it returns a boolean value indicating if the code has valid matching parentheses.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.ParenthesesChecker.UnitTestCodeLinter
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.ParenthesesChecker.UnitTestCodeLinter
  =======================================================================================
 */
 

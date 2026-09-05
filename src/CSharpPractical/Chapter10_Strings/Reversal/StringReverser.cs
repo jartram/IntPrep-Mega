@@ -11,7 +11,7 @@
  * Implement the method `Reverse(string text)` in the class `StringReverser` so it returns the given string with the characters reversed.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.Reversal.UnitTestStringReverser
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.Reversal.UnitTestStringReverser
  =======================================================================================
 */
 

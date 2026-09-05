@@ -35,7 +35,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.TurnTheTables.UnitTestsArrayMultiplier
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.TurnTheTables.UnitTestsArrayMultiplier
  =======================================================================================
 */
 

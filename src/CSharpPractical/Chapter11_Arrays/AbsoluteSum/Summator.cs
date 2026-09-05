@@ -24,7 +24,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.AbsoluteSum.UnitTest1
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.AbsoluteSum.UnitTest1
  =======================================================================================
 */
 

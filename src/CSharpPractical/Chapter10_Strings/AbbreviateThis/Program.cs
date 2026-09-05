@@ -24,7 +24,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.AbbreviateThis.UnitTestAbbreviator
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.AbbreviateThis.UnitTestAbbreviator
  =======================================================================================
 */
 

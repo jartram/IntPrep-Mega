@@ -15,7 +15,7 @@
  * The implementation should treat lowercase and uppercase versions the same.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.HowManyTimes.UnitTestStringFinder
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.HowManyTimes.UnitTestStringFinder
  =======================================================================================
 */
 

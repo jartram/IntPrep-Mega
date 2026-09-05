@@ -20,7 +20,7 @@
  * Ofcourse the thrown value changes everytime you run the application.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods
  =======================================================================================
 */
 
@@ -30,7 +30,7 @@ namespace CSharpPractical.Chapter07_Methods.TossADieToYourWitcher
 {
     class Program
     {
-        static int ThrowDie()
+        internal static int ThrowDie()
         {
             Random generator = new Random();
             return generator.Next(1, 7);
@@ -42,7 +42,7 @@ namespace CSharpPractical.Chapter07_Methods.TossADieToYourWitcher
 
             // dieValue will need to be assigned the result of
             // of the ThrowDie() method
-            int dieValue = 0;
+            int dieValue = ThrowDie();
 
             // TODO Call the ThrowDie method and store the result
             // that is returned by the method in the variable dieValue

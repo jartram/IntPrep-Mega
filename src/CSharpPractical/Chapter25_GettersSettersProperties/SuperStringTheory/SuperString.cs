@@ -8,7 +8,7 @@
  TrimStart, TrimEnd, and Trim methods.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter25_GettersSettersProperties.SuperStringTheory.UnitTestSuperString
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter25_GettersSettersProperties.SuperStringTheory.UnitTestSuperString
  =======================================================================================
 */
 

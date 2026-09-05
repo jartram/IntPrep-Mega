@@ -20,7 +20,7 @@
  * * you take a step value of `0`
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.StartToEnd.UnitTestSeries
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.StartToEnd.UnitTestSeries
  =======================================================================================
 */
 

@@ -32,7 +32,7 @@
  * Feel free to create a small demo app that creates a `Point` object, changes it's coordinates and outputs it state to the terminal.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter23_CreatingAndUsingObjects.PointInSpace.UnitTestPoint
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter23_CreatingAndUsingObjects.PointInSpace.UnitTestPoint
  =======================================================================================
 */
 

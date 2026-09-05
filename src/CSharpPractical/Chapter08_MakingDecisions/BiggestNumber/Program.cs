@@ -31,7 +31,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.BiggestNumber.UnitTestBiggest
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.BiggestNumber.UnitTestBiggest
  =======================================================================================
 */
 

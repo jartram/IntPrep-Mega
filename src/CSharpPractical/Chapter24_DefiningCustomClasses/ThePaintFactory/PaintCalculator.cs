@@ -40,7 +40,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter24_DefiningCustomClasses.ThePaintFactory.UnitTestPaintCalculator
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter24_DefiningCustomClasses.ThePaintFactory.UnitTestPaintCalculator
  =======================================================================================
 */
 

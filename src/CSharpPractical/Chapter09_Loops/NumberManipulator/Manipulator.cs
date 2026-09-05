@@ -37,7 +37,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.NumberManipulator.UnitTestManipulator
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.NumberManipulator.UnitTestManipulator
  =======================================================================================
 */
 

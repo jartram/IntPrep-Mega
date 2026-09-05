@@ -51,7 +51,7 @@
  * Feel free to create a small demo app that creates a `Teacher` object, changes his/her first name and last name and output the details to the terminal.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter24_DefiningCustomClasses.TeachTheTeacher.UnitTestTeacher
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter24_DefiningCustomClasses.TeachTheTeacher.UnitTestTeacher
  =======================================================================================
 */
 

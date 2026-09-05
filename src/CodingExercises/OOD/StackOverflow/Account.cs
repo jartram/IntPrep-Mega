@@ -7,7 +7,7 @@
  Implement the object-oriented design component for Account.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.AccountTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.AccountTests
  =======================================================================================
 */
 

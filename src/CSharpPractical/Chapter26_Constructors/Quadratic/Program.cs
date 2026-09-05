@@ -60,7 +60,7 @@
  * Create a demo application and request the necessary information from the user.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.Quadratic.UnitTest1
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.Quadratic.UnitTest1
  =======================================================================================
 */
 

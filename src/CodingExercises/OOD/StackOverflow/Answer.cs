@@ -7,7 +7,7 @@
  Implement the object-oriented design component for Answer.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.AnswerTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.AnswerTests
  =======================================================================================
 */
 

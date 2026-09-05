@@ -11,7 +11,7 @@
  * Implement the method `CountWords(string text)` in the class `WordCounter` so it returns the number of words in the given text.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.WordsEverywhere.UnitTestWordCounter
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.WordsEverywhere.UnitTestWordCounter
  =======================================================================================
 */
 

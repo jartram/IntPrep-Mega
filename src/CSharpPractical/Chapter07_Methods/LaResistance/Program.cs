@@ -71,7 +71,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods
  =======================================================================================
 */
 
@@ -81,13 +81,11 @@ namespace CSharpPractical.Chapter07_Methods.LaResistance
 {
     class Program
     {
-        // TODO - Step 1 - Create SolveSeries method that calculates
-        // the equivalent resistor of two series resistors
+        internal static double SolveSeries(double r1, double r2) => r1 + r2;
 
 
 
-        // TODO - Step 3 - Create SolveParallel method that calculates
-        // the equivalent resistor of two parallel resistors
+        internal static double SolveParallel(double r1, double r2) => (r1 * r2) / (r1 + r2);
 
 
 

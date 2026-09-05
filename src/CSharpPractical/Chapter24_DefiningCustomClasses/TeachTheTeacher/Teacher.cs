@@ -11,7 +11,7 @@
  - ToString() returning "{Fullname()} <{Email()}>"
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter24_DefiningCustomClasses.TeachTheTeacher.UnitTestTeacher
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter24_DefiningCustomClasses.TeachTheTeacher.UnitTestTeacher
  =======================================================================================
 */
 

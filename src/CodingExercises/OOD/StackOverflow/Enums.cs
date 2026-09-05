@@ -7,7 +7,7 @@
  Implement the object-oriented design component for Enums.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.EnumsTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.EnumsTests
  =======================================================================================
 */
 

@@ -4,7 +4,7 @@ using CSharpPractical.Chapter26_Constructors.ThingsAreComplex;
 
 namespace CSharpPractical.Tests.Chapter26_Constructors.ThingsAreComplex;
 
-public class UnitTest1
+public class UnitTestComplexNumber
     {
         [Fact]
         public void TestDefaultConstructor()

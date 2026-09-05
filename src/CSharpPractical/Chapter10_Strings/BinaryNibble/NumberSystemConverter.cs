@@ -69,7 +69,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.BinaryNibble.UnitTestNumberSystemConverter
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.BinaryNibble.UnitTestNumberSystemConverter
  =======================================================================================
 */
 

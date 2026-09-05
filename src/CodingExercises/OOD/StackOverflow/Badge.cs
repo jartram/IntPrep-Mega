@@ -7,7 +7,7 @@
  Implement the object-oriented design component for Badge.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.BadgeTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.BadgeTests
  =======================================================================================
 */
 

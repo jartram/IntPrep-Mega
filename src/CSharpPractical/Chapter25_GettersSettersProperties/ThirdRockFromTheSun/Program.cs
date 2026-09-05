@@ -37,7 +37,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter25_GettersSettersProperties.ThirdRockFromTheSun.UnitTestSphere
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter25_GettersSettersProperties.ThirdRockFromTheSun.UnitTestSphere
  =======================================================================================
 */
 

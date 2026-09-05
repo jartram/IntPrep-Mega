@@ -14,7 +14,7 @@
  * * `HowManySlicesLeft()`: Determines how many slices are left after everyone gets his/her fair share.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.PizzaTime.UnitTestPizzaDivider
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.PizzaTime.UnitTestPizzaDivider
  =======================================================================================
 */
 

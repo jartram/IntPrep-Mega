@@ -7,7 +7,7 @@
  Implement the object-oriented design component for Moderator.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.ModeratorTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.ModeratorTests
  =======================================================================================
 */
 

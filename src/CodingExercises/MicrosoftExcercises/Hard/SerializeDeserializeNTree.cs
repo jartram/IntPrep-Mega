@@ -9,7 +9,7 @@
  all automated unit tests.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SerializeDeserializeNTreeTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.SerializeDeserializeNTreeTests
  =======================================================================================
 */
 

@@ -25,7 +25,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.HoloGram.UnitTestPangramChecker
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.HoloGram.UnitTestPangramChecker
  =======================================================================================
 */
 

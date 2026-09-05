@@ -7,7 +7,7 @@
  * Convert between metric units and imperial units.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter06_GettingUserData.The_metric_system
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter06_GettingUserData.The_metric_system
  =======================================================================================
 */
 

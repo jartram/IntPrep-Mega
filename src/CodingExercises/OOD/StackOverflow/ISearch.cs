@@ -7,7 +7,7 @@
  Implement the object-oriented design component for ISearch.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.ISearchTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.ISearchTests
  =======================================================================================
 */
 

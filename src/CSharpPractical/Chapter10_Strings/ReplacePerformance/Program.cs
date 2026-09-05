@@ -33,7 +33,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.ReplacePerformance.UnitTestStringHelper
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter10_Strings.ReplacePerformance.UnitTestStringHelper
  =======================================================================================
 */
 

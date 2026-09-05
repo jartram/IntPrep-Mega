@@ -14,7 +14,7 @@
  * The class `RightHandTriangle` defines three methods (`DetermineA()`, `DetermineB()` and `DetermineC()`) to calculate the different side length if the other two are given. Implement the formulas so the Unit tests pass.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.Pythagoras.UnitTestRightHandTriangle
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.Pythagoras.UnitTestRightHandTriangle
  =======================================================================================
 */
 

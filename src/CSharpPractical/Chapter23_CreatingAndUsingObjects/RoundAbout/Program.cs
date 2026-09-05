@@ -31,7 +31,7 @@
  * Feel free to create a small demo app that creates a `Circle` object, changes it's `radius` and outputs it state to the terminal.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter23_CreatingAndUsingObjects.RoundAbout.UnitTestCircle
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter23_CreatingAndUsingObjects.RoundAbout.UnitTestCircle
  =======================================================================================
 */
 

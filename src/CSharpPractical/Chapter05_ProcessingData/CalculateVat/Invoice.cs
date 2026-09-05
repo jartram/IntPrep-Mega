@@ -20,7 +20,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.CalculateVat.UnitTestInvoice
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter05_ProcessingData.CalculateVat.UnitTestInvoice
  =======================================================================================
 */
 

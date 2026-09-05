@@ -13,7 +13,7 @@
  * Change the code in the method `ShowMinimumHeight` in the file `CSharpLand\RollerCoaster.cs`.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter04_StoringData.CsharpLand.RollerCoasterTest
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter04_StoringData.CsharpLand.RollerCoasterTest
  =======================================================================================
 */
 

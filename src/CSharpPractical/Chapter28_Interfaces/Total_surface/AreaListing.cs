@@ -48,13 +48,13 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter28_Interfaces
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter28_Interfaces
  =======================================================================================
 */
 
 namespace CSharpPractical.Chapter28_Interfaces.Total_surface
 {
-  class AreaListing
+  public class AreaListing
   {
     public void Add(Square square) {
       squares.Add(square);

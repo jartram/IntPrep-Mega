@@ -110,7 +110,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.VectorFromStartToEnd.VectorPathUnitTests
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.VectorFromStartToEnd.VectorPathUnitTests
  =======================================================================================
 */
 

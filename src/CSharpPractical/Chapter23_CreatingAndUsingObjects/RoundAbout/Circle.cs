@@ -7,7 +7,7 @@
  Create a Circle class with radius, diameter, area, and circumference calculation.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter23_CreatingAndUsingObjects.RoundAbout.UnitTestCircle
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter23_CreatingAndUsingObjects.RoundAbout.UnitTestCircle
  =======================================================================================
 */
 

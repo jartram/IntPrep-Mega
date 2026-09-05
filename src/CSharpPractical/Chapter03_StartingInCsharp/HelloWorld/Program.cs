@@ -9,7 +9,7 @@
  * Open the C# project in this directory and edit the code so it outputs `Hello World` to the terminal.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp
  =======================================================================================
 */
 

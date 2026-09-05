@@ -29,7 +29,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.GreatestCommonFactor.UnitTestMathHelper
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter09_Loops.GreatestCommonFactor.UnitTestMathHelper
  =======================================================================================
 */
 

@@ -7,7 +7,7 @@
  Implement the object-oriented design component for Guest.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.GuestTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.GuestTests
  =======================================================================================
 */
 

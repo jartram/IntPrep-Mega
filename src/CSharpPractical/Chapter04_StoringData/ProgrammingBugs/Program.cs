@@ -18,7 +18,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter04_StoringData.ProgrammingBugs.UnitTestMessageOfTheDay
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter04_StoringData.ProgrammingBugs.UnitTestMessageOfTheDay
  =======================================================================================
 */
 

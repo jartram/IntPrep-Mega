@@ -33,7 +33,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.CoordinatePlane.UnitTestPoint
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.CoordinatePlane.UnitTestPoint
  =======================================================================================
 */
 

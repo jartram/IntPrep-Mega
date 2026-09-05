@@ -8,7 +8,7 @@
  and methods to add hours, minutes, and seconds.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.BackToTheFuture.UnitTestTimeStamp
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.BackToTheFuture.UnitTestTimeStamp
  =======================================================================================
 */
 

@@ -36,7 +36,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.LedSeriesResistor.UnitTestsResistorCalculator
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.LedSeriesResistor.UnitTestsResistorCalculator
  =======================================================================================
 */
 

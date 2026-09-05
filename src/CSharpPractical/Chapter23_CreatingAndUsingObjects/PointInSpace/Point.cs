@@ -7,7 +7,7 @@
  Create a 2D Point class with GetX, GetY, SetX, and SetY methods.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter23_CreatingAndUsingObjects.PointInSpace.UnitTestPoint
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter23_CreatingAndUsingObjects.PointInSpace.UnitTestPoint
  =======================================================================================
 */
 

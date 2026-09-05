@@ -7,7 +7,7 @@
  Implement the object-oriented design component for Tag.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CodingExercises.Tests.OOD.TagTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.OOD.TagTests
  =======================================================================================
 */
 

@@ -34,7 +34,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.ICanHearColors.UnitTestColor
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.ICanHearColors.UnitTestColor
  =======================================================================================
 */
 

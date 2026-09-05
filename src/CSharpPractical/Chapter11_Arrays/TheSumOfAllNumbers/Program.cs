@@ -27,7 +27,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.TheSumOfAllNumbers.UnitTestsSumOfIntegers
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter11_Arrays.TheSumOfAllNumbers.UnitTestsSumOfIntegers
  =======================================================================================
 */
 

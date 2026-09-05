@@ -17,7 +17,7 @@
  * Also implement the method `IsLeapYear()` inside the class `LeapYearChecker`.
  
  VALIDATION COMMAND:
- dotnet test --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.DriftingYears.UnitTestLeapYearChecker
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter08_MakingDecisions.DriftingYears.UnitTestLeapYearChecker
  =======================================================================================
 */
 
