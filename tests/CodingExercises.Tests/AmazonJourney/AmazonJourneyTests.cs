@@ -6,7 +6,7 @@ using CE = CodingExercises.AmazonJourney;
 
 namespace CodingExercises.Tests.AmazonJourney;
 
-public class RobotBoundededTests
+public class RobotBoundedTests
 {
     [Fact]
     public void TestRobotBounded()

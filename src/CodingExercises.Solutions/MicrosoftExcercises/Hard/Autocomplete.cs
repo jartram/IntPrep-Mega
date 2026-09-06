@@ -1,151 +1,167 @@
-﻿//using System.Collections.Generic;
-//using System.Text;
+/*
+ =======================================================================================
+ CHALLENGE: AutocompleteSystem
+ CATEGORY: MicrosoftExcercises / Hard
+ SOURCE: N/A
+ 
+ DESCRIPTION:
+ Solve the AutocompleteSystem problem as specified. Implement the methods below to pass
+ all automated unit tests.
+ 
+ VALIDATION COMMAND:
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExercises.AutocompleteTests
+ =======================================================================================
+*/
 
-//namespace CodingExercises.Solutions.MicrosoftExcercises.Hard
-//{
-//    public class AutocompleteSystem
-//    {
-//        private StringBuilder currentSentence;
-//        private Trie trie;
+﻿using System.Collections.Generic;
+using System.Text;
+using System.Linq;
 
-//        public AutocompleteSystem(string[] sentences, int[] times)
-//        {
-//            currentSentence = new StringBuilder();
-//            trie = GenerateTrie(sentences, times);
-//        }
+namespace CodingExercises.MicrosoftExcercises.Hard.Autocomplete
+{
+    public class AutocompleteSystem
+    {
+        private StringBuilder currentSentence;
+        private Trie trie;
 
-//        public IList<string> Input(char c)
-//        {
-//            if (c == '#')
-//            {
-//                var sentence = currentSentence.ToString();
+        public AutocompleteSystem(string[] sentences, int[] times)
+        {
+            currentSentence = new StringBuilder();
+            trie = GenerateTrie(sentences, times);
+        }
 
-//                if (sentence != "")
-//                {
-//                    trie.AddSentence(sentence, 1);
-//                    currentSentence = new StringBuilder();
-//                }
+        public IList<string> Input(char c)
+        {
+            if (c == '#')
+            {
+                var sentence = currentSentence.ToString();
 
-//                return new List<string>();
-//            }
+                if (sentence != "")
+                {
+                    trie.AddSentence(sentence, 1);
+                    currentSentence = new StringBuilder();
+                }
 
-//            currentSentence.Append(c);
+                return new List<string>();
+            }
 
-//            return trie.GetHottests(currentSentence.ToString());
-//        }
+            currentSentence.Append(c);
 
-//        private Trie GenerateTrie(string[] sentences, int[] times)
-//        {
-//            var trie = new Trie();
+            return trie.GetHottests(currentSentence.ToString());
+        }
 
-//            for (int i = 0; i < sentences.Length; i++)
-//            {
-//                trie.AddSentence(sentences[i], times[i]);
-//            }
+        private Trie GenerateTrie(string[] sentences, int[] times)
+        {
+            var trie = new Trie();
 
-//            return trie;
-//        }
-//    }
+            for (int i = 0; i < sentences.Length; i++)
+            {
+                trie.AddSentence(sentences[i], times[i]);
+            }
 
-//    public class Trie
-//    {
-//        private TrieNode root;
+            return trie;
+        }
+    }
 
-//        public Trie()
-//        {
-//            root = new TrieNode();
-//        }
+    public class Trie
+    {
+        private TrieNode root;
 
-//        public void AddSentence(string sentence, int frequency)
-//        {
-//            var current = root;
+        public Trie()
+        {
+            root = new TrieNode();
+        }
 
-//            for (int i = 0; i < sentence.Length; i++)
-//            {
-//                var currentChar = sentence[i];
+        public void AddSentence(string sentence, int frequency)
+        {
+            var current = root;
 
-//                if (!current.Links.ContainsKey(currentChar))
-//                {
-//                    current.Links.Add(currentChar, new TrieNode());
-//                }
+            for (int i = 0; i < sentence.Length; i++)
+            {
+                var currentChar = sentence[i];
 
-//                current = current.Links[currentChar];
-//            }
+                if (!current.Links.ContainsKey(currentChar))
+                {
+                    current.Links.Add(currentChar, new TrieNode());
+                }
 
-//            current.Sentence = sentence;
-//            current.Frequency += frequency;
-//        }
+                current = current.Links[currentChar];
+            }
 
-//        public IList<string> GetHottests(string prefix)
-//        {
-//            var hottests = new List<string>();
-//            var current = root;
+            current.Sentence = sentence;
+            current.Frequency += frequency;
+        }
 
-//            for (int i = 0; i < prefix.Length; i++)
-//            {
-//                var currentChar = prefix[i];
+        public IList<string> GetHottests(string prefix)
+        {
+            var hottests = new List<string>();
+            var current = root;
 
-//                if (!current.Links.ContainsKey(currentChar))
-//                {
-//                    return hottests;
-//                }
+            for (int i = 0; i < prefix.Length; i++)
+            {
+                var currentChar = prefix[i];
 
-//                current = current.Links[currentChar];
-//            }
+                if (!current.Links.ContainsKey(currentChar))
+                {
+                    return hottests;
+                }
 
-//            return current.GetAllSentences()
-//                .OrderByDescending(item => item.frequency)
-//                .ThenBy(item => item.sentence)
-//                .Select(item => item.sentence)
-//                .Take(3)
-//                .ToList();
-//        }
-//    }
+                current = current.Links[currentChar];
+            }
 
-//    public class TrieNode
-//    {
-//        public int Frequency { get; set; }
+            return current.GetAllSentences()
+                .OrderByDescending(item => item.frequency)
+                .ThenBy(item => item.sentence)
+                .Select(item => item.sentence)
+                .Take(3)
+                .ToList();
+        }
+    }
 
-//        public string Sentence { get; set; }
+    public class TrieNode
+    {
+        public int Frequency { get; set; }
 
-//        public Dictionary<char, TrieNode> Links { get; set; }
+        public string Sentence { get; set; }
 
-//        public TrieNode()
-//        {
-//            Frequency = 0;
-//            Sentence = "";
-//            Links = new Dictionary<char, TrieNode>();
-//        }
+        public Dictionary<char, TrieNode> Links { get; set; }
 
-//        public IList<(string sentence, int frequency)> GetAllSentences()
-//        {
-//            var sentences = new List<(string, int)>();
-//            var queue = new Queue<TrieNode>();
+        public TrieNode()
+        {
+            Frequency = 0;
+            Sentence = "";
+            Links = new Dictionary<char, TrieNode>();
+        }
 
-//            queue.Enqueue(this);
+        public IList<(string sentence, int frequency)> GetAllSentences()
+        {
+            var sentences = new List<(string, int)>();
+            var queue = new Queue<TrieNode>();
 
-//            while (queue.Count > 0)
-//            {
-//                var actual = queue.Dequeue();
+            queue.Enqueue(this);
 
-//                if (actual.Sentence != "")
-//                {
-//                    sentences.Add((actual.Sentence, actual.Frequency));
-//                }
+            while (queue.Count > 0)
+            {
+                var actual = queue.Dequeue();
 
-//                foreach (var node in actual.Links.Values)
-//                {
-//                    queue.Enqueue(node);
-//                }
-//            }
+                if (actual.Sentence != "")
+                {
+                    sentences.Add((actual.Sentence, actual.Frequency));
+                }
 
-//            return sentences;
-//        }
-//    }
+                foreach (var node in actual.Links.Values)
+                {
+                    queue.Enqueue(node);
+                }
+            }
 
-//    /**
-//     * Your AutocompleteSystem object will be instantiated and called as such:
-//     * AutocompleteSystem obj = new AutocompleteSystem(sentences, times);
-//     * IList<string> param_1 = obj.Input(c);
-//     */
-//}
+            return sentences;
+        }
+    }
+
+    /**
+     * Your AutocompleteSystem object will be instantiated and called as such:
+     * AutocompleteSystem obj = new AutocompleteSystem(sentences, times);
+     * IList<string> param_1 = obj.Input(c);
+     */
+}

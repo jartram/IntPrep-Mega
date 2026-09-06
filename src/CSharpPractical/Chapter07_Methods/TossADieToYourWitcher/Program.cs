@@ -20,7 +20,7 @@
  * Ofcourse the thrown value changes everytime you run the application.
  
  VALIDATION COMMAND:
- dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter07_Methods.TossADieToYourWitcherTest
  =======================================================================================
 */
 

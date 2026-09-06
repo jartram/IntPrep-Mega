@@ -9,11 +9,13 @@
  all automated unit tests.
  
  VALIDATION COMMAND:
- dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RevereString2Tests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExercises.ReverseString2Tests
  =======================================================================================
 */
 
 ﻿using System.Text;
+
+namespace CodingExercises.MicrosoftExcercises.Easy;
 
 public class RevereString2
 {

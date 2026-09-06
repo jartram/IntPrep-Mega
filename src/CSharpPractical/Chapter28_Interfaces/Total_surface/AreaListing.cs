@@ -48,7 +48,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter28_Interfaces
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter28_Interfaces.TotalSurfaceTest
  =======================================================================================
 */
 

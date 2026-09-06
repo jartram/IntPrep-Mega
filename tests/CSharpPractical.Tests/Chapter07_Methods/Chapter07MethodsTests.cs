@@ -9,7 +9,7 @@ using CSharpPractical.Chapter07_Methods.TossADieToYourWitcher;
 
 namespace CSharpPractical.Tests.Chapter07_Methods;
 
-public class Chapter07MethodsTests
+public class HailCSharpTest
 {
     [Fact]
     public void TestHailCSharp()
@@ -28,7 +28,10 @@ public class Chapter07MethodsTests
             Console.SetOut(orig);
         }
     }
+}
 
+public class HelloMisterRobotoTest
+{
     [Fact]
     public void TestHelloMisterRoboto()
     {
@@ -46,7 +49,10 @@ public class Chapter07MethodsTests
             Console.SetOut(orig);
         }
     }
+}
 
+public class LaResistanceTest
+{
     [Fact]
     public void TestLaResistance()
     {
@@ -56,7 +62,10 @@ public class Chapter07MethodsTests
         double parallel = CSharpPractical.Chapter07_Methods.LaResistance.Program.SolveParallel(120, 200);
         Assert.Equal(75, parallel);
     }
+}
 
+public class SumAndDifferenceTest
+{
     [Fact]
     public void TestSumAndDifference()
     {
@@ -66,7 +75,10 @@ public class Chapter07MethodsTests
         int diff = CSharpPractical.Chapter07_Methods.SumAndDifference.Program.Subtract(24, 16);
         Assert.Equal(8, diff);
     }
+}
 
+public class TossADieToYourWitcherTest
+{
     [Fact]
     public void TestTossADieToYourWitcher()
     {

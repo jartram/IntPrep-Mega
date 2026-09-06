@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\CodingExercises\CodingExercises.csproj" />
-    <ProjectReference Include="..\..\src\CodingExercises.Solutions\CodingExercises.Solutions.csproj" />
   </ItemGroup>
 
 </Project>

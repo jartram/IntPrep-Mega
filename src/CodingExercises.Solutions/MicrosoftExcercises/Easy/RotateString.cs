@@ -1,4 +1,6 @@
-﻿public class RotateString
+﻿namespace CodingExercises.MicrosoftExcercises.Easy;
+
+public class RotateString
 {
     public bool Solve(string s, string pat)
     {

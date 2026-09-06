@@ -4,7 +4,7 @@ using CodingExercises.OOD.StackOverflow;
 
 namespace CodingExercises.Tests.OOD;
 
-public class StackOverflowModelTests
+public class AccountTests
 {
     [Fact]
     public void TestAccountResetPassword()
@@ -15,7 +15,10 @@ public class StackOverflowModelTests
         Assert.True(account.ResetPassword("newpass"));
         Assert.Equal("newpass", account.Password);
     }
+}
 
+public class QuestionTests
+{
     [Fact]
     public void TestQuestionClose()
     {

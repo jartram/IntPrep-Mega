@@ -62,7 +62,7 @@
  * Feel free to create a small demo app that demonstrates the usage of the ComplexNumber class.
  
  VALIDATION COMMAND:
- dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.ThingsAreComplex.UnitTest1
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter26_Constructors.ThingsAreComplex.UnitTestComplexNumber
  =======================================================================================
 */
 

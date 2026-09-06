@@ -9,11 +9,13 @@
  all automated unit tests.
  
  VALIDATION COMMAND:
- dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExcercises.RotateStringTests
+ dotnet test tests/CodingExercises.Tests --filter FullyQualifiedName~CodingExercises.Tests.MicrosoftExercises.RotateStringTests
  =======================================================================================
 */
 
-﻿public class RotateString
+﻿namespace CodingExercises.MicrosoftExcercises.Easy;
+
+public class RotateString
 {
     public bool Solve(string s, string pat)
         {

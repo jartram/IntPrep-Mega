@@ -16,7 +16,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp.DevelopedByTest
  =======================================================================================
 */
 
@@ -24,11 +24,12 @@
 
 namespace CSharpPractical.Chapter03_StartingInCsharp.DevelopedBy
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // Write your implementation here
-        }
+            // TODO: Output welcome message and your name
+        }   
     }
 }

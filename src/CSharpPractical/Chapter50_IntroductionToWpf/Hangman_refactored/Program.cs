@@ -67,7 +67,7 @@
  * This challenge is a solo-challenge. While you can help someone by giving some pointers or explaining something, the repo's should not contain copy-pasted code from another student. This challenge is a big part of you grade for OOP1, so be sure to take this challenge serious.
  
  VALIDATION COMMAND:
- dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter50_IntroductionToWpf
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter50_IntroductionToWpf.HangmanRefactoredTest
  =======================================================================================
 */
 

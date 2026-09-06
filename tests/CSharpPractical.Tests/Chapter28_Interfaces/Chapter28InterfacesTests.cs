@@ -5,7 +5,7 @@ using CSharpPractical.Chapter28_Interfaces.Total_surface;
 
 namespace CSharpPractical.Tests.Chapter28_Interfaces;
 
-public class Chapter28InterfacesTests
+public class GeneratorOfNumbersTest
 {
     [Fact]
     public void TestNaturalGenerator()
@@ -43,7 +43,10 @@ public class Chapter28InterfacesTests
         gen.Reset();
         Assert.Equal(1, gen.Next());
     }
+}
 
+public class TotalSurfaceTest
+{
     [Fact]
     public void TestTotalSurface()
     {

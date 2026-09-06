@@ -1,5 +1,7 @@
 ﻿using System.Text;
 
+namespace CodingExercises.MicrosoftExcercises.Easy;
+
 public class RevereString2
 {
     public string ReverseStr(string s, int k)

@@ -22,7 +22,7 @@
  * ```
  
  VALIDATION COMMAND:
- dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter03_StartingInCsharp.PersonalDetailsTest
  =======================================================================================
 */
 
@@ -30,9 +30,9 @@
 
 namespace CSharpPractical.Chapter03_StartingInCsharp.PersonalDetails
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // Add implementation here
         }
