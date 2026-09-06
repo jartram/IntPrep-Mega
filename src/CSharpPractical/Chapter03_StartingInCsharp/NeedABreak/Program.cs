@@ -31,10 +31,11 @@ namespace CSharpPractical.Chapter03_StartingInCsharp.NeedABreak
             // TODO: Fix the syntax errors below so it returns the two lines:
             // "One programmer said to another:"
             // "I need a </br>"
-            //
-            // Console.WriteLine"One programmer said to another:");
-            // Console.WriteLine("I need a </br>);
-            throw new NotImplementedException();
+            var lines = new string[2];
+            lines[0]= "One programmer said to another:";
+            lines[1]= "I need a </br>";
+            //throw new NotImplementedException();
+            return lines;
         }
 
         public static void Main(string[] args)
