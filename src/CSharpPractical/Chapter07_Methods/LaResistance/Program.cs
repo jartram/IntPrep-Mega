@@ -81,11 +81,25 @@ namespace CSharpPractical.Chapter07_Methods.LaResistance
 {
     class Program
     {
-        internal static double SolveSeries(double r1, double r2) => r1 + r2;
+        internal static double SolveSeries(double r1, double r2)
+        {
+            // TODO: Calculate series resistance
+            return 0;
+        }
+
+        // TODO - Step 1 - Create SolveSeries method that calculates
+        // the equivalent resistor of two series resistors
 
 
 
-        internal static double SolveParallel(double r1, double r2) => (r1 * r2) / (r1 + r2);
+        internal static double SolveParallel(double r1, double r2)
+        {
+            // TODO: Calculate parallel resistance
+            return 0;
+        }
+
+        // TODO - Step 3 - Create SolveParallel method that calculates
+        // the equivalent resistor of two parallel resistors
 
 
 

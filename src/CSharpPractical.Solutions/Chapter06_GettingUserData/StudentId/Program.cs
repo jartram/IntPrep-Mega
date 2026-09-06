@@ -1,0 +1,42 @@
+/*
+ =======================================================================================
+ CHALLENGE: StudentId (06-getting-user-data)
+ CHAPTER: Chapter06_GettingUserData
+ 
+ DESCRIPTION:
+ * # Student ID
+ *
+ * The Student ID app is used by the administrative service of VIVES to generate email addresses and IDs for new students. However the generation of both the components has not been finished yet.
+ *
+ * Fix the method `Email()` so it returns an email address in the format `firstname.lastname@student.vives.be`. Make sure that all letters are lower case. You can search the Internet on how to lowercase a full string.
+ *
+ * Next an ID needs to be generated. For this you can use the `Random` class. Generate an ID number of `6` digits and prefix it with an `r`. Place the implementation inside of the `ID()` method.
+ *
+ * Expected Output:
+ *
+ * ```text
+ * Student information:
+ * Firstname: Marco
+ * Lastname: Polo
+ * Email: marco.polo@student.vives.be
+ * ID: r123056
+ * ```
+ 
+ VALIDATION COMMAND:
+ dotnet test tests/CSharpPractical.Tests --filter FullyQualifiedName~CSharpPractical.Tests.Chapter06_GettingUserData.StudentId.UnitTestStudent
+ =======================================================================================
+*/
+
+﻿using System;
+
+namespace CSharpPractical.Chapter06_GettingUserData.StudentId
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student student = new Student();
+            student.PrintToTerminal();
+        }
+    }
+}

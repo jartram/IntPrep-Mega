@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 
 namespace CodingExercises.Exercises
 {
@@ -36,39 +36,21 @@ namespace CodingExercises.Exercises
 
         public int MaxDepth(TreeNode root)
         {
-            if (root == null)
-            {
-                return 0;
-            }
-
-            return MaxDepthAux(root, 1);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public int MaxDepthAux(TreeNode root, int sum)
         {
-            if (root == null)
-            {
-                return sum;
-            }
-
-            if (root.left == null && root.right == null)
-            {
-                return sum;
-            }
-
-            return Math.Max(MaxDepthAux(root.left, sum + 1), MaxDepthAux(root.right, sum + 1));
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         //Internet solution
         public int MaxDepthAlt(TreeNode root)
         {
-            if (root == null)
-                return 0;
-
-            int left = MaxDepthAlt(root.left);
-            int right = MaxDepthAlt(root.right);
-
-            return Math.Max(left, right) + 1;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

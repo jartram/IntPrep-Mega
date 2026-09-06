@@ -13,25 +13,55 @@
 */
 
 using System;
-using System.Linq;
 
-namespace CSharpPractical.Chapter25_GettersSettersProperties.SuperStringTheory
+namespace CSharpPractical.Chapter25_GettersSettersProperties.SuperStringTheory;
+
+public class SuperString
 {
-    public class SuperString
+    private string text = "";
+
+    public string Text
     {
-        private string text = "";
+        get => text;
+        set => text = value ?? "";
+    }
 
-        public string Text
-        {
-            get => text;
-            set => text = value ?? "";
-        }
+    public string GetText() => Text;
+    public void SetText(string value) => Text = value;
 
-        public void Append(string s) => Text = text + s;
-        public void Prepend(string s) => Text = s + text;
-        public bool IsValidNumber() => !string.IsNullOrWhiteSpace(text) && text.All(char.IsDigit);
-        public void TrimStart() => Text = text.TrimStart();
-        public void TrimEnd() => Text = text.TrimEnd();
-        public void Trim() => Text = text.Trim();
+    public void Append(string text)
+    {
+        // TODO: Append text to internal text
+        throw new NotImplementedException();
+    }
+
+    public void Prepend(string text)
+    {
+        // TODO: Prepend text to internal text
+        throw new NotImplementedException();
+    }
+
+    public bool IsValidNumber()
+    {
+        // TODO: Check if text contains only digits
+        throw new NotImplementedException();
+    }
+
+    public void TrimStart()
+    {
+        // TODO: Remove leading spaces
+        throw new NotImplementedException();
+    }
+
+    public void TrimEnd()
+    {
+        // TODO: Remove trailing spaces
+        throw new NotImplementedException();
+    }
+
+    public void Trim()
+    {
+        // TODO: Remove leading and trailing spaces
+        throw new NotImplementedException();
     }
 }

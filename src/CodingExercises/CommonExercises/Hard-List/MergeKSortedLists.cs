@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System;
 using System.Collections.Generic;
@@ -26,44 +26,14 @@ namespace CodingExercises.CommonExercises.Hard_List
         //brute force approach
         public ListNode MergeKLists(ListNode[] lists)
         {
-            if (lists == null || lists.Length < 1)
-            {
-                return null;
-            }
-
-            var nodeList = new List<ListNode>();
-
-            foreach (var node in lists)
-            {
-                var aux = node;
-
-                while (aux != null)
-                {
-                    nodeList.Add(aux);
-                    aux = aux.next;
-                }
-            }
-
-            var sorted = nodeList.ToArray();
-
-            Array.Sort(sorted, (x1, x2) => x1.val.CompareTo(x2.val));
-
-            for (int i = 1; i < sorted.Length; i++)
-            {
-                sorted[i - 1].next = sorted[i];
-
-                if (i == sorted.Length - 1)
-                {
-                    sorted[i].next = null;
-                }
-            }
-
-            return sorted.Length >= 1 ? sorted[0] : null;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public ListNode MergeKLists2(ListNode[] lists)
         {
-            return MergeKLists2(lists, 0, lists.Length - 1);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private ListNode MergeKLists2(ListNode[] lists, int left, int right)

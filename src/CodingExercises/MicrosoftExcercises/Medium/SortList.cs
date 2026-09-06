@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -23,18 +23,10 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         public class Solution
         {
             public ListNode SortList(ListNode head)
-            {
-                if (head == null || head.next == null)
-                {
-                    return head;
-                }
-
-                var mid = GetMid(head);
-                var left = SortList(head);
-                var right = SortList(mid);
-
-                return Merge(left, right);
-            }
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
 
             private ListNode Merge(ListNode left, ListNode right)
             {

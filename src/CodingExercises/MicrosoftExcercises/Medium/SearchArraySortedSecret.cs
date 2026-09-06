@@ -13,35 +13,14 @@
  =======================================================================================
 */
 
-namespace CodingExercises.MicrosoftExcercises.Medium
+﻿namespace CodingExercises.MicrosoftExcercises.Medium
 {
     public class SearchArraySortedSecret
     {
         public int Search(ArrayReader reader, int target)
         {
-            var low = 0;
-            var high = GetBound(reader);
-
-            while (low <= high)
-            {
-                var mid = low + (high - low) / 2;
-                var midElement = reader.Get(mid);
-
-                if (midElement == target)
-                {
-                    return mid;
-                }
-                else if (midElement > target)
-                {
-                    high = mid - 1;
-                }
-                else
-                {
-                    low = mid + 1;
-                }
-            }
-
-            return -1;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private int GetBound(ArrayReader reader)

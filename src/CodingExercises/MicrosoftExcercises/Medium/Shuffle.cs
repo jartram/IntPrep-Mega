@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -33,35 +33,27 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         /** Resets the array to its original configuration and return it. */
         public int[] Reset()
         {
-            array = (int[])original.Clone();
-
-            return original;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         /** Returns a random shuffling of the array. */
         public int[] Solve()
         {
-            Random rnd = new Random();
-            int random = rnd.Next(0, array.Length);
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                Swap(i, RandomInRange(i, array.Length));
-            }
-
-            return array;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public int RandomInRange(int i, int j)
         {
-            return rnd.Next(j - i) + i;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public void Swap(int i, int j)
         {
-            var tmp = array[j];
-            array[j] = array[i];
-            array[i] = tmp;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

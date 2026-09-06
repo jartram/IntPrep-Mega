@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System.Collections.Generic;
 
@@ -25,9 +25,8 @@ namespace CodingExercises.MicrosoftExcercises.Easy
 
         public IList<string> BinaryTreePaths(TreeNode root)
         {
-            result = new List<string>();
-            BinaryTreePathsAux(root, "");
-            return result;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void BinaryTreePathsAux(TreeNode root, string path)

@@ -23,24 +23,45 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter05_ProcessingData.RectangleProperties
 {
     public class Rectangle
     {
-        private double width = 12.3;
-        private double height = 4.5;
+        double width = 3;
+        double height = 8;
 
         public double CalculateArea()
         {
-            return width * height;
+            // TODO: Calculate the area of a rectangle
+            double area = 0;
+
+            // Please dont change the code below (automatic unit tests)
+            return area;
         }
 
         public double CalculateCircumference()
         {
-            return 2 * (width + height);
+            // TODO: Calculate the circumference of a rectangle
+            double circumference = 0;
+
+            // Please dont change the code below (automatic unit tests)
+            return circumference;
         }
-            public void PrintToTerminal() { }
-}
+
+        public void PrintToTerminal()
+        {
+            // Print some info to the terminal
+            Console.WriteLine("Rectangle: " + width + "cm by " + height + "cm");
+
+            Console.WriteLine("The rectangle has an area of " + CalculateArea()
+                + "sq centimeters.");
+
+            Console.WriteLine("The rectangle has an circumference of " + CalculateCircumference()
+                + " centimeters.");
+        }
+    }
 }

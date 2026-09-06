@@ -27,7 +27,9 @@ namespace CSharpPractical.Chapter03_StartingInCsharp.BasicSyntaxError
     {
         public static string GetMessage()
         {
-            return "Nice, you just fixed the application.";
+            // TODO: Fix the syntax error below and return the message: "Nice, you just fixed the application."
+            // Console.WriteLine("Nice, you just fixed the application.")
+            throw new NotImplementedException();
         }
 
         public static void Main(string[] args)

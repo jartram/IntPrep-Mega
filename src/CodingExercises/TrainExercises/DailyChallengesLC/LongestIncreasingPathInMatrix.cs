@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace CodingExercises.TrainExercises.DailyChallengesLC
@@ -25,24 +25,8 @@ namespace CodingExercises.TrainExercises.DailyChallengesLC
 
         public int LongestIncreasingPath(int[][] matrix)
         {
-            if (matrix.Length == 0)
-            {
-                return 0;
-            }
-
-            cache = new int[matrix.Length, matrix[0].Length];
-            int max = 0;
-
-            for (int i = 0; i < matrix.Length; i++)
-            {
-                for (int j = 0; j < matrix[0].Length; j++)
-                {
-                    var actualPath = DFS(matrix, i, j);
-                    max = Math.Max(max, actualPath);
-                }
-            }
-
-            return max;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private int DFS(int[][] matrix, int i, int j)

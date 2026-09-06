@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Premium
 {
@@ -23,47 +23,8 @@ namespace CodingExercises.MicrosoftExcercises.Premium
 
         public bool HasPath(int[][] maze, int[] start, int[] destination)
         {
-            var queue = new Queue<(int, int)>();
-
-            queue.Enqueue((start[0], start[1]));
-
-            while (queue.Count > 0)
-            {
-                var (row, col) = queue.Dequeue();
-                if (row == destination[0] && col == destination[1])
-                {
-                    return true;
-                }
-
-                if (maze[row][col] != -1)
-                {
-                    maze[row][col] = -1;
-
-                    foreach (var (rowDirection, colDirection) in directions)
-                    {
-                        int newRow = row + rowDirection;
-                        int newCol = col + colDirection;
-
-                        while (newRow >= 0 && newRow < maze.Length &&
-                             newCol >= 0 && newCol < maze[newRow].Length &&
-                             (maze[newRow][newCol] != 1))
-                        {
-                            newRow += rowDirection;
-                            newCol += colDirection;
-                        }
-
-                        newRow -= rowDirection;
-                        newCol -= colDirection;
-
-                        if (maze[newRow][newCol] == 0)
-                        {
-                            queue.Enqueue((newRow, newCol));
-                        }
-                    }
-                }
-            }
-
-            return false;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

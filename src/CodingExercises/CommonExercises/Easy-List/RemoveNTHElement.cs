@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.CommonExercises.Easy_List
@@ -22,26 +22,8 @@ namespace CodingExercises.CommonExercises.Easy_List
     {
         public ListNode RemoveNthFromEnd(ListNode head, int n)
         {
-            ListNode dummy = new ListNode(0);
-            ListNode first = dummy;
-            ListNode second = dummy;
-
-            dummy.next = head;
-
-            for (int i = 1; i <= n + 1; i++)
-            {
-                first = first.next;
-            }
-            
-            while (first != null)
-            {
-                first = first.next;
-                second = second.next;
-            }
-            
-            second.next = second.next.next;
-            
-            return dummy.next;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

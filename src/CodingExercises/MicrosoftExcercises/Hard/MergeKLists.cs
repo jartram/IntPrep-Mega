@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
@@ -22,11 +22,8 @@ namespace CodingExercises.MicrosoftExcercises.Hard
     {
         public ListNode Solve(ListNode[] lists)
         {
-            if (lists == null || lists.Length == 0)
-            {
-                return null;
-            }
-            return Solve(lists, 0, lists.Length - 1);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
         private ListNode Solve(ListNode[] lists, int left, int right)
         {

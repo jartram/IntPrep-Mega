@@ -50,7 +50,14 @@ namespace CSharpPractical.Chapter07_Methods.SumAndDifference
             return (first + second);
         }
 
-        internal static int Subtract(int first, int second) => first - second;
+        internal static int Subtract(int first, int second)
+        {
+            // TODO: Subtract second from first
+            return 0;
+        }
+
+        // TODO Create a method Subtract that substracts
+        // a second argument from a first argument and returns the result.
 
 
         static void Main(string[] args)

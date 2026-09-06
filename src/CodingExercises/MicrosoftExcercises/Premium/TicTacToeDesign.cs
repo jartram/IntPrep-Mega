@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 
 namespace CodingExercises.MicrosoftExcercises.Premium
 {
@@ -31,39 +31,10 @@ namespace CodingExercises.MicrosoftExcercises.Premium
             }
 
             public int Move(int row, int col, int player)
-            {
-                table[row, col] = player;
-
-                var winner = CheckHorizontal(row, col, player);
-
-                if (winner == player)
-                {
-                    return winner;
-                }
-
-                winner = CheckVertical(row, col, player);
-
-                if (winner == player)
-                {
-                    return winner;
-                }
-
-                winner = CheckDiagonal(row, col, player);
-
-                if (winner == player)
-                {
-                    return winner;
-                }
-
-                winner = CheckAntiDiagonal(row, col, player);
-
-                if (winner == player)
-                {
-                    return winner;
-                }
-
-                return 0;
-            }
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
 
             private int CheckHorizontal(int row, int col, int player)
             {
@@ -198,32 +169,10 @@ namespace CodingExercises.MicrosoftExcercises.Premium
                         1: Player 1 wins.
                         2: Player 2 wins. */
             public int Move(int row, int col, int player)
-            {
-                var currentPlayer = player == 1 ? 1 : -1;
-
-                if (col == row)
-                {
-                    diagonal += currentPlayer;
-                }
-
-                if (col == (N - row - 1))
-                {
-                    antiDiagonal += currentPlayer;
-                }
-
-                rows[row] += currentPlayer;
-                cols[col] += currentPlayer;
-
-                if (Math.Abs(rows[row]) == N ||
-                    Math.Abs(cols[col]) == N ||
-                    Math.Abs(antiDiagonal) == N ||
-                    Math.Abs(diagonal) == N)
-                {
-                    return player;
-                }
-
-                return 0;
-            }
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
         }
     }
 }

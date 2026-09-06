@@ -37,13 +37,18 @@ namespace CSharpPractical.Chapter07_Methods.HelloMisterRoboto
     {
         internal static void GreetTheUser()
         {
-            Console.WriteLine("Hello, I am Mister Roboto.");
-            Console.WriteLine("I am the next-gen chat-bot created by VIVES students.");
+            // TODO: Greet the user
         }
+
+        // TODO Create a method called GreetTheUser that outputs the following
+        // message to the terminal:
+        //      Hello, I am Mister Roboto.
+        //      I am the next-gen chat-bot created by VIVES students.
 
         static void Main(string[] args)
         {
-            GreetTheUser();
+            //TODO Call the GreetTheUser method here so the message
+            // is shown when the application is launched
         }
     }
 }

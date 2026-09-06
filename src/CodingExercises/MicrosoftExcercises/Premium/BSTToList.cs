@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-namespace CodingExercises.MicrosoftExcercises.Premium
+﻿namespace CodingExercises.MicrosoftExcercises.Premium
 {
     public class BSTToList
     {
@@ -22,17 +22,8 @@ namespace CodingExercises.MicrosoftExcercises.Premium
 
         public Node TreeToDoublyList(Node root)
         {
-            if (root == null)
-            {
-                return null;
-            }
-
-            buildInorder(root);
-
-            first.left = last;
-            last.right = first;
-
-            return first;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void buildInorder(Node root)

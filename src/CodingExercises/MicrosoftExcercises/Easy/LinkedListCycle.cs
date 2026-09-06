@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
@@ -22,26 +22,8 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public bool HasCycle(ListNode head)
         {
-            if (head == null)
-            {
-                return false;
-            }
-
-            var fast = head;
-            var slow = head;
-
-            while (fast != null && fast.next != null)
-            {
-                fast = fast.next.next;
-                slow = slow.next;
-
-                if (fast == slow)
-                {
-                    return true;
-                }
-            }
-
-            return false;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

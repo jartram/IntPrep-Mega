@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System.Collections.Generic;
 
@@ -24,13 +24,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         private Dictionary<int, int> inorderPositions;
         public TreeNode BuildTree(int[] inorder, int[] postorder)
         {
-            int postOrderPosition = postorder.Length - 1;
-            inorderPositions = new Dictionary<int, int>();
-            for (int i = 0; i < inorder.Length; i++)
-            {
-                inorderPositions.Add(inorder[i], i);
-            }
-            return BuildTreeAux(inorder, postorder, 0, postorder.Length - 1, ref postOrderPosition);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
         private TreeNode BuildTreeAux(int[] inorder, int[] postorder, int left, int right, ref int postOrderPosition)
         {

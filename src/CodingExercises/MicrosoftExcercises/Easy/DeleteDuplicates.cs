@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
@@ -22,19 +22,8 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public ListNode Solve(ListNode head)
         {
-            var actual = head;
-            while (actual != null && actual.next != null)
-            {
-                if (actual.val == actual.next.val)
-                {
-                    actual.next = actual.next.next;
-                }
-                else
-                {
-                    actual = actual.next;
-                }
-            }
-            return head;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

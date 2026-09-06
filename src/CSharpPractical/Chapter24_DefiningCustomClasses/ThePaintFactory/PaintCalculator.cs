@@ -44,30 +44,34 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter24_DefiningCustomClasses.ThePaintFactory
 {
     public class PaintCalculator
     {
-        private double totalArea = 0;
-        public double TotalArea => totalArea;
-
         public void AddSquare(double side)
         {
-            totalArea += side * side;
+            // TODO - Add square surface area to totalArea
         }
 
         public void AddRectangle(double width, double height)
         {
-            totalArea += width * height;
+            // TODO - Add rectangular surface area to totalArea
         }
 
         public double LitersOfPaint(int coats)
         {
-            double litersPerCoat = totalArea / 12.0;
-            double totalLiters = litersPerCoat * coats * 1.05;
-            return Math.Ceiling(totalLiters);
+            // TODO - Calculate how much paint is required to paint the totalArea surface.
+            return -1;
         }
+
+        // Attribute for total area to paint
+        private double totalArea = 0;
+
+        // Property for totalArea
+        public double TotalArea { get { return totalArea; } }
     }
 }

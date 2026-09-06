@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -22,7 +22,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int[][] KClosest(int[][] points, int k)
         {
-            return points.OrderBy(point => Math.Abs(point[0] * point[0] + point[1] * point[1])).Take(k).ToArray();
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

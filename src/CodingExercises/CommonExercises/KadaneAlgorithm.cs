@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 
 namespace CodingExercises.Exercises
 {
@@ -22,17 +22,8 @@ namespace CodingExercises.Exercises
         // Largest Sum Contiguous Subarray
         public int KadanesAlgorithm(int[] array)
         {
-            var currentMax = array[0];
-            var globalMax = array[0];
-
-            for (int i = 1; i < array.Length; i++)
-            {
-                var num = array[i];
-                currentMax = Math.Max(num, currentMax + num);
-                globalMax = Math.Max(globalMax, currentMax);
-            }
-
-            return globalMax;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -22,33 +22,14 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public TreeNode Solve(TreeNode root, int low, int high)
         {
-            return PostOrder(root, low, high);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public TreeNode PostOrder(TreeNode root, int low, int high)
         {
-            if (root == null)
-            {
-                return root;
-            }
-            else
-            {
-                root.left = PostOrder(root.left, low, high);
-                root.right = PostOrder(root.right, low, high);
-
-                if (root.val >= low && root.val <= high)
-                {
-                    return root;
-                }
-                else if (root.val < low)
-                {
-                    return root.right;
-                }
-                else
-                {
-                    return root.left;
-                }
-            }
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

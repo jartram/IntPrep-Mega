@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 using System.Text;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
@@ -22,32 +22,8 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public string StringShift(string s, int[][] shifts)
         {
-            var leftShifts = 0;
-            var rightShifts = 0;
-
-            foreach (var shift in shifts)
-            {
-                var direction = shift[0];
-                var total = shift[1];
-
-                if (direction == 0)
-                {
-                    leftShifts += total;
-                }
-                else
-                {
-                    rightShifts += total;
-                }
-            }
-
-            var totalShifts = (rightShifts - leftShifts) % s.Length;
-
-            if (totalShifts == 0)
-            {
-                return s;
-            }
-
-            return GetShiftedString(s, totalShifts < 0, Math.Abs(totalShifts));
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private string GetShiftedString(string s, bool isLeft, int total)

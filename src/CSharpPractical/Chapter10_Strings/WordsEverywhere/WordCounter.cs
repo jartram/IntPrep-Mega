@@ -15,7 +15,9 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter10_Strings.WordsEverywhere
 {
@@ -23,8 +25,12 @@ namespace CSharpPractical.Chapter10_Strings.WordsEverywhere
     {
         public int CountWords(string text)
         {
-            if (string.IsNullOrWhiteSpace(text)) return 0;
-            return text.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+            int numberOfWords = 0;
+
+            // TODO Count the number of words in the text
+
+            // Please dont change the code below (automatic unit tests)
+            return numberOfWords;
         }
     }
 }

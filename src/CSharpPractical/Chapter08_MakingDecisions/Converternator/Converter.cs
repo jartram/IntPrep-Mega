@@ -35,15 +35,48 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter08_MakingDecisions.Converternator
 {
     public class Converter
     {
-        public double PoundToKilogram(double pounds) => pounds / 2.20462;
-        public double KilogramToPound(double kilograms) => kilograms * 2.20462;
-        public double MileToKilometer(double miles) => miles * 1.609344;
-        public double KilometerToMile(double kilometers) => kilometers / 1.609344;
+        public double PoundToKilogram(double pounds)
+        {
+            // TODO Convert pounds to kilograms
+            double kilograms = 0;
+
+            // Please dont change the code below (automatic unit tests)
+            return kilograms;
+        }
+
+        public double KilogramToPound(double kilograms)
+        {
+            // TODO Convert kilograms to pounds
+            double pounds = 0;
+
+            // Please dont change the code below (automatic unit tests)
+            return pounds;
+        }
+
+        public double MileToKilometer(double miles)
+        {
+            // TODO Convert miles to kilometers
+            double kilometers = 0;
+
+            // Please dont change the code below (automatic unit tests)
+            return kilometers;
+        }
+
+        public double KilometerToMile(double kilometers)
+        {
+            // TODO Convert kilometers to miles
+            double miles = 0;
+
+            // Please dont change the code below (automatic unit tests)
+            return miles;
+        }
     }
 }

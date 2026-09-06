@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -30,51 +30,14 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         //THIS IS A TLE, the memoization here isnt the best. IF the memo is improved, then the solution will be accepted
         public double KnightProbability(int n, int k, int row, int column)
         {
-            if (k == 0)
-            {
-                return 1;
-            }
-
-            ValidMoves = new IList<int[]>[n, n];
-
-            CalculateTotalValidMoves(n, k, row, column);
-
-            TotalPossibleMoves = Math.Pow(8, k);
-            return TotalPaths / TotalPossibleMoves;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public void CalculateTotalValidMoves(int n, int k, int i, int j)
         {
-            if (k == 0)
-            {
-                return;
-            }
-
-            IList<int[]> actualTotalValidMoves;
-
-            if (ValidMoves[i, j] != null)
-            {
-                actualTotalValidMoves = ValidMoves[i, j];
-            }
-            else
-            {
-                actualTotalValidMoves = CalculateActualValidMoves(i, j, n);
-            }
-
-            foreach (var neighbour in actualTotalValidMoves)
-            {
-                if (k == 1)
-                {
-                    TotalPaths++;
-                }
-
-                CalculateTotalValidMoves(n, k - 1, neighbour[0], neighbour[1]);
-            }
-
-            if (ValidMoves[i, j] == null)
-            {
-                ValidMoves[i, j] = actualTotalValidMoves;
-            }
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private IList<int[]> CalculateActualValidMoves(int i, int j, int n)
@@ -105,34 +68,14 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public double KnightProbability(int n, int k, int row, int column)
         {
-            var cache = new double[n, n, k + 1];
-
-            return KnightProbability(n, k, row, column, cache); ;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public double KnightProbability(int n, int k, int row, int column, double[,,] cache)
         {
-            if (k == 0)
-            {
-                return 1;
-            }
-
-            if (cache[row, column, k] != 0.0)
-            {
-                return cache[row, column, k];
-            }
-
-            var neighbours = BuildNeighbours(row, column, n);
-            var prob = 0.0;
-
-            foreach (var neighbour in neighbours)
-            {
-                prob += KnightProbability(n, k - 1, neighbour[0], neighbour[1], cache);
-            }
-
-            cache[row, column, k] = prob / 8.0;
-
-            return cache[row, column, k];
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private IList<int[]> BuildNeighbours(int row, int col, int n)

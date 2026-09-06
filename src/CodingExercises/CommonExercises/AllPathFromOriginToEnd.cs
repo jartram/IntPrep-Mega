@@ -23,14 +23,10 @@ namespace CodingExercises.CommonExercises
         public class Solution
         {
             public IList<IList<int>> AllPathsSourceTarget(int[][] graph)
-            {
-                IList<IList<int>> result = new List<IList<int>>();
-                var current = new List<int>();
-                current.Add(0);
-                Backtrack(0, graph, current, result);
-
-                return result;
-            }
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
 
             private void Backtrack(int node, int[][] graph, List<int> current, IList<IList<int>> result)
             {

@@ -17,21 +17,22 @@
  =======================================================================================
 */
 
-using System;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter10_Strings.Palindrome
 {
     public class PalindromeChecker
     {
-        public bool IsPalindrome(string text)
+        public bool IsPalindrome(string word)
         {
-            if (string.IsNullOrEmpty(text)) return false;
-            string trimmed = text.Trim();
-            if (string.IsNullOrEmpty(trimmed)) return false;
-            string lower = trimmed.ToLower();
-            string rev = new string(lower.Reverse().ToArray());
-            return lower == rev;
+            bool isPalindrome = false;
+
+            // TODO Determine if word is a palindrome
+
+            // Please dont change the code below (automatic unit tests)
+            return isPalindrome;
         }
     }
 }

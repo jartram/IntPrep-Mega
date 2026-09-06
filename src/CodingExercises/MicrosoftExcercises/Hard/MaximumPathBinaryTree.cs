@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System;
 
@@ -23,11 +23,8 @@ namespace CodingExercises.MicrosoftExcercises.Hard
     {
         public int MaxPathSum(TreeNode root)
         {
-            int max = int.MinValue;
-
-            MaxPathSumOptimized(root, ref max);
-
-            return max;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         // readable

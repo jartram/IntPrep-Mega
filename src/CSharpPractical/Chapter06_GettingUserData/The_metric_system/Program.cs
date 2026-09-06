@@ -17,8 +17,17 @@ namespace CSharpPractical.Chapter06_GettingUserData.The_metric_system
 {
     public class Program
     {
-        public static double CentimetersToInches(double cm) => cm / 2.54;
-        public static double InchesToCentimeters(double inches) => inches * 2.54;
+        public static double CentimetersToInches(double cm)
+        {
+            // TODO: Implement metric to imperial conversion (1 inch = 2.54 cm)
+            throw new NotImplementedException();
+        }
+
+        public static double InchesToCentimeters(double inches)
+        {
+            // TODO: Implement imperial to metric conversion (1 inch = 2.54 cm)
+            throw new NotImplementedException();
+        }
 
         public static void Main(string[] args)
         {

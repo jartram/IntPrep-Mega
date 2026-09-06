@@ -40,21 +40,31 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter08_MakingDecisions.LedSeriesResistor
 {
     public class ResistorCalculator
     {
-        public double SupplyVoltage { get; set; }
-        public double LedVoltage { get; set; }
-        public double Current { get; set; }
+        double supplyVoltage = 0;
+        double ledVoltage = 0;
+        double current = 0;
 
         public double CalculateSeriesResistor()
         {
-            if (SupplyVoltage <= LedVoltage || Current <= 0)
-                return -1;
-            return (SupplyVoltage - LedVoltage) / Current;
+            double resistance = 0;
+
+            // TODO Determine the resistance value for the series resistor of the LED
+            // Warning, set the value to -1 if the ledVoltage is bigger than the supplyVoltage
+            // or if the current is 0 or negative.
+            
+            return resistance;
         }
+
+        public double SupplyVoltage { get { return supplyVoltage; } set { supplyVoltage = value; } }
+        public double LedVoltage { get { return ledVoltage; } set { ledVoltage = value; } }
+        public double Current { get { return current; } set { current = value; } }
     }
 }

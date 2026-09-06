@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-namespace CodingExercises.CommonExercises.Easy_String
+﻿namespace CodingExercises.CommonExercises.Easy_String
 {
     public class Atoi
     {
@@ -26,102 +26,8 @@ namespace CodingExercises.CommonExercises.Easy_String
 
         public int MyAtoi(string s)
         {
-            if (s == null || s.Length == 0)
-            {
-                return 0;
-            }
-
-
-            //Find sign
-            while (i < s.Length && !signFound)
-            {
-                actual = s[i];
-
-                if (!ValidChar(actual))
-                {
-                    return result;
-                }
-
-                if (actual != ' ')
-                {
-                    signFound = true;
-                }
-                else
-                {
-                    i++;
-                }
-            }
-
-            if (i >= s.Length)
-            {
-                return 0;
-            }
-
-            sign = s[i] == '-'
-                ? -1
-                : 1;
-
-
-            if (!char.IsDigit(s[i]))
-            {
-                i++;
-            }
-
-            //Skip zeroes
-
-            while (i < s.Length)
-            {
-                actual = s[i];
-
-                if (char.IsDigit(actual) && actual != '0')
-                {
-                    break;
-                }
-
-                if (!ValidChar(actual))
-                {
-                    return result;
-                }
-
-                i++;
-            }
-
-            //Make number
-            while (i < s.Length)
-            {
-                actual = s[i];
-
-                if (char.IsDigit(actual))
-                {
-                    if (sign == 1)
-                    {
-                        if (result > int.MaxValue / 10 ||
-                           (result == int.MaxValue / 10 && int.Parse(actual.ToString()) > 7))
-                        {
-                            return int.MaxValue;
-                        }
-                    }
-                    else
-                    {
-                        if (result * -1 < int.MinValue / 10 ||
-                           (result == int.MaxValue / 10 && int.Parse(actual.ToString()) > 8))
-                        {
-                            return int.MinValue;
-                        }
-                    }
-
-                    result = result * 10 + int.Parse(actual.ToString());
-                }
-
-                if (!ValidChar(actual))
-                {
-                    return result * sign;
-                }
-
-                i++;
-            }
-
-            return result * sign;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private bool ValidChar(char c)

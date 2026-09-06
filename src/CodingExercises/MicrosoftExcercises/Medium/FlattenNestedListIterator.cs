@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -37,14 +37,16 @@ namespace CodingExercises.MicrosoftExcercises.Medium
             }
 
             public bool HasNext()
-            {
-                return current < flatten.Length;
-            }
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
 
             public int Next()
-            {
-                return flatten[current++];
-            }
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
 
             private void AddItem(NestedInteger item, IList<int> list)
             {
@@ -69,11 +71,20 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public IList<NestedInteger> GetList()
         {
-            return null;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
-        public int GetInteger() { return 1; }
+        public int GetInteger()
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
 
-        public bool IsInteger() { return false; }
+        public bool IsInteger()
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
     }
 }

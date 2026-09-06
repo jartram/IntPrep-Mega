@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
 {
@@ -23,16 +23,8 @@ namespace CodingExercises.MicrosoftExcercises.Hard
 
         public bool CanCross(int[] stones)
         {
-            var stonesMap = new Dictionary<int, int>();
-            lastIndex = stones[stones.Length - 1];
-            for (int i = 0; i < stones.Length; i++)
-            {
-                stonesMap.Add(stones[i], i);
-            }
-
-            var cache = new Dictionary<string, bool>();
-
-            return CanCross(stonesMap, 0, 0, 1, cache);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private bool CanCross(Dictionary<int, int> stones, int index, int stone, int jump, Dictionary<string, bool> cache)

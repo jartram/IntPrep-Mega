@@ -13,20 +13,39 @@
 
 using System;
 
-namespace CSharpPractical.Chapter23_CreatingAndUsingObjects.RoundAbout
+namespace CSharpPractical.Chapter23_CreatingAndUsingObjects.RoundAbout;
+
+public class Circle
 {
-    public class Circle
+    private double radius = 0;
+
+    public void SetRadius(double radius)
     {
-        private double radius = 0;
+        // TODO: Set radius (non-negative)
+        this.radius = radius >= 0 ? radius : 0;
+    }
 
-        public void SetRadius(double r)
-        {
-            if (r >= 0) radius = r;
-        }
+    public double GetRadius()
+    {
+        // TODO: Return radius
+        return radius;
+    }
 
-        public double GetRadius() => radius;
-        public double GetDiameter() => 2 * radius;
-        public double CalculateArea() => Math.PI * radius * radius;
-        public double CalculateCircumference() => 2 * Math.PI * radius;
+    public double GetDiameter()
+    {
+        // TODO: Return diameter (2 * radius)
+        return radius * 2;
+    }
+
+    public double CalculateArea()
+    {
+        // TODO: Return PI * radius * radius
+        throw new NotImplementedException();
+    }
+
+    public double CalculateCircumference()
+    {
+        // TODO: Return 2 * PI * radius
+        throw new NotImplementedException();
     }
 }

@@ -14,91 +14,39 @@
 
 using System;
 
-namespace CSharpPractical.Chapter26_Constructors.BackToTheFuture
+namespace CSharpPractical.Chapter26_Constructors.BackToTheFuture;
+
+public class TimeStamp
 {
-    public class TimeStamp
+    public int Hours { get; set; }
+    public int Minutes { get; set; }
+    public int Seconds { get; set; }
+
+    public TimeStamp()
     {
-        private int hours = 0;
-        private int minutes = 0;
-        private int seconds = 0;
+        // TODO: Default constructor
+    }
 
-        public TimeStamp()
-        {
-            hours = 0;
-            minutes = 0;
-            seconds = 0;
-        }
+    public TimeStamp(int hours, int minutes, int seconds)
+    {
+        // TODO: Normalized time constructor
+    }
 
-        public TimeStamp(int h, int m, int s)
-        {
-            if (h < 0 || m < 0 || s < 0)
-            {
-                hours = 0;
-                minutes = 0;
-                seconds = 0;
-                return;
-            }
+    public void AddSeconds(int seconds)
+    {
+        // TODO: Add seconds and re-normalize
+        throw new NotImplementedException();
+    }
 
-            int total = h * 3600 + m * 60 + s;
-            total %= (24 * 3600);
-            hours = total / 3600;
-            minutes = (total % 3600) / 60;
-            seconds = total % 60;
-        }
+    public void AddMinutes(int minutes)
+    {
+        // TODO: Add minutes and re-normalize
+        throw new NotImplementedException();
+    }
 
-        public int Hours
-        {
-            get => hours;
-            set
-            {
-                if (value < 0) hours = 0;
-                else hours = value % 24;
-            }
-        }
-
-        public int Minutes
-        {
-            get => minutes;
-            set
-            {
-                if (value < 0) minutes = 0;
-                else minutes = value % 60;
-            }
-        }
-
-        public int Seconds
-        {
-            get => seconds;
-            set
-            {
-                if (value < 0) seconds = 0;
-                else seconds = value % 60;
-            }
-        }
-
-        public void AddSeconds(int delta)
-        {
-            if (delta < 0) return;
-            int total = hours * 3600 + minutes * 60 + seconds + delta;
-            total %= (24 * 3600);
-            hours = total / 3600;
-            minutes = (total % 3600) / 60;
-            seconds = total % 60;
-        }
-
-        public void AddMinutes(int delta)
-        {
-            if (delta < 0) return;
-            int total = hours * 60 + minutes + delta;
-            total %= (24 * 60);
-            hours = total / 60;
-            minutes = total % 60;
-        }
-
-        public void AddHours(int delta)
-        {
-            if (delta < 0) return;
-            hours = (hours + delta) % 24;
-        }
+    public void AddHours(int hours)
+    {
+        // TODO: Add hours and re-normalize
+        throw new NotImplementedException();
     }
 }

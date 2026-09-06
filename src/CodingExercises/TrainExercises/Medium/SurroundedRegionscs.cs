@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.TrainExercises.Medium
 {
@@ -21,32 +21,8 @@ namespace CodingExercises.TrainExercises.Medium
     {
         public void Solve(char[][] board)
         {
-            for (int j = 0; j < board[0].Length; j++)
-            {
-                MarkNotSurrounded(board, 0, j);
-                MarkNotSurrounded(board, board.Length - 1, j);
-            }
-
-            for (int i = 0; i < board.Length; i++)
-            {
-                MarkNotSurrounded(board, i, 0);
-                MarkNotSurrounded(board, i, board[0].Length - 1);
-            }
-
-            for (int i = 0; i < board.Length; i++)
-            {
-                for (int j = 0; j < board[i].Length; j++)
-                {
-                    if (board[i][j] == 'O')
-                    {
-                        board[i][j] = 'X';
-                    }
-                    if (board[i][j] == '?')
-                    {
-                        board[i][j] = 'O';
-                    }
-                }
-            }
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void MarkNotSurrounded(char[][] board, int i, int j)

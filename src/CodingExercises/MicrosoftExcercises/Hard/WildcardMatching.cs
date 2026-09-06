@@ -13,15 +13,14 @@
  =======================================================================================
 */
 
-namespace CodingExercises.MicrosoftExcercises.Hard
+﻿namespace CodingExercises.MicrosoftExcercises.Hard
 {
     public class WildcardMatching
     {
         public bool IsMatch(string s, string p)
         {
-            var cache = new bool?[s.Length + 1, p.Length + 1];
-
-            return IsMatch(s, p, 0, 0, cache);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private bool IsMatch(string s, string p, int sI, int pI, bool?[,] cache)

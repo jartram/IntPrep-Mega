@@ -39,34 +39,36 @@
  =======================================================================================
 */
 
-using System;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter11_Arrays.ParallelArrays
 {
     public class ArrayHelper
     {
-        public static int CountDifferentFrom(int[] array, int target)
+        public static int CountDifferentFrom(int[] elements, int value)
         {
-            return array.Count(x => x != target);
+            // TODO - Count how many elements differ from 'value'
+
+            return -1;
         }
 
-        public static int[] SumByElements(int[] left, int[] right)
+        public static int[] SumByElements(int[] first, int[] second)
         {
-            int len = Math.Max(left.Length, right.Length);
-            int[] result = new int[len];
-            for (int i = 0; i < len; i++)
-            {
-                result[i] = (i < left.Length ? left[i] : 0) + (i < right.Length ? right[i] : 0);
-            }
-            return result;
+            // TODO - Return new array that contains the sum of the elements in
+            // 'first' and 'second'.
+
+            return null;
         }
 
-        public static int[] DoubleInSize(int[] array)
+        public static int[] DoubleInSize(int[] numbers)
         {
-            int[] result = new int[array.Length * 2];
-            Array.Copy(array, result, array.Length);
-            return result;
+            // TODO - Return an array twice the size of numbers with
+            // the data of 'numbers' stored in front. Initialize the other
+            // elements to '0'
+
+            return null;
         }
     }
 }

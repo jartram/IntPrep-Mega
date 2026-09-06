@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -33,23 +33,22 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         // Returns the next element in the iteration without advancing the iterator.
         public int Peek()
         {
-            return _iterator.Current;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         // Returns the next element in the iteration and advances the iterator.
         public int Next()
         {
-            var current = _iterator.Current;
-
-            hasNext = _iterator.MoveNext();
-
-            return current;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         // Returns false if the iterator is refering to the end of the array of true otherwise.
         public bool HasNext()
         {
-            return hasNext;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

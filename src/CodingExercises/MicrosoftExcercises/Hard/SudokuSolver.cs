@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,11 +26,8 @@ namespace CodingExercises.MicrosoftExcercises.Hard
 
         public void SolveSudoku(char[][] board)
         {
-            solved = false;
-            totalCandidates = 9 * 9;
-            var candidates = GenerateCandidates(board);
-
-            Backtrack(0, 0, board, candidates);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void Backtrack(int i, int j, char[][] board, Dictionary<int, HashSet<int>> candidates)

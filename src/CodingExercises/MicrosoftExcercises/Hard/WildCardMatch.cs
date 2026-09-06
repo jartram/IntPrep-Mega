@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
@@ -22,21 +22,8 @@ namespace CodingExercises.MicrosoftExcercises.Hard
     {
         public bool IsMatch(string str, string pattern)
         {
-            var cache = new Dictionary<string, bool>();
-
-            var sb = new StringBuilder();
-
-            for (int i = 0; i < pattern.Length; i++)
-            {
-                var actual = pattern[i];
-
-                if (i == 0 || actual != '*' || (actual == '*' && pattern[i - 1] != '*'))
-                {
-                    sb.Append(actual);
-                }
-            }
-
-            return IsMatchAux(str, sb.ToString(), cache);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private bool IsMatchAux(string str, string pattern, Dictionary<string, bool> cache)

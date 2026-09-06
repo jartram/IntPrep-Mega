@@ -5,9 +5,10 @@ Welcome to **IntPrep-Mega**, the ultimate consolidated C# and .NET Core coding p
 ## Overview
 - **Target Framework:** Modern .NET 8.0 LTS
 - **Solution Architecture:**
-  - `src/CSharpPractical`: Practical C# foundational & OOP challenges (from [IntPrep-csharp_practical](https://github.com/jartram/IntPrep-csharp_practical))
-  - `src/CodingExercises`: Algorithmic & LeetCode interview challenges stubbed for completion (from [IntPrep-coding-exercises](https://github.com/jartram/IntPrep-coding-exercises))
-  - `src/CodingExercises.Solutions`: Reference implementations for all algorithm challenges
+  - `src/CSharpPractical`: Practical C# foundational & OOP challenge templates for hands-on practice (from [IntPrep-csharp_practical](https://github.com/jartram/IntPrep-csharp_practical))
+  - `src/CSharpPractical.Solutions`: Full reference implementations for all practical challenges
+  - `src/CodingExercises`: Algorithmic & LeetCode interview challenge stubs for hands-on practice (from [IntPrep-coding-exercises](https://github.com/jartram/IntPrep-coding-exercises))
+  - `src/CodingExercises.Solutions`: Full reference implementations for all algorithm challenges
   - `tests/CSharpPractical.Tests`: Unit test suite for practical challenges
   - `tests/CodingExercises.Tests`: Unit test suite for algorithmic challenges
 

@@ -13,25 +13,14 @@
  =======================================================================================
 */
 
-namespace CodingExercises.Exercises
+﻿namespace CodingExercises.Exercises
 {
     public class LongestPalindromeEx
     {
         public string LongestPalindrome(string s)
         {
-            var result = "";
-
-            for (int i = 0; i < s.Length; i++)
-            {
-                var actualPalindrome = CalculatePalindrome(s, i);
-
-                if (actualPalindrome.Length > result.Length)
-                {
-                    result = actualPalindrome;
-                }
-            }
-
-            return result;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private string CalculatePalindrome(string str, int i)

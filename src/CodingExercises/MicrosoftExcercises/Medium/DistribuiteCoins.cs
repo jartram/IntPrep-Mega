@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System;
 
@@ -23,26 +23,14 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int Solve(TreeNode root)
         {
-            var moves = 0;
-
-            DFS(root, ref moves);
-
-            return moves;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public int DFS(TreeNode root, ref int moves)
         {
-            if (root == null)
-            {
-                return 0;
-            }
-
-            var leftOverload = DFS(root.left, ref moves);
-            var rightOverload = DFS(root.right, ref moves);
-
-            moves += Math.Abs(leftOverload) + Math.Abs(rightOverload);
-
-            return leftOverload + rightOverload + root.val - 1;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

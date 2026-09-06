@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System;
 using System.Collections.Generic;
@@ -28,40 +28,14 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public IList<TreeNode> FindDuplicateSubtrees(TreeNode root)
         {
-            if (root == null)
-            {
-                return new List<TreeNode>();
-            }
-
-            Traverse(root);
-
-            return duplicates;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public string Traverse(TreeNode root)
         {
-            if (root == null)
-            {
-                return "#";
-            }
-
-            var subTree = $"{root.val} {Traverse(root.left)} {Traverse(root.right)}";
-
-            if (trees.ContainsKey(subTree))
-            {
-                if (trees[subTree] == 1)
-                {
-                    duplicates.Add(root);
-                }
-            }
-            else
-            {
-                trees.Add(subTree, 0);
-            }
-
-            trees[subTree] += 1;
-
-            return subTree;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

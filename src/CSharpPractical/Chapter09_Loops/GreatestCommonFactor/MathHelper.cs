@@ -33,23 +33,21 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter09_Loops.GreatestCommonFactor
 {
     public class MathHelper
     {
-        public int DetermineGreatestCommonFactor(int a, int b)
+        public int DetermineGreatestCommonFactor(int first, int second)
         {
-            a = Math.Abs(a);
-            b = Math.Abs(b);
-            while (b != 0)
-            {
-                int t = b;
-                b = a % b;
-                a = t;
-            }
-            return a;
+            // TODO Determine the Greatest Common Factor
+            int gcf = 0;
+
+            // Please dont change the code below (automatic unit tests)
+            return gcf;
         }
     }
 }

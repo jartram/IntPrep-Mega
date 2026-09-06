@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
 {
@@ -32,36 +32,29 @@ namespace CodingExercises.MicrosoftExcercises.Easy
         /** Push element x onto stack. */
         public void Push(int x)
         {
-            queue.Enqueue(x);
-
-            while (stack.Count > 0)
-            {
-                queue.Enqueue(stack.Dequeue());
-            }
-
-
-            while (queue.Count > 0)
-            {
-                stack.Enqueue(queue.Dequeue());
-            }
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         /** Removes the element on top of the stack and returns that element. */
         public int Pop()
         {
-            return stack.Dequeue();
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         /** Get the top element. */
         public int Top()
         {
-            return stack.Peek();
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         /** Returns whether the stack is empty. */
         public bool Empty()
         {
-            return stack.Count == 0;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

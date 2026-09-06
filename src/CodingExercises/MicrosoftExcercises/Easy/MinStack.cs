@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
@@ -33,35 +33,26 @@ namespace CodingExercises.MicrosoftExcercises.Easy
 
         public void Push(int x)
         {
-            minStack.AddFirst(x);
-
-            min = Math.Min(min, x);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public void Pop()
         {
-            var firtValue = minStack.First.Value;
-            minStack.RemoveFirst();
-
-            if (min == firtValue)
-            {
-                min = int.MaxValue;
-
-                foreach (var val in minStack)
-                {
-                    min = Math.Min(val, min);
-                }
-            }
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public int Top()
         {
-            return minStack.First.Value;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public int GetMin()
         {
-            return min;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

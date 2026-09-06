@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -23,11 +23,8 @@ namespace CodingExercises.MicrosoftExcercises.Hard
     {
         public IList<string> WordBreak(string s, IList<string> wordDict)
         {
-            IList<string> combinations = new List<string>();
-
-            Backtrack(s, 0, wordDict.ToHashSet(), new StringBuilder(), combinations);
-
-            return combinations;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void Backtrack(string str, int start, HashSet<string> wordDict, StringBuilder combination, IList<string> combinations)

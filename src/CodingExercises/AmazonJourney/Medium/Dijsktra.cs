@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -23,38 +23,8 @@ namespace CodingExercises.AmazonJourney.Medium
     {
         public List<int> dijkstra(int vertices, ref List<List<List<int>>> adj, int source)
         {
-            var result = new int[vertices];
-            var pq = new PriorityQueue<(int, int)>(new MyComparer());
-
-            Array.Fill(result, int.MaxValue);
-
-            result[source] = 0;
-            pq.Push((0, source));
-
-            while (pq.Count() > 0)
-            {
-                (var currentCost, var actual) = pq.Pop();
-
-                if (currentCost > result[actual])
-                {
-                    continue;
-                }
-
-                foreach (var edge in adj[actual])
-                {
-                    var destination = edge[0];
-                    var totalCost = currentCost + edge[1];
-
-                    if (totalCost < result[destination])
-                    {
-                        result[destination] = totalCost;
-                        pq.Push((totalCost, destination));
-                    }
-                }
-
-            }
-
-            return result.ToList();
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 
@@ -71,33 +41,26 @@ namespace CodingExercises.AmazonJourney.Medium
 
         public int Count()
         {
-            return data.Count;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public K Top()
         {
-            return data[0];
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public K Pop()
         {
-            var item = data[0];
-            var lastIndex = data.Count - 1;
-
-            data[0] = data[lastIndex];
-            data.RemoveAt(lastIndex);
-            lastIndex--;
-
-            HeapifyDown(lastIndex);
-
-            return item;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public void Push(K item)
         {
-            data.Add(item);
-
-            HeapifyUp();
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void Swap(int i, int j)
@@ -162,7 +125,8 @@ namespace CodingExercises.AmazonJourney.Medium
     {
         public int Compare((int, int) A, (int, int) B)
         {
-            return (A.Item1).CompareTo(B.Item1);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

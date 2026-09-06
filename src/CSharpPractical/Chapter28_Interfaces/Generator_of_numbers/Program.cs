@@ -58,47 +58,30 @@ namespace CSharpPractical.Chapter28_Interfaces.Generator_of_numbers
 
     public class NaturalGenerator : IGenerator
     {
-        private int _current = 0;
-        public int Next() => _current++;
-        public void Reset() => _current = 0;
+        // TODO: Implement NaturalGenerator
+        public int Next() => 0;
+        public void Reset() {}
     }
 
     public class PowersOfTwoGenerator : IGenerator
     {
-        private int _current = 1;
-        public int Next()
-        {
-            int val = _current;
-            _current *= 2;
-            return val;
-        }
-        public void Reset() => _current = 1;
+        // TODO: Implement PowersOfTwoGenerator
+        public int Next() => 0;
+        public void Reset() {}
     }
 
     public class FibonacciGenerator : IGenerator
     {
-        private int _a = 0;
-        private int _b = 1;
-        public int Next()
-        {
-            int next = _b;
-            int temp = _a + _b;
-            _a = _b;
-            _b = temp;
-            return next;
-        }
-        public void Reset()
-        {
-            _a = 0;
-            _b = 1;
-        }
+        // TODO: Implement FibonacciGenerator
+        public int Next() => 0;
+        public void Reset() {}
     }
 
     public class RandomGenerator : IGenerator
     {
-        private Random _rnd = new Random(42);
-        public int Next() => _rnd.Next();
-        public void Reset() => _rnd = new Random(42);
+        // TODO: Implement RandomGenerator
+        public int Next() => 0;
+        public void Reset() {}
     }
 
     class Program

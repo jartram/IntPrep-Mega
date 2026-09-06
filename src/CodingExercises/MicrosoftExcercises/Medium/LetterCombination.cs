@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -34,34 +34,14 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public IList<string> LetterCombinations(string digits)
         {
-            if (digits == "")
-            {
-                return new List<string>();
-            }
-            var result = new List<string>();
-
-            Backtrack(digits, 0, new StringBuilder(), result);
-
-            return result;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public void Backtrack(string digits, int index, StringBuilder sb, IList<string> list)
         {
-            if (index == digits.Length)
-            {
-                list.Add(sb.ToString());
-
-                return;
-            }
-
-            foreach (var c in dict[digits[index]])
-            {
-                sb.Append(c);
-
-                Backtrack(digits, index + 1, sb, list);
-
-                sb.Remove(sb.Length - 1, 1);
-            }
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 
@@ -83,16 +63,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public IList<string> LetterCombinations(string digits)
         {
-            var combinations = new List<string>();
-
-            if (digits.Length < 1)
-            {
-                return combinations;
-            }
-
-            Backtrack(digits, 0, new StringBuilder(), combinations);
-
-            return combinations;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void Backtrack(string digits, int index, StringBuilder current, IList<string> combinations)

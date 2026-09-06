@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
 {
@@ -32,36 +32,14 @@ namespace CodingExercises.MicrosoftExcercises.Hard
 
         public void Push(int val)
         {
-            var frequency = freqs.ContainsKey(val) ? freqs[val] + 1 : 1;
-
-            if (!stacks.ContainsKey(frequency))
-            {
-                maxFrequency = frequency;
-                stacks.Add(frequency, new Stack<int>());
-            }
-
-            stacks[frequency].Push(val);
-            freqs[val] = frequency;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public int Pop()
         {
-            var pop = stacks[maxFrequency].Pop();
-
-            freqs[pop]--;
-
-            if (freqs[pop] == 0)
-            {
-                freqs.Remove(pop);
-            }
-
-            if (stacks[maxFrequency].Count == 0)
-            {
-                stacks.Remove(maxFrequency);
-                maxFrequency--;
-            }
-
-            return pop;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

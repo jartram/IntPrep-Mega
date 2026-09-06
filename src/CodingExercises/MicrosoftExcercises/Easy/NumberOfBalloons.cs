@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
 {
@@ -21,20 +21,8 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public int MaxNumberOfBalloons(string text)
         {
-            var pattern = "balloon";
-            var freqText = BuildFrequency(text);
-            var freqPattern = BuildFrequency(pattern);
-            var total = int.MaxValue;
-
-            for (int i = 0; i < 26; i++)
-            {
-                if (freqPattern[i] > 0)
-                {
-                    total = Math.Min(total, freqText[i] / freqPattern[i]);
-                }
-            }
-
-            return total;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private int[] BuildFrequency(string str)

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,34 +21,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public bool IsValidSudoku(char[][] board)
         {
-            var seen = GenerateCandidates(board);
-
-            for (int i = 0; i < board.Length; i++)
-            {
-                for (int j = 0; j < board[i].Length; j++)
-                {
-                    var current = board[i][j];
-
-                    if (current != '.')
-                    {
-                        var currentBox = GetBox(i, j);
-
-                        if (seen[currentBox].Contains(current))
-                        {
-                            return false;
-                        }
-
-                        seen[currentBox].Add(current);
-
-                        if (!IsValid(current, i, j, board))
-                        {
-                            return false;
-                        }
-                    }
-                }
-            }
-
-            return true;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private int GetBox(int i, int j)
@@ -109,25 +83,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public bool IsValid(char current, int row, int col, char[][] board)
         {
-            //vertical check
-            for (int i = 0; i < board.Length; i++)
-            {
-                if (i != row && board[i][col] == current)
-                {
-                    return false;
-                }
-            }
-
-            //horizontal check
-            for (int j = 0; j < board[0].Length; j++)
-            {
-                if (j != col && board[row][j] == current)
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

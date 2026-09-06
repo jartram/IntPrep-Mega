@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Text;
+﻿using System.Text;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
 {
@@ -21,33 +21,8 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public string Solve(string s)
         {
-            var next = 0;
-            var right = s.Length - 1;
-            var sb = new StringBuilder();
-
-            for (int i = right; i >= 0; i--)
-            {
-                while (next < s.Length && !char.IsLetter(s[next]))
-                {
-                    sb.Append(s[next]);
-                    next++;
-                }
-
-                if (char.IsLetter(s[i]))
-                {
-                    sb.Append(s[i]);
-
-                    next++;
-                }
-            }
-
-            while (next < s.Length && !char.IsLetter(s[next]))
-            {
-                sb.Append(s[next]);
-                next++;
-            }
-
-            return sb.ToString();
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

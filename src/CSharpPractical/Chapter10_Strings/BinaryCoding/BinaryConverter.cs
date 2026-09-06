@@ -30,7 +30,9 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter10_Strings.BinaryCoding
 {
@@ -38,10 +40,18 @@ namespace CSharpPractical.Chapter10_Strings.BinaryCoding
     {
         public int ToDecimal(string binary)
         {
-            if (string.IsNullOrEmpty(binary)) return 0;
-            string clean = binary.Replace("b", "").Replace(" ", "");
-            if (string.IsNullOrEmpty(clean)) return 0;
-            return Convert.ToInt32(clean, 2);
+            int decimalValue = 0;
+
+            // TODO Convert the binary value in the variabel binary
+            // to a decimal value
+            //
+            // Do note that it contain spaces, ignore these.
+            //
+            // It cal also start with a character 'b' which
+            // should also be ignored.
+            // Ex.: b1001 0101
+
+            return decimalValue;
         }
     }
 }

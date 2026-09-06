@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
@@ -24,27 +24,8 @@ namespace CodingExercises.MicrosoftExcercises.Hard
         private int[] Xs = new int[] { 0, -1, 1, 0 };
         public IList<string> FindWords(char[][] board, string[] words)
         {
-            var trie = new Trie();
-            var wordsSet = words.ToHashSet();
-            foreach (var word in wordsSet)
-            {
-                trie.AddWord(word);
-            }
-            IList<string> result = new List<string>();
-            for (int row = 0; row < board.Length; row++)
-            {
-                for (int col = 0; col < board[row].Length; col++)
-                {
-                    var aux = board[row][col];
-                    if (trie.Root.Contains(aux))
-                    {
-                        board[row][col] = '*';
-                        Backtrack(row, col, trie.Root.GetChildren(aux), board, result);
-                        board[row][col] = aux;
-                    }
-                }
-            }
-            return result.Distinct().ToList();
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
         private void Backtrack(int startRow, int startCol, TrieNode currentNode, char[][] board, IList<string> result)
         {
@@ -94,19 +75,18 @@ namespace CodingExercises.MicrosoftExcercises.Hard
         }
         public bool Contains(char ch)
         {
-            return Links.ContainsKey(ch);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
         public TrieNode GetChildren(char cr)
         {
-            return Links[cr];
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
         public TrieNode AddOrReturnExisting(char ch)
         {
-            if (!Links.ContainsKey(ch))
-            {
-                Links.Add(ch, new TrieNode());
-            }
-            return Links[ch];
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
     public class Trie
@@ -118,13 +98,8 @@ namespace CodingExercises.MicrosoftExcercises.Hard
         }
         public void AddWord(string word)
         {
-            var currentNode = Root;
-            for (int index = 0; index < word.Length; index++)
-            {
-                var currentChar = word[index];
-                currentNode = currentNode.AddOrReturnExisting(currentChar);
-            }
-            currentNode.Word = word;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

@@ -53,45 +53,51 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter24_DefiningCustomClasses.KingsOfNothing
 {
     public class Player
     {
-        private int x = 0;
-        private int y = 0;
+        public void Move(int deltaX, int deltaY)
+        {
+            // TODO - Change the player location with the delta-values
+        }
+
+        public void Damage(int damage)
+        {
+            // TODO - Lower the players health with the amount of 'damage'.
+            // Make sure not to go lower than '0'
+        }
+
+        public bool IsAlive()
+        {
+            // TODO - Return true of the player is still alive
+
+            return false;
+        }
+
+        public void Heal(int amount)
+        {
+            // TODO - Heal the player by amount. Do not go above 100.
+            // Also a player can only be healed if its alive
+        }
+
+        // Getters / Setters
+        public int GetX() { return locationX; }
+        public void SetX(int x) { this.locationX = x; }
+
+        public int GetY() { return locationY; }
+        public void SetY(int y) { this.locationY = y; }
+
+        public int GetHealth() { return health; }
+        public void SetHealth(int health) { this.health = health; }
+
+        // Attributes
+        private int locationX = 0;
+        private int locationY = 0;
         private int health = 100;
-
-        public int GetX() => x;
-        public int GetY() => y;
-
-        public void Move(int dx, int dy)
-        {
-            x += dx;
-            y += dy;
-        }
-
-        public int GetHealth() => health;
-
-        public void SetHealth(int h)
-        {
-            health = Math.Clamp(h, 0, 100);
-        }
-
-        public void Damage(int d)
-        {
-            health = Math.Max(0, health - d);
-        }
-
-        public void Heal(int h)
-        {
-            if (health > 0)
-            {
-                health = Math.Min(100, health + h);
-            }
-        }
-
-        public bool IsAlive() => health > 0;
     }
 }

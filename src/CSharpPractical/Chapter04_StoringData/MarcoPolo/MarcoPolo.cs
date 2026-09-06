@@ -27,7 +27,9 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter04_StoringData.MarcoPolo
 {
@@ -37,22 +39,35 @@ namespace CSharpPractical.Chapter04_StoringData.MarcoPolo
         {
             string firstname = "Marco";
             string lastname = "Polo";
-            string fullname = $"{firstname} {lastname}";
+
+            // TODO: Concatenate firstname and lastname and assign to fullname
+            string fullname = "";
+
             Console.WriteLine("Hello, I am " + fullname);
+
+            // Please dont change the code below (automatic unit tests)
             return fullname;
         }
 
         public int Age()
         {
-            int age = 19;
+            // TODO: Initialize age to 19
+            int age = 0;
+
             Console.WriteLine("I am " + age + " years of age.");
+
+            // Please dont change the code below (automatic unit tests)
             return age;
         }
 
         public string EyeColor()
         {
-            string colorOfMyEyes = "blue";
+            // TODO: Set the color of my eyes to blue
+            string colorOfMyEyes = "grey";
+
             Console.WriteLine("I have fancy " + colorOfMyEyes + " colored eyes.");
+
+            // Please dont change the code below (automatic unit tests)
             return colorOfMyEyes;
         }
     }

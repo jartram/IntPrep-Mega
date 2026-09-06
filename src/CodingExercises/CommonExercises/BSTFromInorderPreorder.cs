@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.Exercises
 {
@@ -26,14 +26,8 @@ namespace CodingExercises.Exercises
 
         public TreeNode BuildTree(int[] preorder, int[] inorder)
         {
-            inorderPositions = new Dictionary<int, int>();
-
-            for (int i = 0; i < inorder.Length; i++)
-            {
-                inorderPositions.Add(inorder[i], i);
-            }
-
-            return ArrayToTree(preorder, inorder, 0, preorder.Length - 1);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private TreeNode ArrayToTree(int[] preorder, int[] inorder, int left, int right)

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 using System;
 
@@ -26,42 +26,22 @@ namespace CodingExercises.CommonExercises.Hard_Graph
             public int globalMax = int.MinValue;
 
             public int MaxPathSum(TreeNode root)
-            {
-                DFS(root);
-
-                return globalMax;
-            }
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
 
             public int DFS(TreeNode root)
-            {
-                if (root == null)
-                {
-                    return 0;
-                }
-                else
-                {
-                    var left = Math.Max(0, DFS(root.left));
-                    var right = Math.Max(0, DFS(root.right));
-
-                    globalMax = Math.Max(left + right + root.val, globalMax);
-
-                    return Math.Max(left, right) + root.val;
-                }
-            }
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
 
             public int MaxPathSum2(TreeNode root)
-            {
-                if (root == null)
-                {
-                    return 0;
-                }
-
-                var max = root.val;
-
-                DFS2(root, ref max);
-
-                return max;
-            }
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
 
             private int DFS2(TreeNode root, ref int max)
             {

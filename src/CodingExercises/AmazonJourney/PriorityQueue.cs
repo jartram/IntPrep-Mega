@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.AmazonJourney
 {
@@ -30,38 +30,32 @@ namespace CodingExercises.AmazonJourney
 
         public int Count()
         {
-            return data.Count;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public bool IsEmpty()
         {
-            return data.Count == 0;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public K Top()
         {
-            return data[0];
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public K Pop()
         {
-            var item = data[0];
-            var lastIndex = data.Count - 1;
-
-            data[0] = data[lastIndex];
-            data.RemoveAt(lastIndex);
-            lastIndex--;
-
-            HeapifyDown(lastIndex);
-
-            return item;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public void Push(K item)
         {
-            data.Add(item);
-
-            HeapifyUp();
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void HeapifyUp()

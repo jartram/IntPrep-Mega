@@ -13,18 +13,34 @@
 
 using System;
 
-namespace CSharpPractical.Chapter23_CreatingAndUsingObjects.PointInSpace
+namespace CSharpPractical.Chapter23_CreatingAndUsingObjects.PointInSpace;
+
+public class Point
 {
-    public class Point
+    private double x = 0;
+    private double y = 0;
+
+    public double GetX()
     {
-        private int x = 0;
-        private int y = 0;
+        // TODO: Return X coordinate
+        return x;
+    }
 
-        public int GetX() => x;
-        public void SetX(int value) => x = value;
-        public int GetY() => y;
-        public void SetY(int value) => y = value;
+    public double GetY()
+    {
+        // TODO: Return Y coordinate
+        return y;
+    }
 
-        public override string ToString() => $"[{x},{y}]";
+    public void SetX(double x)
+    {
+        // TODO: Set X coordinate
+        this.x = x;
+    }
+
+    public void SetY(double y)
+    {
+        // TODO: Set Y coordinate
+        this.y = y;
     }
 }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -23,29 +23,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public IList<int> Solve(string s)
         {
-            var dict = new Dictionary<char, int[]>();
-
-            for (int i = 0; i < s.Length; i++)
-            {
-                var current = s[i];
-
-                if (!dict.ContainsKey(current))
-                {
-                    dict.Add(current, new int[] { i, i });
-                }
-
-                dict[current][1] = i;
-            }
-
-            var intervalsMerged = MergeIntervals(dict.Values.ToList());
-            var result = new List<int>();
-
-            foreach (var interval in intervalsMerged)
-            {
-                result.Add(interval[1] - interval[0] + 1);
-            }
-
-            return result;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private IList<int[]> MergeIntervals(IList<int[]> intervals)
@@ -81,31 +60,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public IList<int> PartitionLabelsGreedy(string s)
         {
-            var max = new int[26];
-            var result = new List<int>();
-
-            for (int i = 0; i < s.Length; i++)
-            {
-                max[s[i] - 'a'] = i;
-            }
-
-            var j = 0;
-            var initial = 0;
-
-            for (int i = 0; i < s.Length; i++)
-            {
-                var current = s[i];
-
-                j = Math.Max(j, max[current - 'a']);
-
-                if (i == j)
-                {
-                    result.Add(i - initial + 1);
-                    initial = i + 1;
-                }
-            }
-
-            return result;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

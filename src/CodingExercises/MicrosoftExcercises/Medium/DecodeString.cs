@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -24,7 +24,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
         public int lastIndex = 0;
         public string DecodeStringSolve(string s)
         {
-            return DecodeStringSolve(s, 0);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
         private string DecodeStringSolve(string s, int start)
         {

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -22,11 +22,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public IList<string> Solve(string S)
         {
-            var permutations = new List<string>();
-
-            Backtrack(S, new StringBuilder(), permutations);
-
-            return permutations;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void Backtrack(string str, StringBuilder permutation, IList<string> permutations)

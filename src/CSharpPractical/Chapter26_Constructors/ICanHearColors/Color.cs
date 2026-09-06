@@ -14,49 +14,26 @@
 
 using System;
 
-namespace CSharpPractical.Chapter26_Constructors.ICanHearColors
+namespace CSharpPractical.Chapter26_Constructors.ICanHearColors;
+
+public class Color
 {
-    public class Color
+    public int Red { get; set; }
+    public int Green { get; set; }
+    public int Blue { get; set; }
+
+    public Color() : this(0, 0, 0)
     {
-        private int red = 0;
-        private int green = 0;
-        private int blue = 0;
+    }
 
-        public Color()
-        {
-            red = 0;
-            green = 0;
-            blue = 0;
-        }
+    public Color(int red, int green, int blue)
+    {
+        Red = Math.Clamp(red, 0, 255);
+        Green = Math.Clamp(green, 0, 255);
+        Blue = Math.Clamp(blue, 0, 255);
+    }
 
-        public Color(int r, int g, int b)
-        {
-            Red = r;
-            Green = g;
-            Blue = b;
-        }
-
-        public int Red
-        {
-            get => red;
-            set => red = Math.Clamp(value, 0, 255);
-        }
-
-        public int Green
-        {
-            get => green;
-            set => green = Math.Clamp(value, 0, 255);
-        }
-
-        public int Blue
-        {
-            get => blue;
-            set => blue = Math.Clamp(value, 0, 255);
-        }
-
-        public override string ToString() => $"Red: {Red} | Green: {Green} | Blue: {Blue}";
-            public void SetRed(int v) => Red = v;
-        public void SetGreen(int v) => Green = v;
-        public void SetBlue(int v) => Blue = v;
-}
+    public void SetRed(int r) => Red = Math.Clamp(r, 0, 255);
+    public void SetGreen(int g) => Green = Math.Clamp(g, 0, 255);
+    public void SetBlue(int b) => Blue = Math.Clamp(b, 0, 255);
 }

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -28,17 +28,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public bool Book(int start, int end)
         {
-            foreach (var book in books)
-            {
-                if (!Avaliable(book, start, end))
-                {
-                    return false;
-                }
-            }
-
-            books.Add(new int[] { start, end });
-
-            return true;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private bool Avaliable(int[] book, int start, int end)

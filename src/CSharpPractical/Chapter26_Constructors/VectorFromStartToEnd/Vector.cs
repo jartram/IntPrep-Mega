@@ -18,25 +18,38 @@ namespace CSharpPractical.Chapter26_Constructors.VectorFromStartToEnd
 {
     public class Vector
     {
-        private double x = 0;
-        private double y = 0;
-
         public Vector()
         {
-            x = 0;
-            y = 0;
+            // TODO: Implement default constructor initializing (0, 0)
         }
 
         public Vector(double x, double y)
         {
-            this.x = x;
-            this.y = y;
+            // TODO: Implement constructor initializing (x, y)
         }
 
-        public double X() => x;
-        public double Y() => y;
-        public double Magnitude() => Math.Sqrt(x * x + y * y);
+        public double X()
+        {
+            // TODO: Return X coordinate
+            throw new NotImplementedException();
+        }
 
-        public override string ToString() => $"[{x};{y}] with magnitude {Magnitude()}";
+        public double Y()
+        {
+            // TODO: Return Y coordinate
+            throw new NotImplementedException();
+        }
+
+        public double Magnitude()
+        {
+            // TODO: Return sqrt(x^2 + y^2)
+            throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            // TODO: Return $"[{x};{y}] with magnitude {Magnitude()}"
+            throw new NotImplementedException();
+        }
     }
 }

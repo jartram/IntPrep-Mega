@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
@@ -23,40 +23,8 @@ namespace CodingExercises.MicrosoftExcercises.Hard
         //TLE
         public IList<IList<string>> FindLadders(string beginWord, string endWord, IList<string> wordList)
         {
-            wordList.Add(beginWord);
-            var shortests = new List<IList<string>>();
-            var wordsDict = GenerateWordDictionary(wordList);
-            var beginQueue = new Queue<List<string>>();
-
-            beginQueue.Enqueue(new List<string>() { beginWord });
-
-            while (beginQueue.Count > 0)
-            {
-                var initialQueueSize = beginQueue.Count;
-
-                while (initialQueueSize > 0)
-                {
-                    var actualList = beginQueue.Dequeue();
-                    var actual = actualList.Last();
-
-                    if (actual == endWord)
-                    {
-                        shortests.Add(actualList);
-                    }
-
-                    EnqueueNeighbours(beginQueue, wordsDict, actual, actualList);
-
-                    initialQueueSize--;
-                }
-
-
-                if (shortests.Count > 0)
-                {
-                    return shortests;
-                }
-            }
-
-            return shortests;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void EnqueueNeighbours(Queue<List<string>> queue,
@@ -109,74 +77,8 @@ namespace CodingExercises.MicrosoftExcercises.Hard
 
         public IList<IList<string>> FindLaddersReview(string beginWord, string endWord, IList<string> wordList)
         {
-            var res = new List<IList<string>>();
-            var wordSet = wordList.ToHashSet();
-
-            if (!wordSet.Contains(endWord) || beginWord.Length != endWord.Length)
-            {
-                return res;
-            }
-
-            var queue = new Queue<List<string>>();
-            var path = new List<string>() { beginWord };
-            var visited = new HashSet<string>();
-            var found = false;
-
-            queue.Enqueue(path);
-
-            while (queue.Count > 0)
-            {
-                var queueSize = queue.Count;
-
-                while (queueSize > 0)
-                {
-                    var actualList = queue.Dequeue();
-                    var current = actualList.Last();
-                    var currentArray = current.ToArray();
-
-                    for (int i = 0; i < current.Length; i++)
-                    {
-                        var originalChar = current[i];
-
-                        for (char c = 'a'; c <= 'z'; c++)
-                        {
-                            currentArray[i] = c;
-                            var next = new string(currentArray);
-
-                            if (wordSet.Contains(next))
-                            {
-                                visited.Add(next);
-                                actualList.Add(next);
-
-                                if (next == endWord)
-                                {
-                                    found = true;
-                                    res.Add(new List<string>(actualList));
-                                }
-
-                                queue.Enqueue(new List<string>(actualList));
-                                actualList.RemoveAt(actualList.Count - 1);
-                            }
-                        }
-
-                        currentArray[i] = originalChar;
-                    }
-
-                    queueSize--;
-                }
-
-                foreach (var str in visited)
-                {
-                    wordSet.Remove(str);
-                }
-
-                if (found)
-                {
-                    break;
-                }
-            }
-
-            return res;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

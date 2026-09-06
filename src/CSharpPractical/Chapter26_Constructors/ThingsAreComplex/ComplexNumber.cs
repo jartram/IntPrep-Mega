@@ -14,60 +14,74 @@
 
 using System;
 
-namespace CSharpPractical.Chapter26_Constructors.ThingsAreComplex
+namespace CSharpPractical.Chapter26_Constructors.ThingsAreComplex;
+
+public class ComplexNumber
 {
-    public class ComplexNumber
+    private double real = 0;
+    private double imaginary = 0;
+
+    public ComplexNumber()
     {
-        private double real = 0;
-        private double imaginary = 0;
+    }
 
-        public ComplexNumber()
-        {
-            real = 0;
-            imaginary = 0;
-        }
+    public ComplexNumber(double real, double imaginary)
+    {
+        this.real = real;
+        this.imaginary = imaginary;
+    }
 
-        public ComplexNumber(double r, double i)
-        {
-            real = r;
-            imaginary = i;
-        }
+    public double Real()
+    {
+        // TODO: Return real component
+        return real;
+    }
 
-        public double Real() => real;
-        public double Imaginary() => imaginary;
-        public double Magnitude() => Math.Sqrt(real * real + imaginary * imaginary);
+    public double Imaginary()
+    {
+        // TODO: Return imaginary component
+        return imaginary;
+    }
 
-        public ComplexNumber Add(ComplexNumber right)
-        {
-            return new ComplexNumber(real + right.real, imaginary + right.imaginary);
-        }
+    public double Magnitude()
+    {
+        // TODO: Calculate and return magnitude sqrt(real^2 + imag^2)
+        throw new NotImplementedException();
+    }
 
-        public ComplexNumber Subtract(ComplexNumber right)
-        {
-            return new ComplexNumber(real - right.real, imaginary - right.imaginary);
-        }
+    public ComplexNumber Add(ComplexNumber value)
+    {
+        // TODO: Add complex number
+        throw new NotImplementedException();
+    }
 
-        public ComplexNumber Multiply(ComplexNumber right)
-        {
-            return new ComplexNumber(
-                real * right.real - imaginary * right.imaginary,
-                real * right.imaginary + imaginary * right.real
-            );
-        }
+    public ComplexNumber Subtract(ComplexNumber value)
+    {
+        // TODO: Subtract complex number
+        throw new NotImplementedException();
+    }
 
-        public ComplexNumber Divide(ComplexNumber right)
-        {
-            double denom = right.real * right.real + right.imaginary * right.imaginary;
-            return new ComplexNumber(
-                (real * right.real + imaginary * right.imaginary) / denom,
-                (imaginary * right.real - real * right.imaginary) / denom
-            );
-        }
+    public ComplexNumber Multiply(ComplexNumber value)
+    {
+        // TODO: Multiply complex number
+        throw new NotImplementedException();
+    }
 
-        public override string ToString()
-        {
-            string sign = imaginary >= 0 ? "+" : "-";
-            return $"({real} {sign} {Math.Abs(imaginary)}i)";
-        }
+    public ComplexNumber Divide(ComplexNumber value)
+    {
+        // TODO: Divide complex number
+        throw new NotImplementedException();
+    }
+
+    public ComplexNumber Reciprocal()
+    {
+        // TODO: Return reciprocal 1 / z
+        throw new NotImplementedException();
+    }
+
+    public override string ToString()
+    {
+        // TODO: Return string representation
+        throw new NotImplementedException();
     }
 }

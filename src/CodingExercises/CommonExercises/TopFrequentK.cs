@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace CodingExercises.Exercises
@@ -22,24 +22,8 @@ namespace CodingExercises.Exercises
     {
         public int[] TopKFrequent(int[] nums, int k)
         {
-            var frequencies = new Dictionary<int, int>();
-
-            foreach (var num in nums)
-            {
-                if (!frequencies.ContainsKey(num))
-                {
-                    frequencies.Add(num, 1);
-                }
-                else
-                {
-                    frequencies[num] += 1;
-                }
-            }
-
-            var keys = frequencies.Keys.ToArray();
-            var values = frequencies.Values.ToArray();
-
-            return TopKFrequent(values, keys, k, 0, values.Length - 1);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private int[] TopKFrequent(int[] values, int[] keys, int k, int left, int right)
@@ -83,7 +67,8 @@ namespace CodingExercises.Exercises
 
         public int FindKthLargest(int[] nums, int k)
         {
-            return FindKthLargest(nums, k, 0, nums.Length - 1);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private int FindKthLargest(int[] nums, int k, int left, int right)

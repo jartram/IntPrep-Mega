@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
 {
@@ -21,17 +21,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
     {
         public int ComputeArea(int A, int B, int C, int D, int E, int F, int G, int H)
         {
-            var areaRectangle1 = Math.Abs(A - C) * Math.Abs(B - D);
-            var areaRectangle2 = Math.Abs(E - G) * Math.Abs(F - H);
-
-            if (areaRectangle1 == 0 || areaRectangle2 == 0)
-            {
-                return Math.Max(areaRectangle2, areaRectangle1);
-            }
-
-            var overlappedArea = GetOverlappedArea(A, B, C, D, E, F, G, H);
-
-            return areaRectangle1 + areaRectangle2 - overlappedArea;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private int GetOverlappedArea(int x0, int y0, int x1, int y1, int x00, int y00, int x11, int y11)

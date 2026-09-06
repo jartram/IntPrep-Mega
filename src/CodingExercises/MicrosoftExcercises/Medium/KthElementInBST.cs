@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using CodingExercises.Shared;
+﻿using CodingExercises.Shared;
 using CodingExercises.CommonExercises;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -25,27 +25,14 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public int KthSmallest(TreeNode root, int k)
         {
-            currentNumber = k;
-
-            CreateInorderBSTList(root);
-
-            return finalNumber;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public void CreateInorderBSTList(TreeNode root)
         {
-            if (root != null && currentNumber != 0)
-            {
-                CreateInorderBSTList(root.left);
-                currentNumber--;
-
-                if (currentNumber == 0)
-                {
-                    finalNumber = root.val;
-                }
-
-                CreateInorderBSTList(root.right);
-            }
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

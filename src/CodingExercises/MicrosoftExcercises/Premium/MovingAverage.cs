@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Premium
 {
@@ -34,17 +34,8 @@ namespace CodingExercises.MicrosoftExcercises.Premium
 
         public double Next(int val)
         {
-            if (stream.Count == maxSize)
-            {
-                totalSum -= stream.First.Value;
-                stream.RemoveFirst();
-            }
-
-            totalSum += val;
-
-            stream.AddLast(val);
-
-            return totalSum / (stream.Count * 1.0);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

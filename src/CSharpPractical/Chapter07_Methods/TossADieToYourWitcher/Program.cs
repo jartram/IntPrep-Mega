@@ -42,7 +42,7 @@ namespace CSharpPractical.Chapter07_Methods.TossADieToYourWitcher
 
             // dieValue will need to be assigned the result of
             // of the ThrowDie() method
-            int dieValue = ThrowDie();
+            int dieValue = 0;
 
             // TODO Call the ThrowDie method and store the result
             // that is returned by the method in the variable dieValue

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Medium
@@ -26,18 +26,8 @@ namespace CodingExercises.MicrosoftExcercises.Medium
 
         public IList<IList<int>> CombinationSum3(int k, int target)
         {
-            candidates = new int[9];
-
-            for (int i = 0; i < candidates.Length; i++)
-            {
-                candidates[i] = i + 1;
-            }
-
-            combinations = new List<IList<int>>();
-
-            Backtrack(0, target, new List<int>(), k);
-
-            return combinations;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         public void Backtrack(int currentIndex,

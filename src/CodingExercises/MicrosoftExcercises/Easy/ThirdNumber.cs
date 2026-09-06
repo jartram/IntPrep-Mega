@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
 using System.Linq;
 
 namespace CodingExercises.MicrosoftExcercises.Easy
@@ -22,19 +22,8 @@ namespace CodingExercises.MicrosoftExcercises.Easy
     {
         public int ThirdMax(int[] nums)
         {
-            nums = nums.Distinct().ToArray();
-
-            if (nums.Length == 1)
-            {
-                return nums[0];
-            }
-
-            if (nums.Length == 2)
-            {
-                return Math.Max(nums[0], nums[1]);
-            }
-
-            return ThirdMax(nums, 0, nums.Length - 1);
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private int ThirdMax(int[] nums, int left, int right)

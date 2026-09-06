@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Text;
+﻿using System.Text;
 
 namespace CodingExercises.CommonExercises.Easy_String
 {
@@ -22,44 +22,8 @@ namespace CodingExercises.CommonExercises.Easy_String
     {
         public string CountAndSay(int n)
         {
-            if (n == 1)
-            {
-                return "1";
-            }
-            else
-            {
-                var lastCount = CountAndSay(n - 1);
-                var actualCount = new StringBuilder();
-                var lastChar = ' ';
-                var equals = 0;
-
-                int i = 0;
-                int j = lastCount.Length;
-
-                while (i < j)
-                {
-                    if (lastChar == ' ' ||
-                       lastCount[i] == lastCount[i - 1])
-                    {
-                        equals++;
-                    }
-                    else
-                    {
-                        actualCount.Append($"{equals}{lastChar}");
-                        equals = 1;
-                    }
-
-                    lastChar = lastCount[i];
-                    i++;
-                }
-
-                if (equals != 0)
-                {
-                    actualCount.Append($"{equals}{lastChar}");
-                }
-
-                return actualCount.ToString();
-            }
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
     }
 }

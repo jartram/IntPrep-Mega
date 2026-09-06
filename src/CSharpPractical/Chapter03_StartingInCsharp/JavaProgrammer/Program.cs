@@ -25,7 +25,9 @@ namespace CSharpPractical.Chapter03_StartingInCsharp.JavaProgrammer
     {
         public static string GetMessage()
         {
-            return "I switched from Java to C# and this is my app.";
+            // TODO: Fix the Java mistake below and return "I switched from Java to C# and this is my app."
+            // System.out.println("I switched from Java to C# and this is my app.");
+            throw new NotImplementedException();
         }
 
         public static void Main(string[] args)

@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.Exercises
 {
@@ -21,11 +21,8 @@ namespace CodingExercises.Exercises
     {
         public IList<IList<int>> Subsets(int[] nums)
         {
-            var subsets = new List<IList<int>>();
-
-            GenerateSubsets(new List<int>(), 0, subsets, nums);
-
-            return subsets;
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
         }
 
         private void GenerateSubsets(IList<int> actual, int index, IList<IList<int>> subsets, int[] nums)

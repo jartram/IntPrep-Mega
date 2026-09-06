@@ -13,7 +13,7 @@
  =======================================================================================
 */
 
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CodingExercises.MicrosoftExcercises.Hard
 {
@@ -28,43 +28,10 @@ namespace CodingExercises.MicrosoftExcercises.Hard
             };
 
             public int UniquePathsIII(int[][] grid)
-            {
-                (int row, int col) start = (-1, -1);
-                (int row, int col) dest = (-1, -1);
-
-                var obstacles = 0;
-
-                for (int i = 0; i < grid.Length; i++)
-                {
-                    for (int j = 0; j < grid[i].Length; j++)
-                    {
-                        if (grid[i][j] == 1)
-                        {
-                            start = (i, j);
-                        }
-
-                        if (grid[i][j] == 2)
-                        {
-                            dest = (i, j);
-                        }
-
-                        if (grid[i][j] == -1)
-                        {
-                            obstacles++;
-                        }
-                    }
-                }
-
-                var noObstacles = (grid.Length * grid[0].Length) - obstacles;
-                var total = 0;
-                var visited = new HashSet<(int, int)>();
-
-                visited.Add(start);
-
-                Backtrack(start, dest, visited, ref total, noObstacles, grid);
-
-                return total;
-            }
+        {
+            // TODO: Implement your solution here
+            throw new NotImplementedException();
+        }
 
             private void Backtrack((int, int) start,
                                    (int, int) dest,

@@ -21,7 +21,9 @@
  =======================================================================================
 */
 
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpPractical.Chapter08_MakingDecisions.DriftingYears
 {
@@ -29,7 +31,12 @@ namespace CSharpPractical.Chapter08_MakingDecisions.DriftingYears
     {
         public bool IsLeapYear(int year)
         {
-            return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+            // TODO: Check if year is a leap year and
+            // place the result in the boolean variable below
+            bool isLeapYear = false;
+
+            // Please dont change the code below (automatic unit tests)
+            return isLeapYear;
         }
     }
 }
