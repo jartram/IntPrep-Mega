@@ -42,7 +42,7 @@ namespace CSharpPractical.Chapter04_StoringData.FrameDelimiter
         public byte StartOfFrame()
         {
             // TODO: Set start of frame delimiter to AA hexadecimal
-            byte startOfFrame = 0;
+            byte startOfFrame = Convert.ToByte(170);
 
             Console.WriteLine("A frame always starts with: " + startOfFrame);
 
@@ -53,7 +53,7 @@ namespace CSharpPractical.Chapter04_StoringData.FrameDelimiter
         public byte EndOfFrame()
         {
             // TODO: Set end of frame delimiter to 55 hexadecimal
-            byte endOfFrame = 0;
+            byte endOfFrame = Convert.ToByte(85);
 
             Console.WriteLine("A frame always ends with: " + endOfFrame);
 

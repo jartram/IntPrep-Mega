@@ -35,6 +35,13 @@ namespace CSharpPractical.Chapter03_StartingInCsharp.PersonalDetails
         public static void Main(string[] args)
         {
             // Add implementation here
+            string name = "Jose Ramirez";
+            int age = 40;
+            string height = "5.11";
+
+            Console.WriteLine("My name is  " + name);
+            Console.WriteLine($"I'm {age} years old");
+            Console.WriteLine($"I am {height} feet tall");
         }
     }
 }
