@@ -30,6 +30,8 @@ namespace CSharpPractical.Chapter03_StartingInCsharp.DevelopedBy
         {
             // Write your implementation here
             // TODO: Output welcome message and your name
+            Console.WriteLine("Hello and welcome to my Hello World in C#.");
+            Console.WriteLine("This application was developed by Nico De Witte.");
         }   
     }
 }

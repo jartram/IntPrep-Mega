@@ -21,7 +21,7 @@ namespace CSharpPractical.Chapter03_StartingInCsharp.HelloWorld
     {
         public static void Main(string[] args)
         {
-            // Make it output Hello World
+            Console.WriteLine("Hello World");
         }
     }
 }
